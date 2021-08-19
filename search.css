@@ -12,12 +12,27 @@ div.ss > span{
     position: absolute;
     font-size: 20px;
     color: #fff;
+    cursor: pointer;
+}
+div.shopping_{
+    display: flex;
+}
+div.shopping_ i{
+    cursor: pointer;
+    color: #fff;
+}
+#shopping{
+    font-size: 28px;
+    margin-right: 15px;
+}
+#user{
+    font-size: 48px;
+    margin-top: -7px;
+    margin-left: 10px;
+    color: #808080;
 }
 #sign{
     color: #fff;
-    width: 100px;
-    height: 30px;
-    background: red;
     text-align: center;
     border-radius: 5px;
     padding-top: 3px;

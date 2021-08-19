@@ -47,7 +47,9 @@ ul.nav_list li a::after{
 }
 ul.nav_list li a:hover::after{
     width: 100%;
-    
+}
+ul.nav_list li a:hover{
+    color: #EE0000;
 }
 div.gotop span{
     position: fixed;
@@ -63,25 +65,37 @@ div.gotop span{
     border-radius: 50%;
     display: none;
 }
+.gotop span:hover{
+    background-color: #BB0000;
+}
 div.carousel-inner img {
     width: 100%;
 }
+/* dựa trên logo */
 #caption_{
     text-align: left;
-    left: 100px;
+    left: 200px;
     top: 300px;
 }
-#caption_ div{
-    width: 90px;
-    height: 28px;
-    background: #fff;
-    border-radius: 10px;
+div.order{
+    width: 150px;
+    height: 35px;
+    background:#EE0000;
+    border-radius: 20px;
     cursor: pointer;
 }
-#caption_ div > a{
+div.order > a{
     text-decoration: none;
     padding-left: 5px;
     padding-top: 10px;
+}
+div.order > i{
+    color: black;
+    margin-top:10px;
+    padding-left: 10px;
+}
+div.order:hover{
+    background-color: #BB0000;
 }
 @media only screen and (max-width: 600px) {
     ul.nav_list{

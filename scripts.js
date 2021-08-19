@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
   $('.btn').click(function(){
     $(this).toggleClass("click");
@@ -33,4 +34,22 @@ $(document).ready(function(){
       scrollTop:0
     },2000)
   })    
+
+  var od =document.querySelectorAll('div.orderonl img')
+  for(var i=0; i<od.length;i++){
+    var aa=od[i];
+    $(aa).on({
+      mouseenter: function() {
+          $(this).css({
+              "border-radius":"40px",
+              "background-color": "gold"
+          })
+      },
+      mouseleave: function() {
+          $(this).css({
+              "background-color":"white"
+          })
+      }
+  })
+  }
 });
