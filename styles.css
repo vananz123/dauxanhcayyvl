@@ -9,6 +9,7 @@ div.headerr{
     height: 12vh;
     padding: 0 8%;
     position:fixed;
+    z-index: 1;
 }
 nav.navv{
     display: flex;
@@ -68,7 +69,23 @@ div.gotop span{
 div.carousel-inner img {
     width: 100%;
 }
-
+#caption_{
+    text-align: left;
+    left: 100px;
+    top: 300px;
+}
+#caption_ div{
+    width: 90px;
+    height: 28px;
+    background: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#caption_ div > a{
+    text-decoration: none;
+    padding-left: 5px;
+    padding-top: 10px;
+}
 @media only screen and (max-width: 900px) {
     ul.nav_list{
         display: none;
