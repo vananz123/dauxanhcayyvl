@@ -8,7 +8,7 @@ div.search{
     border-radius: 50%;
     background: #080808;
     cursor: pointer;
-    z-index: 1;
+    z-index: 999;
 }
 div.search1{
     position: absolute;
@@ -20,6 +20,7 @@ div.search1{
     border-radius: 50%;
     background:#fff;
     cursor: pointer;
+    z-index: 998;
 }
 div.search1 span{
     font-size: 15px;
@@ -36,6 +37,7 @@ div.ss{
     top: -60px;
     right: 0;
     transition:top .3s ease;
+    z-index: 997;
 }
 div.ss input{
     height: 50px;

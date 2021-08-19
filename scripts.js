@@ -21,7 +21,7 @@ $(document).ready(function(){
   $(window).scroll(function(){
     if($(window).scrollTop()>100){
       $('div.headerr').css({
-        "background": "black"
+        "background": "rgba(0, 0 ,0,0.5)"
       })
     }else{
       $('div.headerr').css({
