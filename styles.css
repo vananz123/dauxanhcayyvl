@@ -68,15 +68,6 @@ div.gotop span{
 .gotop span:hover{
     background-color: #BB0000;
 }
-div.carousel-inner img {
-    width: 100%;
-}
-/* dựa trên logo */
-#caption_{
-    text-align: left;
-    left: 200px;
-    top: 300px;
-}
 div.order{
     width: 150px;
     height: 35px;
@@ -96,6 +87,50 @@ div.order > i{
 }
 div.order:hover{
     background-color: #BB0000;
+}
+/* img anh nen */
+.dot{
+    position: relative;
+    display: flex;
+    width: 100px;
+    left: 48%;
+    top: 100vh;
+    z-index: 11;
+}
+.dot .dots{
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.dots.act{
+    background: white;
+}
+div.cont{
+            
+    top: 0;
+    left: 0;
+}
+.cont .conts{
+    position: absolute;
+    width: 100%;
+    transition: .2s;
+    opacity: 0;
+}
+div.conts img{
+    width: 100%;
+}
+.cont .conts.act{
+    opacity: 1;
+}
+.cont .conts .caption_{
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    z-index: 1;
+    transform: translateY(-50%);
 }
 @media only screen and (max-width: 600px) {
     ul.nav_list{
