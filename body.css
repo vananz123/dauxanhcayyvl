@@ -1,0 +1,13 @@
+div.vl{
+    position:relative;
+}
+div.orderonl{
+    margin-left: 315px;
+}
+#vl1{
+    text-align: center;
+}
+#vl1 > div{
+    margin-left: 45%;
+}
+

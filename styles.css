@@ -5,16 +5,18 @@
     box-sizing: border-box;
 }
 div.headerr{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 12vh;
     padding: 0 8%;
-    position:fixed;
     z-index: 1;
 }
 nav.navv{
     display: flex;
     align-items:center;
-    justify-content:space-between;
+    justify-content:space-around;
 }
 .logo{
     width: 50px;
@@ -45,13 +47,9 @@ ul.nav_list li a::after{
 }
 ul.nav_list li a:hover::after{
     width: 100%;
-    
 }
-li.btn_list{
-    background: #ff3000;
-    border-radius: 5px;
-    padding: 10px 30px;
-    cursor: pointer;
+ul.nav_list li a:hover{
+    color: #EE0000;
 }
 div.gotop span{
     position: fixed;
@@ -65,29 +63,48 @@ div.gotop span{
     text-align: center;
     padding-top: 5px;
     border-radius: 50%;
+    display: none;
+}
+.gotop span:hover{
+    background-color: #BB0000;
 }
 div.carousel-inner img {
     width: 100%;
 }
+/* dựa trên logo */
 #caption_{
     text-align: left;
-    left: 100px;
+    left: 200px;
     top: 300px;
 }
-#caption_ div{
-    width: 90px;
-    height: 28px;
-    background: #fff;
-    border-radius: 10px;
+div.order{
+    width: 150px;
+    height: 35px;
+    background:#EE0000;
+    border-radius: 20px;
     cursor: pointer;
 }
-#caption_ div > a{
+div.order > a{
     text-decoration: none;
     padding-left: 5px;
     padding-top: 10px;
 }
-@media only screen and (max-width: 900px) {
+div.order > i{
+    color: black;
+    margin-top:10px;
+    padding-left: 10px;
+}
+div.order:hover{
+    background-color: #BB0000;
+}
+@media only screen and (max-width: 600px) {
     ul.nav_list{
+        display: none;
+    }
+    div.ss{
+        display: none;
+    }
+    #sign{
         display: none;
     }
     nav.navv img{
