@@ -26,6 +26,7 @@ div.title span{
     line-height: 25px;
 }
 div.btn{
+    display: none;
     position: fixed;
     top: 25px;
     left: 10px;
@@ -47,5 +48,10 @@ div.btn.click span:before{
 }
 div.taskbar.show{
     left: 0;
+}
+@media only screen and (max-width: 600px) {
+    div.btn{
+        display: block;
+    }
 }
 

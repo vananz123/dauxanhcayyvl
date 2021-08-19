@@ -1,56 +1,25 @@
-div.search{
-    position: fixed;
-    right: 0;
-    top:20px;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    border-radius: 50%;
-    background: #080808;
-    cursor: pointer;
-    z-index: 999;
+div.neun_right{
+    z-index: 1;
 }
-div.search1{
+div.ss > input{
+    margin-bottom: 10px;
+    width: 250px;
+    height: 45px;
+    border-radius:20px
+}
+div.ss > span{
+    margin-top: 15px;
     position: absolute;
-    right: 5px;
-    top:5px;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    border-radius: 50%;
-    background:#fff;
-    cursor: pointer;
-    z-index: 998;
-}
-div.search1 span{
-    font-size: 15px;
-    line-height: 40px;
-    color:#000000;   
-}
-div.search span{
     font-size: 20px;
-    line-height: 40px;
-    color: #fff;   
+    color: #fff;
 }
-div.ss{
-    position: absolute;
-    top: -60px;
-    right: 0;
-    transition:top .3s ease;
-    z-index: 997;
-}
-div.ss input{
-    height: 50px;
-    width: 300px;
-    border-radius:21px;
-    
-}
-div.search.click{
-    color: #ff3000;
-}
-div.search.click span:before{
-    content: '\f00d';
-}
-div.ss.show{
-    top: 70px;
+#sign{
+    color: #fff;
+    width: 100px;
+    height: 30px;
+    background: red;
+    text-align: center;
+    border-radius: 5px;
+    padding-top: 3px;
+    cursor: pointer;
 }

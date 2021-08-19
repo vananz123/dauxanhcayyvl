@@ -9,22 +9,21 @@ $(document).ready(function(){
   });
   $(window).scroll(function(){
     if($(window).scrollTop() >=120){
-      $('.gotop span').css({
-        "display":"block"
-      })
+      $('.gotop span').show("slow")
     }else{
-      $('.gotop span').css({
-        "display":"none"
-      })
+      $('.gotop span').hide("slow")
     }
   })
   $(window).scroll(function(){
     if($(window).scrollTop()>100){
       $('div.headerr').css({
+        "position": "fixed",
+        "z-index":"1",
         "background": "rgba(0, 0 ,0,0.5)"
       })
     }else{
       $('div.headerr').css({
+        "position":"absolute",
         "background": "none"
       })
     }
