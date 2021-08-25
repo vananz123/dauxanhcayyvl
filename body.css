@@ -1,13 +1,205 @@
+body{
+    background-image: url(none);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: center;
+}
 div.vl{
     position:relative;
-}
-div.orderonl{
-    margin-left: 315px;
-}
-#vl1{
+    background: #fff;
+    top: 140vh;
+    margin-top: -15px;
     text-align: center;
-}
-#vl1 > div{
-    margin-left: 45%;
+    align-items: center;
 }
 
+#vl1 h2{
+    text-align: center;
+    font-size: 38px;
+}
+#vl1 > div{
+    display: block;
+    margin-left: 45%;
+}
+.chuaa{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: #F8F8FF;
+    margin: 140vh auto 0;
+}
+.rr{
+    position: absolute;
+    top: 50px;
+    left: 30%;
+    width: 600px;
+    z-index: 0;
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 2px;
+    
+ }
+ .rr h2{
+     text-align: center;
+ }
+ .item h5{
+     text-align: center;
+ }
+
+ .foot{
+    display: flex;
+    width: 100%;
+    height: 300px;
+    background: #000000;
+    color: aliceblue;
+    align-items: center;
+    justify-content: space-between;
+}
+.foot .foots{
+    margin: 40px;
+}
+.infomation .infomations i{
+    color: red;
+}
+.foots.time{
+    color: #FF7F24;
+}
+.nguoidung{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    top: 0vh;
+    background: #fff;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.diemso{
+    display: flex;
+   
+}
+.diemso .cup{
+    margin-left: 200px;
+}
+.cup{
+    font-size: 45px;
+}
+.cup p{
+    font-size: 25px;
+}
+
+div.dev{
+    display: flex;
+    position: relative;
+   
+    justify-content:space-around;
+    /* background-color:#F8F8FF; */
+    background: blue;
+    height: 650px;
+    padding-top: 50px;
+    
+    
+}
+.dev .info{
+    margin-left: 200px;
+    padding-top: 100px
+}
+div.devs img {
+    width: 550px;
+    height: 500px;
+}
+div.sdt{
+    display: flex;
+}
+div.sdt > div{
+    margin: 3%;
+}
+#sdtsss{
+    margin-top: 35px;
+    width: 200px;
+}
+.list{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: #F8F8FF;
+    text-align: center;
+    
+}
+.list #list_{
+    display: flex;
+    position: absolute;
+    top: 50px;
+    left: 162px;
+}
+#list_ .list_s{
+    position: relative;
+    margin:3%;
+    
+    width: 300px;
+    height: 350px;
+    background: #FF7F24;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: .4s;
+}
+.list #list_ .list_s img {
+    width: 100%;
+    
+}
+#list_ .list_s .deal_list{
+    width: 0px;
+    height: 35px;
+    background: #FFFFFF	;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 15px;
+    padding: 6px;
+    margin-left: 53px;
+    font-size: 15px;
+    opacity: 0;
+    transition: .6s;
+}
+.list_s .deal_list1{
+    position: absolute;
+    top: 243px;
+    left: 53px;
+    width: 120px;
+    height: 35px;
+    background: #AA0000 ;
+    text-align: center;
+    border-radius: 20px;
+    padding: 6px;
+    font-size: 15px;
+}
+
+.footerd > div{
+    margin: 50px;
+}
+.noname{
+    position: absolute;
+    top: 360vh;
+    left: 45%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    transition: .3s;
+}
+.noname > div{
+    text-align: center;
+    
+}
+.noname div p{
+   padding-top: 15px;
+    padding-bottom: 5px;
+}
+.noname:hover{
+    background-color: red;
+    transform: scale(1.2);
+    
+    
+}

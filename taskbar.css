@@ -1,11 +1,12 @@
+
 div.taskbar{
     position: fixed;
-    background: blueviolet;
+    background: red;
     width:250px;
     height: 100vh;
-    left: -250px;
+    left:-250px;
     transition:left .4s ease;
-    z-index: 998;
+    z-index: 98;
 }
 div.taskbar i{
     margin: 0 60px ;
@@ -15,7 +16,7 @@ div.taskbar ul li{
 }
 div.taskbar ul li a{
     text-decoration: none;
-    color: #fff;
+    color:#fff;
     line-height: 45px;
 }
 div.title{
@@ -26,7 +27,7 @@ div.title span{
     line-height: 25px;
 }
 div.btn{
-    display: none;
+
     position: fixed;
     top: 25px;
     left: 10px;
@@ -37,7 +38,7 @@ div.btn{
     z-index: 999;
 }
 div.btn span{
-    color: #fff;
+    color: black;
     font-size: 28px;
 }
 div.btn.click{
@@ -49,9 +50,9 @@ div.btn.click span:before{
 div.taskbar.show{
     left: 0;
 }
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
     div.btn{
         display: block;
     }
-}
+} */
 

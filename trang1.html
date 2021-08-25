@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>page1</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="taskbar.css"/>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        section.body 
+        {
+            margin-left: 200px;
+        }
+        .logo-coffee {
+            cursor: pointer;
+        }
+        .logo_ {
+            width: 7rem;
+            margin-left: 50px;
+        }
+        .menus img {
+            height: 2.2rem;
+            width:2.2rem;
+        }
+        ul.menu {
+            list-style-type:none;
+        }
+        .menu{
+            margin-left: 0px;
+            width: 200px;
+        }
+        .menus {
+           
+            align-items: center;
+            padding: 10px 12px;
+            margin: 3px 0;
+            
+        }
+        .menu1 {
+            font-size: 1.4rem;
+            text-transform: capitalize;
+            margin-left: 10px;
+        }
+        .it_{
+            width: 1000px;
+            height: 800px;
+        }
+        .gg{
+            display: flex;
+            justify-content: space-between;
+        }
+        .fle{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+                
+        }
+        .fle .fles{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 2%;
+            
+        }
+        .fle .fles img {
+            width: 100%;
+            transition: .3s;
+        }
+        
+        .fle .fles .laber {
+            position: absolute;
+            top:-5px;
+            left:-5px;
+            width: 100px;
+            height: 30px;
+            color: #ffff;
+            background-color: #ff514e;
+            padding: 5px;
+            border-radius: 0 20px;
+            text-align: center;
+        }
+        .fle .fles .addt{
+            position: absolute;
+            top: 30px;
+            right: 0px;
+            width: 30px;
+            height: 30px;
+            background: #ff514e;
+            opacity: 0.7;
+            text-align: center;
+            padding-top: 7px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            
+        }
+        .fles .addt_s{
+            position: absolute;
+            top: -5px;
+            right: 0px;
+            width: 30px;
+            height: 30px;
+            background: #ff514e;
+            opacity: 0.7;
+            text-align: center;
+            padding-top: 7px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+        }
+        .fle .fles .addt:hover{
+            background: blue;
+        }
+        .fle .fles .addt_s:hover{
+            color: blue;
+        }
+        .fle .fles p{
+            font-size: 20px;
+            
+        }
+        
+        p.thousand {
+            font-size: 24px;
+            font-family: 'BebasNeue','Lato', "Times New Roman", serif;
+            font-weight: 600;
+            color:#EA8025;
+            margin-bottom: 10px;
+        }
+        .footer {
+           
+            background-color: rgba(0,0,0,.87);
+            color:aliceblue;
+        }
+        ul.col {
+            color:aliceblue;
+            font-size: 20px;
+            padding: 10px;
+            list-style-type: none;
+            display: flex;
+        }
+        .center {
+            text-align: center;
+        }
+
+        .pagination {
+        display: inline-block;
+        }
+
+        .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color .3s;
+        border: 1px solid #ddd;
+        margin: 0 4px;
+        
+        }
+
+        .pagination a.active {
+        background-color: #4CAF50;
+        color: white;
+        border: 1px solid #4CAF50;
+        }
+
+        .pagination a:hover:not(.active) {background-color: #ddd;}
+        ul.footer {
+            list-style-type:none;
+            padding: 25px;
+            margin:10px;
+            background-color:rgba(0,0,0,.87);
+            
+        }
+        ul.footer>li {
+            max-width:100%;
+            padding-right:15px;
+
+            
+            
+        }
+        .footer_time-hours {
+            color:chocolate;  
+        }
+        .sup {
+            padding: 25px;
+        }
+        
+        nav>ul.footer {
+            display:flex;
+            margin: auto;
+            padding: 35px;
+            justify-content: space-between;
+        }
+        ul.diachi {
+            line-height: 2,5;
+        }
+        ul.subcontent {
+            padding: 25px;
+            
+        }
+    
+    </style>       
+    </head>
+   
+    <body >
+     <section class="body">
+            <div class="logo-coffee">
+            <img     class="logo_" src="baitaplon/icon/logo-cafe.jpg" alt="logo"/>
+            
+        </div>
+        <div class="gg">
+            <nav >
+                <ul  class="menu">
+                    <h2>Popular</h2>
+                    <li class="menus">
+                      <img src="baitaplon/icon/coffe.png" alt="coffe"/>  
+                      <span class="menu1">Coffe</span>
+                    </li>
+                    <li class="menus">
+                        <img src="baitaplon/icon/Fresh water1.jpg" alt="fresh water" />
+                      <span class="menu1">Fresh water</span>
+                  </li>
+                  <li class="menus">
+                      <img src="baitaplon/icon/milk tea.png" alt="milk tea" />
+                      <span class="menu1">Milk tea</span>
+                  </li>
+                  <li class="menus">
+                      <img src="baitaplon/icon/cake.png" alt="cake" />
+                      <span class="menu1">Cake</span>
+                  </li>
+                </ul>
+            </nav>
+      
+            <div class="it_">
+              <div class="fle">
+                  
+              </div>
+          </div>
+        </div>       
+        </section>
+        <div class="center">
+            <div class="pagination">
+                
+                <a href="#">&laquo;</a>
+                <a href="#"class="active">1</a>
+                <a href="#">2</a>
+                <!-- <a href="#">3</a>
+                <a href="#">4</a> -->
+                <a href="#">&raquo;</a>
+            </div>
+          </div>
+        <footer class="footer">
+            <nav>
+                <ul class="footer">
+                    <li class="sub">
+                         
+                        <ul class="footer subcontent">
+                            <li class="footer_time-day">Monday</li>
+                            <li class="footer_time-day">Tuesday</li>
+                                <li class="footer_time-day">Wednesday</li>
+                                <li class="footer_time-day">Thursday</li>
+                                <li class="footer_time-day">Friday</li>
+                                <li class="footer_time-day">Saturday</li>
+                                <li class="footer_time-day">Sunday</li>
+                        </ul>
+                    </li>
+                    <li class="sub">
+                        
+                        <ul class="footer subcontent">
+                            <li>.... </li>
+                            <li>.... </li>
+                            <li>.... </li>
+                            <li>.... </li>
+                            <li>.... </li>
+                            <li>.... </li>
+                            <li>.... </li>
+                        </ul>
+                    </li>
+                    <li class="sub">
+                        
+                        <ul class="footer subcontent">
+                           <li class="footer_time-hours ">Closed</li>
+                           <li class="footer_time-hours ">8.00-20.00</li>
+                            <li class="footer_time-hours ">8.00-20.00</li>
+                            <li class="footer_time-hours ">8.00-20.00</li>
+                            <li class="footer_time-hours ">8.00-20.00</li>
+                            <li class="footer_time-hours ">8.00-20.00</li>
+                            <li class="footer_time-hours ">9.00-12.00</li>
+                            
+                        </ul>
+                    </li>
+                    <li class="sub">
+                        
+                        <ul class="footer subcontent diachi">
+                           <li style="font-size: 25px;" ><h4>Address</h4></li>
+                           <li ><a style="text-decoration: none;color:aliceblue" href="#"><i style="color:chocolate;" class="fas fa-phone-alt"></i>&emsp;+456789 235</a></li>
+                            <li ><a style="text-decoration: none;color:aliceblue" href="#"><i style="color:chocolate;" class="fas fa-envelope-open-text"></i>&emsp;coffe@gmail.com</a></li>
+                            <li><a style="text-decoration: none;color:aliceblue"href="#"><i style="color:chocolate;" class="fas fa-building"></i>&emsp;375 Nguyễn kiệm</a></li>
+                           <li>
+                          <a href="#">
+                            <i style="color:chocolate;"class="fab fa-instagram"></i> 
+                          </a>&emsp;
+                          <a href="#"><i style="color:rgb(45, 136, 255);" class="fab fa-facebook"></i></a>&emsp;
+                          <a><i style="color:red" class="fab fa-youtube"></i></a>
+                            
+                             
+                        </li>
+                       
+                        </ul>
+                    </li>
+                    <li style="margin-left: 30px;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1499666993473!2d106.67767731460603!3d10.799823892305671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528d772c9449b%3A0x7dbaf1e77dfb181!2zMzc1IE5ndXnhu4VuIEtp4buHbSwgUGjGsOG7nW5nIDksIFBow7ogTmh14bqtbiwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1629461577241!5m2!1svi!2s" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </li>
+                 </ul>  
+     
+            </nav>
+        </footer>
+        <!-- <div class="takkk">
+            <div class="btn">
+                <span class="fas fa-bars"></span>
+            </div>
+            <div class="taskbar">
+                <div class="title">
+                  <span>The coffee</span>
+                </div>
+                <ul class="task-item">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="">Meun</a></li>
+                  <li><a href="">Order</a></li>
+                  <li><a href="">Sign Up</a></li>
+                  <li><a href="">Sign In</a></li>
+                </ul>
+            </div>
+        </div> -->
+        <div class="gotop">
+            <i class="fas fa-angle-up"></i>
+        </div>
+    </body>
+    <script>
+        function ramdomprice(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) ) + min;
+        }
+        
+        const so_anh=22
+        function loadimg(){
+            for(var i=0;i<so_anh;i++){
+            $('.fle').append('<div class="fles"></div>') 
+            }
+            var ds=document.querySelectorAll('.fle .fles')
+            for(var i=0;i<ds.length;i++){
+                var r=`baitaplon/bánh/cake_${i+1}.png`
+                // var name_t=`<p>${name[i]}</p>`
+                var price_t=`<p>price:${ramdomprice(4,7)}00000 VND</p>`
+                $(ds[i]).append('<img src='+r+'>')
+                $(ds[i]).append(price_t)
+                $(ds[i]).append('<div class="laber">Favorite</div>')
+                $(ds[i]).append('<i class="fas fa-cart-plus addt"></i>')
+                $(ds[i]).append('<i class="far fa-heart addt_s"></i>')
+            }
+        }
+        loadimg();
+        var aa=document.querySelectorAll('.pagination a')
+        var item=document.querySelectorAll('.fle .fles')
+        for(var i=0;i<item.length;i++){
+            if(i>=0 && i<12){
+                $(item[i]).show()
+            }else{
+                $(item[i]).hide()
+            }
+        }
+        function set(j){
+            var t=item.length;
+            var apage=12//so phan tu trong 1 trang la 12
+            var m=t/apage;
+            m=Math.ceil(m)
+            for(var n=1;n<=m;n++){
+                if(j==n){
+                    var b=1;
+                    for(b;b<=t;b++){
+                        if(b>=n*apage-apage && b<n*apage){
+                            $(item[b]).show()
+                        }else{
+                            $(item[b]).hide()
+                        }
+                    }  
+                }
+                if(j>1){
+                    $(item[0]).hide();
+                }
+                if(j==1){
+                    $(item[0]).show();
+                } 
+            }
+            
+            for(aas of aa){
+                aas.classList.remove('active')
+                aa[j].classList.add('active')
+            }
+        }
+        for(let j=0;j<aa.length;j++){
+            var d=aa.length
+            aa[j].addEventListener('click',function(){
+                event.preventDefault()
+                set(j)
+            })
+        }
+
+        var ds1=document.querySelectorAll('.fle .fles')
+        var ds2=document.querySelectorAll('.fle .fles img')
+        function hoverenter(h){
+            var ds=document.querySelectorAll('.fle .fles .addt')
+            var ds1=document.querySelectorAll('.fle .fles .addt_s')
+            $(ds2[h]).css("transform"," scale(1.1)")
+            $(ds[h]).fadeIn(600)
+            $(ds1[h]).fadeIn(600)
+            
+        }
+        function hoverout(h){
+            var ds=document.querySelectorAll('.fle .fles .addt')
+            var ds1=document.querySelectorAll('.fle .fles .addt_s')
+            $(ds2[h]).css("transform"," scale(1)")
+            $(ds[h]).hide()
+            $(ds1[h]).hide()
+        }
+        for(let h=0;h<ds1.length;h++){
+            ds1[h].addEventListener("mouseenter",function(){
+                hoverenter(h)
+            })
+            ds1[h].addEventListener("mouseleave",function(){
+                hoverout(h)
+            })
+        }
+
+        
+        
+    </script>
+</html>

@@ -1,18 +1,50 @@
 div.neun_right{
     z-index: 1;
 }
-div.ss > input{
-    margin-bottom: 10px;
-    width: 250px;
-    height: 45px;
-    border-radius:20px
+div.ss{
+    position: relative;
+    width: 450px;
+    height: 60px;
+    background: none;
+    align-items: center;
+    text-align: center;
+    z-index: 999;
 }
-div.ss > span{
-    margin-top: 15px;
+.ss_{
     position: absolute;
-    font-size: 20px;
-    color: #fff;
+    top:0;
+    left:140px;
+    width: 50px;
+    height: 50px;
+    background: #FFF;
+    border-radius: 60px;
+    overflow: hidden;
+    transition: .4s;
+
+
+}
+.ss_ span{
+    position: absolute;
+    padding-top: 17px;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
     cursor: pointer;
+}
+.ss_ input{
+    position: absolute;
+    top: 0;
+    left: 50px;
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+}
+.ss_.act{
+    width: 300px;
 }
 div.shopping_{
     display: flex;
@@ -35,6 +67,7 @@ div.shopping_ i{
     color: #fff;
     text-align: center;
     border-radius: 5px;
+    margin-top: 0px;
     padding-top: 3px;
     cursor: pointer;
 }
