@@ -56,6 +56,7 @@
 }
 .i.show{
     transform: scale(1.05);
+    background-color: red;
 }
 .ii.shows{
     top:180px;
@@ -69,9 +70,7 @@
     top:335px;
     left:210px;
 }
-.content.contents{
-    color: red;
-}
+
 .content{
     padding-top:43px;
     font-size: 25px;

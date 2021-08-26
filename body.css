@@ -1,3 +1,4 @@
+
 body{
     background-image: url(none);
     background-repeat: no-repeat;
@@ -10,8 +11,8 @@ div.vl{
     background: #fff;
     top: 140vh;
     margin-top: -15px;
-    text-align: center;
-    align-items: center;
+   
+    
 }
 
 #vl1 h2{
@@ -120,27 +121,23 @@ div.sdt > div{
     width: 200px;
 }
 .list{
-    position: relative;
     width: 100%;
-    height: 500px;
+    height: 600px;
     background: #F8F8FF;
     text-align: center;
     
 }
 .list #list_{
     display: flex;
-    position: absolute;
-    top: 50px;
-    left: 162px;
+    margin: 50px 70px;
 }
 #list_ .list_s{
     position: relative;
-    margin:3%;
-    
+    margin-left: 30px;
     width: 300px;
-    height: 350px;
-    background: #FF7F24;
-    border-radius: 10px;
+    height: 450px;
+    background: #FFFFFF;
+    border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: .4s;
@@ -149,29 +146,47 @@ div.sdt > div{
     width: 100%;
     
 }
-#list_ .list_s .deal_list{
+#list_ .list_s p{
+    padding-top: 10px;
+}
+div.deal_list{
+    position: relative;
     width: 0px;
-    height: 35px;
-    background: #FFFFFF	;
+    height: 45px;
+    border-radius: 20px;
+    margin: 5px 90px;
+
+
+    overflow: hidden;
+    transition: width 2s;
+    z-index: 11;
+}
+div.deal_list .deal_list_{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 45px;
     border-radius: 20px;
     text-align: center;
-    margin-top: 15px;
-    padding: 6px;
-    margin-left: 53px;
+    background: #FFFFFF	;
+    color: #000000;
     font-size: 15px;
-    opacity: 0;
-    transition: .6s;
+    z-index: 12;
+}
+div.deal_list .deal_list_ p{
+    margin-top:1px ;
 }
 .list_s .deal_list1{
     position: absolute;
-    top: 243px;
-    left: 53px;
+    top: 305px;
+    left: 90px;
     width: 120px;
-    height: 35px;
+    height: 45px;
     background: #AA0000 ;
     text-align: center;
     border-radius: 20px;
-    padding: 6px;
+    padding-top: 12px;
     font-size: 15px;
 }
 
@@ -203,3 +218,16 @@ div.sdt > div{
     
     
 }
+div.vl{
+    position:relative;
+}
+div.orderonl{
+    margin-left: 315px;
+}
+#vl1{
+    text-align: center;
+}
+#vl1 > div{
+    margin-left: 45%;
+}
+

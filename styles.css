@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -74,6 +75,7 @@ ul.nav_list li a:hover{
 .gotop.show{
     bottom: 25px;
 }
+
 /* img anh nen */
 .dot{
     position: relative;
@@ -102,26 +104,33 @@ div.cont{
 .cont .conts{
     position: absolute;
     width: 100%;
-    transition: .3s ease-in-out;
+    transition: .4s ease;
     opacity: 0;
+    clip-path: circle(1000px at center);
 }
 div.conts img{
     width: 100%;
 }
 .cont .conts.act{
     opacity: 1;
+    animation-name:ex;
+    animation-duration: 1.2s;
+}
+@keyframes ex{
+    from{clip-path:circle(20px at center);}
+    to{clip-path: circle(1000px at center);}
 }
 .caption .caption_{
     position: absolute;
     top: 50%;
     left: 200px;
-    
     transition: .3s;
     opacity: 0;
 }
 .caption .caption_.act{
     opacity: 1;
 }
+
 /* order caption */
 div.order{
     width: 150px;
@@ -160,8 +169,5 @@ div.order:hover{
         margin-top: 10px;
     }
 }
-
-
-
 
 

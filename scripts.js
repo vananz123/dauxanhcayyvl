@@ -1,5 +1,7 @@
-
 $(document).ready(function(){
+  function ramdomprice(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+  }
   //header
   $('.btn').click(function(){
     $(this).toggleClass("click");
@@ -23,12 +25,13 @@ $(document).ready(function(){
   })
   var x=$('#user').css("color")
   $(window).scroll(function(){
-    if($(window).scrollTop()>100){
+    if($(window).scrollTop()>20){
       $('div.headerr').css({
         "position": "fixed",
         "z-index":"1",
         "background": "rgba(0, 0 ,0,0.5)"
       })
+
       $('#user').css({
         "color": "red"
       })
@@ -50,6 +53,7 @@ $(document).ready(function(){
   $('div.order').click(function(){
     event.preventDefault()
   })
+
   var od =document.querySelectorAll('div.orderonl img')
   for(var i=0; i<od.length;i++){
     var aa=od[i];
@@ -149,11 +153,15 @@ $(document).ready(function(){
     var ds_mon=document.querySelectorAll('#list_ .list_s')
     for(var j=0;j<ds_mon.length;j++){
       var r=`tai_nguyen/cake/cake_${j+1}.png`
-      $(ds_mon[j]).append('<a herf="#"></a>')
+      
+      $(ds_mon[j]).append('<img src='+r+'>')
       $(ds_mon[j]).append('<div class="deal_list"></div>')
+      var rr=document.querySelectorAll('.list_s .deal_list')
+      $(rr[j]).append('<div class="deal_list_"><p>BEST DEAL</p></div>')
       $(ds_mon[j]).append('<div class="deal_list1">BEST DEAL</div>')
-      var rr=document.querySelectorAll('#list_ .list_s a')
-      $(rr[j]).append('<img src='+r+'>')
+      var price_t=`<p>${ramdomprice(4,7)}00000VND</p>`
+      $(ds_mon[j]).append(price_t)
+      
     }
   }
   dsmon();
@@ -165,12 +173,13 @@ $(document).ready(function(){
       $(ds1[h]).css({
         "transform":" translate(0,-10px)",
         "background":"red"
+        
       })
       $(ds[h]).css({
         "background":"none"
       })
       $(ds2[h]).css({
-        "opacity":"1",
+        
         "width":"120px"
       })
     
@@ -178,13 +187,13 @@ $(document).ready(function(){
   function hoverout(h){
       $(ds1[h]).css({
         "transform":" translate(0,0)",
-        "background":"#FF7F24"
+        "background":"#FFFFFF"
       })
       $(ds[h]).css({
         "background":"#AA0000"
       })
       $(ds2[h]).css({
-        "opacity":"0",
+        "opacity":"1",
         "width":"0"
       })
   }
@@ -197,3 +206,5 @@ $(document).ready(function(){
       })
   }
 });
+
+

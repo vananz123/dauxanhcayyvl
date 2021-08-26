@@ -205,7 +205,47 @@
             padding: 25px;
             
         }
-    
+        .ef{
+            position: fixed;
+            top: 100vh;
+            left: 30%;
+            background-color: aqua;
+            width: 200px;
+            height: 50px;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .ef .form{
+            width: 600px;
+            height: 600px;
+            margin-top: 20px;
+            background: red;
+            
+        }
+        .ef h3{
+            margin-left: 10px;
+        }
+        .content_form_s{
+            display: flex;
+        }
+        .content_form_s img{
+            width: 400px;
+        }
+        #close{
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+        
+        #addto{
+            width: 120px;
+            height: 35px;
+            background-color: blue;
+            text-align: center;
+            border-radius: 20px;
+            padding-top: 10px;
+        }
     </style>       
     </head>
    
@@ -339,8 +379,16 @@
                 </ul>
             </div>
         </div> -->
-        <div class="gotop">
-            <i class="fas fa-angle-up"></i>
+        <div class="ef">
+            <h3>Details</h3>
+            <div class="form">
+                <div class="content_form_s">
+                    <img src="tai_nguyen/cake/cake_1.png">
+                    <p>The journal publishes original research and review papers on any subject at the interface between food and engineering</p>
+                </div>
+                <i class="fas fa-plus-circle" id="addto">Add to card</i>
+            </div>
+            <i class="far fa-times-circle" id="close"></i>
         </div>
     </body>
     <script>
@@ -437,8 +485,35 @@
                 hoverout(h)
             })
         }
-
-        
-        
+//ef
+        var eff=document.querySelectorAll('.fle .fles img')
+        function ef(j){
+            var img_s=document.querySelector("div.content_form_s img")
+            var r=`baitaplon/bánh/cake_${j+1}.png`
+            img_s.src=r
+            $('.ef').animate({
+                "top":"5vh"
+            },500).animate({
+                "width":"600px",
+                "height":"600px"
+            })
+    
+            $('#close').click(function(){
+                $('.ef').animate({
+                    "top":"100vh"
+                },200).animate({
+                    
+                    "width":"200px",
+                    "height":"50px"
+                })
+            })
+        }
+        for(let j=0;j<eff.length;j++){
+            eff[j].addEventListener('click',function(){
+                event.preventDefault()
+               
+                ef(j)
+            })
+        }
     </script>
 </html>
