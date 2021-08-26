@@ -129,7 +129,7 @@ div.sdt > div{
 }
 .list #list_{
     display: flex;
-    margin: 50px 70px;
+    margin: 50px 85px;
 }
 #list_ .list_s{
     position: relative;
@@ -155,10 +155,8 @@ div.deal_list{
     height: 45px;
     border-radius: 20px;
     margin: 5px 90px;
-
-
     overflow: hidden;
-    transition: width 2s;
+    transition: width 1.5s;
     z-index: 11;
 }
 div.deal_list .deal_list_{

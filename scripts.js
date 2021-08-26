@@ -118,7 +118,7 @@ $(document).ready(function(){
   }
   
   $(window).scroll(function(){
-    if($(window).scrollTop() >=2502 && $(window).scrollTop()<2590){
+    if($(window).scrollTop() >=2502 && $(window).scrollTop()<2990){
       animateNumber(4000, 1000, 0, function (number) {
         const formattedNumber = number.toLocaleString()
         $('#cups').text(formattedNumber+"+")
