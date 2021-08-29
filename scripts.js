@@ -205,6 +205,28 @@ $(document).ready(function(){
           hoverout(h)
       })
   }
+  function sendsmit(){
+    $('#sendsmit').click(function(){
+      event.preventDefault()
+    })
+    $('.close button').click(function(){
+      $('.bgg').hide("show")
+      $('.modal_ct').hide("slow")
+    })
+    $('#sendsmit').click(function(){
+      var modal_ct=".modal_ct"
+      if($('#emailsmit').val()!="" && $('#namesmit').val()!="" && $('#sendmes').val()!=""){
+        $('.bgg').show()
+        $(modal_ct).show("slow")
+        $('.modal_ct .modal_box .content span').text("comptele send messeger")
+      }else{
+        $('.bgg').show()
+        $(modal_ct).show("slow")
+        $('.modal_ct .modal_box .content span').text("Please enter full information")
+      }
+    })
+  }
+  sendsmit();
 });
 
 

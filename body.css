@@ -41,8 +41,8 @@ div.vl{
     border-radius: 2px;
     
  }
- .rr h2{
-     text-align: center;
+ .rr h2 , h6{
+    text-align: center;
  }
  .item h5{
      text-align: center;
