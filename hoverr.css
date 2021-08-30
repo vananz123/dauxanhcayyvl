@@ -1,16 +1,4 @@
-::-webkit-scrollbar {
-    width: 13px;
-    border-radius: 20px;
-}
-::-webkit-scrollbar-thumb {
-    background: gray; 
-    border-radius: 10px;
-}
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #b30000; 
-}
 .r{
     position: relative;
     width: 500px;
@@ -94,7 +82,8 @@ div.tt{
     
     height: 600px;
     background:white;
-    justify-content:space-around;
+    justify-content:center;
+    justify-items: center;
 
 }
 .tt .send{
@@ -141,6 +130,7 @@ div.tt{
     position:relative;
     width: 305px;
     height: 455px;
+    margin-left: 230px;
     margin-top: 70px;
     
     
