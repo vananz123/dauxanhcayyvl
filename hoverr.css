@@ -129,9 +129,13 @@ div.tt{
     margin-left:40px;
     background: red;
     border: none;
+    
 }
 #sendmes{
+    width: 420px;
     height: 70px;
+    border: 1px solid black;
+    outline: none;
 }
 .contact{
     position:relative;

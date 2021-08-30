@@ -213,16 +213,37 @@ $(document).ready(function(){
       $('.bgg').hide("show")
       $('.modal_ct').hide("slow")
     })
+    var modal_ct=".modal_ct"
+    var span=".modal_ct .modal_box .content span"
+    var smit=document.querySelectorAll('.tt .send form input')
+    function ret(){
+      for(var i=0;i<smit.length-1;i++){
+        if($(smit[i]).val() == ""){
+          return i;
+        }
+      }
+      return -1;
+    }
+    function err(j){
+      for(j;j < smit.length-1;j++){
+        $(smit[j]).css("border-color","red")
+      }
+      $('.bgg').show()
+      $(modal_ct).show("slow")
+      $(span).text("Please enter full infomation")
+    }
     $('#sendsmit').click(function(){
-      var modal_ct=".modal_ct"
-      if($('#emailsmit').val()!="" && $('#namesmit').val()!="" && $('#sendmes').val()!=""){
+      ret();
+      if(ret()==-1){
         $('.bgg').show()
         $(modal_ct).show("slow")
-        $('.modal_ct .modal_box .content span').text("comptele send messeger")
+        $(span).text("Comptele send messenger")
+        var check=ret()
+        for(var h=0;h < smit.length-1;h++){
+          $(smit[h]).css("border-color","black")
+        }
       }else{
-        $('.bgg').show()
-        $(modal_ct).show("slow")
-        $('.modal_ct .modal_box .content span').text("Please enter full information")
+        err(ret());
       }
     })
   }
