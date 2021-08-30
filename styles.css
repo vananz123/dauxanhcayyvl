@@ -17,7 +17,7 @@ div.headerr{
 nav.navv{
     display: flex;
     align-items:center;
-    justify-content:space-around;
+    justify-content:center;
 }
 .logo{
     width: 45px;

@@ -155,10 +155,11 @@ $(document).ready(function(){
       var r=`tai_nguyen/cake/cake_${j+1}.png`
       
       $(ds_mon[j]).append('<img src='+r+'>')
+      
       $(ds_mon[j]).append('<div class="deal_list"></div>')
       var rr=document.querySelectorAll('.list_s .deal_list')
-      $(rr[j]).append('<div class="deal_list_"><p>BEST DEAL</p></div>')
-      $(ds_mon[j]).append('<div class="deal_list1">BEST DEAL</div>')
+      $(rr[j]).append('<div class="deal_list0"><p>BEST DEAL</p></div><div class="deal_list1">BEST DEAL</div>')
+      // $(ds_mon[j]).append('<div class="deal_list1">BEST DEAL</div>')
       var price_t=`<p>${ramdomprice(4,7)}00000VND</p>`
       $(ds_mon[j]).append(price_t)
       
@@ -166,56 +167,50 @@ $(document).ready(function(){
   }
   dsmon();
 
-  var ds1=document.querySelectorAll('#list_ .list_s')
-  var ds=document.querySelectorAll('#list_ .list_s .deal_list1')
-  var ds2=document.querySelectorAll('#list_ .list_s .deal_list')
+  var list=document.querySelectorAll('#list_ .list_s')
+  var list0=document.querySelectorAll('#list_ .list_s .deal_list .deal_list0')
+  var list1=document.querySelectorAll('#list_ .list_s .deal_list .deal_list1')
   function hoverenter(h){
-      $(ds1[h]).css({
+      $(list[h]).css({
         "transform":" translate(0,-10px)",
         "background":"red"
         
       })
-      $(ds[h]).css({
-        "background":"none"
-      })
-      $(ds2[h]).css({
-        
+      $(list0[h]).css({
+        "background":"white",
         "width":"120px"
       })
-    
   }
   function hoverout(h){
-      $(ds1[h]).css({
+      $(list[h]).css({
         "transform":" translate(0,0)",
         "background":"#FFFFFF"
       })
-      $(ds[h]).css({
-        "background":"#AA0000"
-      })
-      $(ds2[h]).css({
-        "opacity":"1",
+      $(list0[h]).css({
+        "background":"#AA0000",
         "width":"0"
       })
   }
-  for(let h=0;h<ds1.length;h++){
-      ds1[h].addEventListener("mouseenter",function(){
+  for(let h=0;h<list.length;h++){
+      list[h].addEventListener("mouseenter",function(){
           hoverenter(h)
       })
-      ds1[h].addEventListener("mouseleave",function(){
+      list[h].addEventListener("mouseleave",function(){
           hoverout(h)
       })
   }
   function sendsmit(){
+    var modal_ct=".modal_ct .modal_box"
+    var span=".modal_ct .modal_box .content span"
+    var smit=document.querySelectorAll('.tt .send form input')
     $('#sendsmit').click(function(){
       event.preventDefault()
     })
     $('.close button').click(function(){
-      $('.bgg').hide("show")
-      $('.modal_ct').hide("slow")
+      $('.bgg').hide()
+      $(modal_ct).toggleClass("shows")
     })
-    var modal_ct=".modal_ct"
-    var span=".modal_ct .modal_box .content span"
-    var smit=document.querySelectorAll('.tt .send form input')
+    
     function ret(){
       for(var i=0;i<smit.length-1;i++){
         if($(smit[i]).val() == ""){
@@ -229,14 +224,14 @@ $(document).ready(function(){
         $(smit[j]).css("border-color","red")
       }
       $('.bgg').show()
-      $(modal_ct).show("slow")
+      $(modal_ct).toggleClass("shows")
       $(span).text("Please enter full infomation")
     }
     $('#sendsmit').click(function(){
       ret();
       if(ret()==-1){
         $('.bgg').show()
-        $(modal_ct).show("slow")
+        $(modal_ct).toggleClass("shows")
         $(span).text("Comptele send messenger")
         var check=ret()
         for(var h=0;h < smit.length-1;h++){
