@@ -79,7 +79,6 @@
 }
 div.tt{
     display: flex;
-    
     height: 600px;
     background:white;
     justify-content:center;
@@ -128,26 +127,25 @@ div.tt{
 }
 .contact{
     position:relative;
-    width: 305px;
+    width: 605px;
     height: 455px;
-    margin-left: 230px;
-    margin-top: 70px;
-    
-    
+    margin-left: 50px;
+    margin-top: 65px;
 }
 .contact .contacts{
     position: absolute;
+    top: 0;
+    left: 30%;
     width: 300px;
     height: 450px;
     background: white;
     overflow: hidden;
     border-radius: 20px;
     border: 2px solid ;
-    transform:translateX(0px) translateY(calc(30px* var(--i))) rotate(40deg) skew(-20deg,-10deg) scale(0.6);
+    transform:translateX(-50px) translateY(calc(30px* var(--i))) rotate(40deg) skew(-20deg,-10deg) scale(0.6);
     transition: 0.5s;
-    z-index: calc(-1 *var(--i));
+    z-index: calc(-1 *var(--i))
 }
-
 .contacts .cire{
     position: absolute;
     top: 40px;

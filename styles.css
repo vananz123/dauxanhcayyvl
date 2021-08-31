@@ -39,10 +39,10 @@ ul.nav_list li a{
 }
 ul.nav_list li a::after{
     content: '';
+    position: absolute;
     background: blue;
     width: 0;
     height: 3px;
-    position: absolute;
     left: 0;
     bottom: 0;
     transition: width 0.5s;
@@ -52,6 +52,14 @@ ul.nav_list li a:hover::after{
 }
 ul.nav_list li a:hover{
     color: #EE0000;
+}
+.nav_list li a .title{
+    text-transform: capitalize;
+}
+.logo{
+    width: 45px;
+    margin-top: -5px;
+    cursor: pointer;
 }
 .gotop {
     position: fixed;

@@ -131,6 +131,7 @@ div.sdt > div{
 }
 .list #list_{
     display: flex;
+    flex-wrap: wrap;
     justify-items: center;
     justify-content: center;
 }
