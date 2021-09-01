@@ -1,6 +1,6 @@
 
 body{
-    background-image: url(none);
+    background-image: url("https://c.pxhere.com/photos/e3/78/mug_coffee_cup_drink-98978.jpg!d");
     background-repeat: no-repeat;
     background-size: 100%;
     background-attachment: fixed;
@@ -16,11 +16,15 @@ div.vl{
 }
 #vl1 > div{
     display: block;
-    margin-left: 45%;
+    margin:0 auto 0;
 }
 div.orderonl{
     text-align: center;
     align-items: center;
+}
+div.orderonl > img{
+    font-size: 10px;
+    width:30em;
 }
 .chuaa{
     position: relative;
@@ -45,7 +49,7 @@ div.orderonl{
     text-align: center;
  }
  .item h5{
-     text-align: center;
+    text-align: center;
  }
 
  .foot{
@@ -92,22 +96,22 @@ div.orderonl{
 div.dev{
     display: flex;
     position: relative;
-   
     justify-content:space-around;
     /* background-color:#F8F8FF; */
     background: blue;
     height: 650px;
     padding-top: 50px;
     
-    
 }
-.dev .info{
-    margin-left: 200px;
-    padding-top: 100px
+div.dev .info{
+    font-size: 16px;
+    margin-left: 12.5em;
+    padding-top: 6.25em;
 }
 div.devs img {
-    width: 550px;
-    height: 500px;
+    font-size: 10px;
+    width: 55em;
+    height: 55em;
 }
 div.sdt{
     display: flex;
@@ -132,9 +136,10 @@ div.sdt > div{
     justify-content: center;
 }
 #list_ .list_s{
-    margin-left: 30px;
-    width: 300px;
-    height: 450px;
+    font-size: 16px;
+    margin-left: 1.875em;
+    width: 18.75em;
+    height: 28.125em;
     background: #FFFFFF;
     border-radius: 15px;
     overflow: hidden;
@@ -146,43 +151,47 @@ div.sdt > div{
     
 }
 div.deal_list{
+    font-size: 16px;
     position: relative;
     top: 10px;
     left: 46.5%;
     transform: translateX(-50px);
-    width: 120px;
-    height: 45px;
+    width: 7.5em;
+    height: 2.8125em;
     border-radius: 20px;
     background-color:tomato;
     overflow: hidden;
 }
 #list_ .list_s > p{
-    padding-top: 20px;
+    font-size: 16px;
+    padding-top: 1.25em;
 }
 .list_s .deal_list .deal_list0{
+    font-size: 16px;
     position:absolute;
     top: 0;
     left: 0;
     width: 0px;
-    height: 45px;
+    height: 2.8125em;
     overflow: hidden;
     transition: width 1.2s;
 }
 .list_s .deal_list .deal_list0 > p{
+    font-size: 16px;
     position:absolute;
     top: 0;
     left: 0;
-    width: 120px;
-    height: 45px;
+    width: 7.5em;
+    height: 2.8125em;
     padding-top: 10px;
 }
 .list_s .deal_list .deal_list1{
+    font-size: 16px;
     position:absolute;
     top: 0;
     left: 0;
-    width: 120px;
-    height: 45px;
-    
+    width: 7.5em;
+    height: 2.8125em;
     padding-top: 10px;
 }
 .footerd > div{
@@ -213,5 +222,111 @@ div.deal_list{
     
     
 }
-
-
+@media only screen and (max-width: 500px) {
+    img#logo{
+        font-size:4px;
+        top:10%;
+    }    
+    div.space{
+        height: 130px;
+    }
+    nav.navv{
+        display: none;
+    }
+    .slider .sliders{
+        font-size: 4px;
+        height: 400px;
+        transform: translate(-50%,250px);
+    }
+    .slider .sliders .tt img{
+        font-size: 4px;
+        height: 400px;
+    }
+    div.dot{
+        margin:190px auto 0;
+    }
+    div.devs img{
+        font-size: 4px;
+    }
+    div.headerr .navbar{
+        display: block;
+    }
+    .caption_left .caption_{
+        top: 0;
+        left: 0;
+        color: #F8F8FF;
+    }
+    .caption_right .caption_{
+        top: 110px;
+        right: 0;
+        text-align: end;
+        color: #F8F8FF;
+    }
+    div.orderonl > img{
+        font-size: 4px;
+    }
+    .chuaa{
+        height: 410px;
+    }
+    .chuaa .rr{
+        top: 10px;
+        width: 400px;
+    }
+    div.dev{
+        flex-wrap: wrap;
+        height: 500px;
+        padding-top: 0;
+        background:#F8F8FF;
+    }
+    
+    div.dev .info{
+        margin-left:10px;
+        margin-top: -60px;
+    }
+    div.dev .info > h2{
+        font-size: 25px;
+    }
+    #list_ .list_s{
+        font-size: 10px;
+        margin-top: 13px;
+    }
+    .nguoidung{
+        height: 50px;
+    }
+    .diemso .cup{
+        margin: 10px;
+        text-align: center;
+    }
+    .cup{
+        font-size: 20px;
+    }
+    .cup p{
+        font-size: 15px;
+    }
+    div.r{
+        display: none;
+    }
+    div.space_img{
+        width: 100%;
+        height: 300px;
+    }
+    div.tt{
+        height: 420px;
+    }
+    .tt .contact{
+        display: none;
+    }
+    .tt .send{
+        font-size: 12px;
+    }
+    .tt .send form input{
+        font-size: 12px;
+    }
+    #sendmes{
+        font-size: 12px;
+    }
+    .modal_ct .modal_box{
+        width: 350px;
+        height: 200px;
+    }
+}

@@ -86,9 +86,10 @@ div.tt{
 
 }
 .tt .send{
-    margin-top: 40px;
-    width: 500px;
-    height: 500px;
+    font-size: 16px;
+    margin-top: 2.5em;
+    width: 31.25em;
+    height:31.25em;
     background: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 20px;
@@ -102,8 +103,9 @@ div.tt{
     text-align: center;
 }
 .send form input{
-    width: 420px;
-    height: 50px;
+    font-size: 16px;
+    width: 26.25em;
+    height: 3.125em;
     margin-bottom: 20px;
     border: 1px solid black;
     outline: none;
@@ -111,17 +113,19 @@ div.tt{
     
 }
 #sendsmit{
+    font-size: 16px;
     display:block;
-    width: 100px;
-    height: 50px;
+    width: 6.25em;
+    height: 3.125em;
     margin-left:40px;
     background: red;
     border: none;
     
 }
 #sendmes{
-    width: 420px;
-    height: 70px;
+    font-size: 16px;
+    width: 26.25em;
+    height: 4.375em;
     border: 1px solid black;
     outline: none;
 }

@@ -12,6 +12,8 @@
       <link rel="stylesheet" href="hoverr.css"/>
       <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
       <link rel="stylesheet" href="owlcarousel//assets/owl.theme.default.min.css">
+      <link rel="stylesheet" href="media.css" />
+      <link rel="stylesheet" href="taskbar.css"/>
       <script src="scripts.js"></script>
       <script src="owlcarousel/owl.carousel.min.js"></script>
 
@@ -69,25 +71,26 @@
             <a href="sign.html" class="sgin" target="_blank"><span>sign in<br> &sgin up</span></a>
           </div>
         </nav>
+        <div class="navbar">
+          <div class="btn">
+            <span class="fas fa-bars"></span>
+          </div>
+          <div class="taskbar">
+            <div class="title">
+              <span>The coffee</span>
+            </div>
+            <ul class="task-item">
+              <li><a href="#">Home</a></li>
+              <li><a href="">Meun</a></li>
+              <li><a href="">Order</a></li>
+              <li><a href="">Sign Up</a></li>
+              <li><a href="">Sign In</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
       <!-- onclick="window.location='sign.html'" -->
-      <!-- <section>
-        <div class="btn">
-          <span class="fas fa-bars"></span>
-        </div>
-        <div class="taskbar">
-          <div class="title">
-            <span>The coffee</span>
-          </div>
-          <ul class="task-item">
-            <li><a href="#">Home</a></li>
-            <li><a href="">Meun</a></li>
-            <li><a href="">Order</a></li>
-            <li><a href="">Sign Up</a></li>
-            <li><a href="">Sign In</a></li>
-          </ul>
-        </div>
-      </section> -->
+
       <div class="space"></div>
       <section>
         <div class="slider">
@@ -147,9 +150,9 @@
           </div>
           <br>
           <div class="orderonl">
-            <img style="width: 300px;" src="img/order_online.png">
-            <img style="width: 300px;" src="img/order.png" >
-            <img style="width: 300px;" src="img/1532688.png">
+            <img  src="img/order_online.png">
+            <img  src="img/order.png" >
+            <img  src="img/1532688.png">
           </div>
         </div>
       </section>
@@ -227,16 +230,18 @@
         </div>
       </section>
       <section>
-        <div class="r">
-          <div class="i">
-            <div class="content">
-              <span>Coffee</span><br>
-              <span>$10</span>
+        <div class="space_img">
+          <div class="r">
+            <div class="i">
+              <div class="content">
+                <span>Coffee</span><br>
+                <span>$10</span>
+              </div>
             </div>
+            <div class="ii"></div>
+            <div class="iii"></div>
+            <div class="iiii"></div>
           </div>
-          <div class="ii"></div>
-          <div class="iii"></div>
-          <div class="iiii"></div>
         </div>
       </section>
       <footer>
@@ -334,7 +339,7 @@
               <div>8.00-20.00</div>
               <div>9.00-12.00</div>
           </div>
-          <div class="foots">
+          <!-- <div class="foots">
               <div style="font-size: 35px;">Address</div>
               <div class="infomation">
                   <div class="infomations">
@@ -355,10 +360,10 @@
                       <a href="#" class="fab fa-youtube" id="youtubes"></a>
                   </div>
               </div>
-          </div>
-          <div class="foots">
+          </div> -->
+          <!-- <div class="foots">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1499666993473!2d106.67767731460603!3d10.799823892305671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528d772c9449b%3A0x7dbaf1e77dfb181!2zMzc1IE5ndXnhu4VuIEtp4buHbSwgUGjGsOG7nW5nIDksIFBow7ogTmh14bqtbiwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1629461577241!5m2!1svi!2s" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-          </div>
+          </div> -->
         </div>
       </footer>
       <div class="gotop">
@@ -373,11 +378,12 @@
       var dot=document.querySelectorAll('.dot .dots')
       var capl=document.querySelectorAll('.caption_left .caption_')
       var capr=document.querySelectorAll('.caption_right .caption_')
-
+      var r=$('.sliders .tt').css('width')
+      r=parseInt(r.slice(0,3))
       function setact(i){
-          var r=`${i*-800}px`//800 la width cua img 
+          var m=`${i*-r}px`//800 la width cua img 
           $(slider[0]).css({
-              "margin-left":r
+              "margin-left":m
           })
           for(dots of dot){
               dots.classList.remove('act');

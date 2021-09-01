@@ -19,7 +19,7 @@ div.headerr{
 div.headerr.skit{
     height: 70px;
     position: fixed;
-    z-index: 9999;
+    z-index: 99;
 }
 div.headerr.skit .navv{
     right: 0;
@@ -39,12 +39,13 @@ div.headerr #wall{
     height: 100vh;
 }
 img#logo{
+    font-size: 10px;
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
-    width: 400px;
+    width: 40em;
 }
 nav.navv{
     position: absolute;
@@ -181,24 +182,28 @@ div.ss{
     background: linear-gradient(black,white);
 }
 .slider .sliders{
+    font-size: 10px;
     display: flex;
     overflow: hidden;
     margin-left: 50%;
     transform: translate(-50%,50px);
     border-radius: 10px;
+    width: 80em;
 }
 .slider .sliders .tt{
-    width: 800px;
+    /* font-size: 10px;
+    width: 80em; */
     transition: .4s ease;
 }
 .slider .sliders .tt img{
+    font-size: 10px;
     display: inline-block;
-    width: 800px;
+    width: 80em;
 }
 .dot{
     position: relative;
     display:flex;
-    margin: 0 auto 50px;
+    margin:0 auto 50px;
     width: 75px;
 }
 .dot .dots{
@@ -253,6 +258,5 @@ div.ss{
 #order:hover{
     background: #F5F5F5;
 }
-
 
 

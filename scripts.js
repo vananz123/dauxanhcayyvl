@@ -33,13 +33,13 @@ $(document).ready(function(){
     })
   }
   header_ef();
-  $(window).scroll(function(){
-    if($(window).scrollTop() >=2336){
-      $('body').css("background-image","url('https://c.pxhere.com/photos/e3/78/mug_coffee_cup_drink-98978.jpg!d')")
-    }else{
-      $('body').css("background-image","url(none)")
-    }
-  })
+  // $(window).scroll(function(){
+  //   if($(window).scrollTop() >=2336){
+  //     $('body').css("background-image","url('https://c.pxhere.com/photos/e3/78/mug_coffee_cup_drink-98978.jpg!d')")
+  //   }else{
+  //     $('body').css("background-image","url(none)")
+  //   }
+  // })
   $('div.order').click(function(){
     event.preventDefault()
   })
@@ -67,7 +67,7 @@ $(document).ready(function(){
     nav:true,
     responsive:{
         0:{
-            items:1
+            items:2
         },
         600:{
             items:2
@@ -252,6 +252,12 @@ $(document).ready(function(){
     }
   }
   nav_ani();
+  function showHeaderM(){
+    $('.navbar .btn').click(function(){
+      $('div.headerr').toggleClass("show_header_m")
+    })
+  }
+  showHeaderM();
 });
 
 
