@@ -287,8 +287,11 @@ div.deal_list{
         font-size: 25px;
     }
     #list_ .list_s{
-        font-size: 10px;
+        font-size: 8.5px;
         margin-top: 13px;
+    }
+    #list_ .list_s > p{
+        font-size: 13px;
     }
     .nguoidung{
         height: 50px;
