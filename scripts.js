@@ -23,26 +23,16 @@ $(document).ready(function(){
       scrollTop:0
     },1800)
   })
-  var x=$('#user').css("color")
-  $(window).scroll(function(){
-    if($(window).scrollTop()>20){
-      $('div.headerr').css({
-        "position": "fixed",
-        "z-index":"1",
-        "background": "rgba(0, 0 ,0,0.5)"
-      })
-
-      $('#user').css({
-        "color": "red"
-      })
-    }else{
-      $('div.headerr').css({
-        "position":"absolute",
-        "background": "none"
-      })
-      $('#user').css("color",x)
-    }
-  })
+  function header_ef(){
+    $(window).scroll(function(){
+      if($(window).scrollTop() > 10){
+        $('div.headerr').addClass("skit")
+      }else{
+        $('div.headerr').removeClass("skit")
+      }
+    })
+  }
+  header_ef();
   $(window).scroll(function(){
     if($(window).scrollTop() >=2336){
       $('body').css("background-image","url('https://c.pxhere.com/photos/e3/78/mug_coffee_cup_drink-98978.jpg!d')")
@@ -243,7 +233,25 @@ $(document).ready(function(){
     })
   }
   sendsmit();
-
+  function nav_ani(){
+    var ani =document.querySelector('.nav_list .ani.move')
+    var nis =document.querySelectorAll('.nav_list li')
+    function sett(j){
+      const m=500*1/5
+      var p=`${m}px`
+      var left=m*(j)
+      $(ani).css({
+        "width":p,
+        "left":left
+      })
+    }
+    for(let j=0;j<nis.length;j++){
+      nis[j].addEventListener('mouseover',function(){
+        sett(j)
+      })
+    }
+  }
+  nav_ani();
 });
 
 

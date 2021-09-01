@@ -20,9 +20,11 @@
     </head>
     <body>
       <div class="headerr">
+        <img src="tai_nguyen/bg/ubuntu.png" alt="food" id="logo"/>
+        <img src="tai_nguyen/bg/wall.jpg" alt="dfsdf" id="wall">
         <nav class="navv">
-          <img src="img/Quoc-huy.png" alt="food" class="logo"/>
           <ul class="nav_list">
+            <div class="ani move"></div>
             <li>
               <a href="#">
                 <i class="fas fa-home"></i>
@@ -36,19 +38,19 @@
               </a>
             </li>
             <li>
-              <a href="trang1.html">
+              <a href="#chuaa">
                 <i class="fas fa-list-alt"></i>
                 <span class="title">meun</span>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="trang1.html" target="_blank">
                 <i class="fas fa-shopping-basket"></i>
                 <span class="title">order</span>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#contact">
                 <i class="fas fa-question-circle"></i>
                 <span class="title">help</span>
               </a>
@@ -62,13 +64,13 @@
               </div>
             </div>
           </div>
-          <div class="shopping_">
-            <i id="shopping" class="fas fa-shopping-cart"></i>
-            <i id="user" class="fas fa-user-circle" onclick="window.location='sign.html'"></i>
-            <i id="sign" onclick="window.location='sign.html'">Sign In</i>
+          <div class="shopping">
+            <a href="#" class="shoppings" target="_blank"><span class="fas fa-shopping-cart"></span></a>
+            <a href="sign.html" class="sgin" target="_blank"><span>sign in<br> &sgin up</span></a>
           </div>
         </nav>
       </div>
+      <!-- onclick="window.location='sign.html'" -->
       <!-- <section>
         <div class="btn">
           <span class="fas fa-bars"></span>
@@ -86,45 +88,55 @@
           </ul>
         </div>
       </section> -->
+      <div class="space"></div>
       <section>
-        <div class="cont">
-          <div class="conts act">
-            <img src="https://c.pxhere.com/photos/1c/5b/coffee_coffee_beans_afternoon_tea-1087030.jpg!d">
-
+        <div class="slider">
+          
+          <div class="sliders">
+            <div class="tt"><img src="https://c.pxhere.com/photos/1c/5b/coffee_coffee_beans_afternoon_tea-1087030.jpg!d"/></div>
+            <div class="tt"><img src="https://c.pxhere.com/photos/15/5a/coffee_Cup_Table_wood-1617499.jpg!d"/></div>
+            <div class="tt"><img src="https://c.pxhere.com/photos/a1/3c/Beverage_Cafe_Cappuccino_Chocolate_cocoa_counter_cozy_Cream-1623286.jpg!d"/></div>
+           
           </div>
-          <div class="conts">
-            <img src="https://c.pxhere.com/photos/15/5a/coffee_Cup_Table_wood-1617499.jpg!d" >
+          <div class="dot">
+            <div class="dots act"></div>
+            <div class="dots"></div>
+            <div class="dots"></div>
+           
           </div>
-          <div class="conts">
-            <img src="https://c.pxhere.com/photos/a1/3c/Beverage_Cafe_Cappuccino_Chocolate_cocoa_counter_cozy_Cream-1623286.jpg!d">
-
-            
+          <div class="caption_left">
+            <div  class="caption_ act">
+              <h4>COFFEE SAMPA</h4>
+              <h2>Coffe drink gently <br>in the morning</h2>
+              
+            </div>
+            <div  class="caption_">
+              <h4>COFFEE PANDA</h4>
+              <h2>Coffe drink gently <br>in the morning</h2>
+              
+            </div>
+            <div  class="caption_">
+              <h4>COFFEE HOT</h4>
+              <h2>Coffe drink gently <br>in the morning</h2>
+              
+            </div>
+          </div> 
+          <div class="caption_right">
+            <div  class="caption_ act">
+              <h2>Coffe drink gently <br>in the morning<br>water watererr</h2>
+              
+            </div>
+            <div  class="caption_">       
+              <h2>Coffe drink gently <br>in the morning<br>dau xanh cay</h2>
+              
+            </div>
+            <div  class="caption_">
+              <h2>Coffe drink gently <br>in the morning<br>ma no cayyy</h2>
+              
+            </div>
           </div>
-        </div>
-        <div class="caption">
-          <div  class="caption_ act">
-            <h4>COFFEE SAMPA</h4>
-            <h2>Coffe drink gently in the morning</h2>
-            
-          </div>
-          <div  class="caption_">
-            <h4>COFFEE PANDA</h4>
-            <h2>Coffe drink gently in the morning</h2>
-            
-          </div>
-          <div  class="caption_">
-            <h4>COFFEE HOT</h4>
-            <h2>Coffe drink gently in the morning</h2>
-            
-          </div>
-        </div>
-        <div class="dot">
-            <span class="dots act"></span>
-            <span class="dots"></span>
-            <span class="dots"></span>
         </div>
       </section>
-
       <section>
         <div class="vl">
           <div id="vl1">
@@ -357,29 +369,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
-      var anh=document.querySelectorAll('.cont .conts')
-      var nut=document.querySelectorAll('.dot .dots')
-      var cap=document.querySelectorAll('.caption .caption_')
-      var order=document.querySelectorAll('.caption .caption_ .order')
-          function setact(i){
-              for(cont of anh){
-                  cont.classList.remove('act');
-                  anh[i].classList.add('act');
-              }
-              for(dot of nut){
-                  dot.classList.remove('act');
-                  nut[i].classList.add('act');
-              }
-              for(caps of cap){
-                caps.classList.remove('act')
-                cap[i].classList.add('act')
-              }
+      var slider=document.querySelectorAll('.sliders .tt')
+      var dot=document.querySelectorAll('.dot .dots')
+      var capl=document.querySelectorAll('.caption_left .caption_')
+      var capr=document.querySelectorAll('.caption_right .caption_')
+
+      function setact(i){
+          var r=`${i*-800}px`//800 la width cua img 
+          $(slider[0]).css({
+              "margin-left":r
+          })
+          for(dots of dot){
+              dots.classList.remove('act');
+              dot[i].classList.add('act');
           }
-          for(let j=0;j<nut.length;j++){
-              nut[j].addEventListener('click',function(){
-                  setact(j)
-              })
+          for(caps of capl){
+            caps.classList.remove('act')
+            capl[i].classList.add('act')
           }
-          
+          for(caps of capr){
+            caps.classList.remove('act')
+            capr[i].classList.add('act')
+          }
+      }
+      for(let i=0;i<dot.length;i++){
+        dot[i].addEventListener('click',function(){
+            setact(i)
+        })
+      }
   </script>
 </html>

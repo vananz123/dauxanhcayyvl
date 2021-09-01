@@ -4,62 +4,151 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+div.space{
+    width: 100%;
+    height: 200px;
+    background: #000000;
+}
 div.headerr{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    transition: height 1s;
+}
+div.headerr.skit{
+    height: 70px;
+    position: fixed;
+    z-index: 9999;
+}
+div.headerr.skit .navv{
+    right: 0;
+}
+div.headerr.skit #logo{
+    top:10px;
+    left: 10px;
+    width: 50px;
+    transform: translateX(0);
+    transition: all 1s;
+}
+div.headerr #wall{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 70px;
-    padding: 0 10%;
+    height: 100vh;
+}
+img#logo{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1;
-    transition: .4s;
+    width: 400px;
 }
 nav.navv{
+    position: absolute;
+    top:10px;
+    right: -80%;
     display: flex;
-    align-items:center;
-    justify-content:center;
-}
-.logo{
-    width: 45px;
-    margin-top: -5px;
-    cursor: pointer;
+    justify-content:flex-end;
+    transition:right 1s;
 }
 .nav_list{
-    padding: 28px 0px;
+    position: relative;
+    margin-top: 10px;
+    padding: 5px 0;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 20px;
+    height: 35px;
+    list-style-type: none;
+    width: 500px;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.705);
 }
 ul.nav_list li{
-    display: inline-block;
-    margin: 0 15px;
+   
+    width: 100px;
 }
 ul.nav_list li a{
-    text-decoration: none;
-    color: #fff;
-    padding: 5px 0;
     position: relative;
-}
-ul.nav_list li a::after{
-    content: '';
-    position: absolute;
-    background: blue;
-    width: 0;
-    height: 3px;
-    left: 0;
-    bottom: 0;
-    transition: width 0.5s;
-}
-ul.nav_list li a:hover::after{
-    width: 100%;
-}
-ul.nav_list li a:hover{
-    color: #EE0000;
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 0;
+    z-index: 1;
 }
 .nav_list li a .title{
     text-transform: capitalize;
 }
-.logo{
-    width: 45px;
-    margin-top: -5px;
+.nav_list .ani{
+    position: absolute;
+    top: 0;
+    width:100px;
+    left:0;
+    height: 100%;
+    background: #BB0000;
+    border-radius: 20px;
+    z-index: 0;
+    transition: left .4s ease-in-out;
+}
+div.ss{
+    position: relative;
+    width: 310px;
+    height:51px;
+    background: none;
+    align-items: center;
+    text-align: center;
+    z-index: 999;
+}
+.ss_{
+    position: absolute;
+    top:0;
+    left:10px;
+    width: 50px;
+    height: 50px;
+    background: #FFF;
+    border-radius: 60px;
+    overflow: hidden;
+    transition: .4s;
+}
+.ss_ span{
+    position: absolute;
+    padding-top: 17px;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
     cursor: pointer;
+}
+.ss_ input{
+    position: absolute;
+    top: 0;
+    left: 50px;
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+}
+.ss_.act{
+    width: 300px;
+}
+.shopping{
+    width: 150px;
+    height: 51px;
+}
+.shopping .shoppings span{
+    font-size: 40px;
+    
+}
+.shopping .sgin span{
+    display: inline-block;
+    text-align:start;
+    text-transform: capitalize;
+    
 }
 .gotop {
     position: fixed;
@@ -84,20 +173,37 @@ ul.nav_list li a:hover{
 .gotop.show{
     bottom: 25px;
 }
-
 /* img anh nen */
+.slider{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(black,white);
+}
+.slider .sliders{
+    display: flex;
+    overflow: hidden;
+    margin-left: 50%;
+    transform: translate(-50%,50px);
+    border-radius: 10px;
+}
+.slider .sliders .tt{
+    width: 800px;
+    transition: .4s ease;
+}
+.slider .sliders .tt img{
+    display: inline-block;
+    width: 800px;
+}
 .dot{
     position: relative;
-    display: flex;
-    width: 100px;
-    left: 48%;
-    top: 100vh;
-    z-index: 99;
+    display:flex;
+    margin: 0 auto 50px;
+    width: 75px;
 }
 .dot .dots{
     width: 20px;
     height: 20px;
-    
     border-radius: 50%;
     border: 2px solid gold;
     cursor: pointer;
@@ -106,46 +212,26 @@ ul.nav_list li a:hover{
 .dots.act{
     background: white;
 }
-div.cont{
-            
-    top: 0;
-    left: 0;
-}
-.cont .conts{
+.caption_left .caption_{
     position: absolute;
-    width: 100%;
-    transition: .4s ease;
-    opacity: 0;
-    clip-path: circle(1000px at center);
-}
-div.conts img{
-    width: 100%;
-}
-.cont .conts.act{
-    opacity: 1;
-    animation-name:ex;
-    animation-duration: 1.2s;
-}
-@keyframes ex{
-    from{clip-path:circle(20px at center);}
-    to{clip-path: circle(1000px at center);}
-}
-.caption .caption_{
-    position: absolute;
-    top: 50%;
-    left: 200px;
+    top: 30%;
+    left: 5%;
     transition: .3s;
     opacity: 0;
     
 }
-.caption .caption_.act{
-    opacity: 1;
-    animation-name: caption_cap;
-    animation-duration: 1s;
+.caption_right .caption_{
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    transition: .3s;
+    opacity: 0;
 }
-@keyframes caption_cap{
-    from{transform: translate(-700px,0px);}
-    to{transform: translate(0,0);}
+.caption_left .caption_.act{
+    opacity: 1;
+}
+.caption_right .caption_.act{
+    opacity: 1;
 }
 /* order caption */
 #order{
@@ -167,20 +253,6 @@ div.conts img{
 #order:hover{
     background: #F5F5F5;
 }
-@media only screen and (max-width: 600px) {
-    ul.nav_list{
-        display: none;
-    }
-    div.ss{
-        display: none;
-    }
-    #sign{
-        display: none;
-    }
-    nav.navv img{
-        margin-left: 50px;
-        margin-top: 10px;
-    }
-}
+
 
 
