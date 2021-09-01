@@ -270,7 +270,7 @@ div.deal_list{
     }
     .chuaa .rr{
         top: 10px;
-        width: 400px;
+        width: 350px;
     }
     div.dev{
         flex-wrap: wrap;
@@ -331,5 +331,8 @@ div.deal_list{
     .modal_ct .modal_box{
         width: 350px;
         height: 200px;
+    }
+    div.foot{
+        display: none;
     }
 }
