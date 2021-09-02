@@ -64,7 +64,6 @@ $(document).ready(function(){
   $(".owl-carousel").owlCarousel({
     loop:true,
     margin:10,
-    nav:true,
     responsive:{
         0:{
             items:2
@@ -258,6 +257,47 @@ $(document).ready(function(){
     })
   }
   showHeaderM();
+  function slider_mobile(){
+    var slider=document.querySelectorAll('.sliders .tt')
+    var dot=document.querySelectorAll('.dot .dots')
+    var capl=document.querySelectorAll('.caption_left .caption_')
+    var capr=document.querySelectorAll('.caption_right .caption_')
+    var width=$(window).width()
+    if(width <600){
+      $('.slider .sliders').css({
+        "width":width,
+        "height":width
+      })
+      $('.slider .sliders .tt img').css({
+        "width":width,
+        "height":width
+      })
+      function setact(i){
+        var m=`${i*-width}px`// width cua man hinh
+        $(slider[0]).css({
+            "margin-left":m
+        })
+        for(dots of dot){
+            dots.classList.remove('act');
+            dot[i].classList.add('act');
+        }
+        for(caps of capl){
+          caps.classList.remove('act')
+          capl[i].classList.add('act')
+        }
+        for(caps of capr){
+          caps.classList.remove('act')
+          capr[i].classList.add('act')
+        }
+      }
+      for(let i=0;i<dot.length;i++){
+        dot[i].addEventListener('click',function(){
+            setact(i)
+        })
+      }
+    }
+  }
+  slider_mobile();
 });
 
 
