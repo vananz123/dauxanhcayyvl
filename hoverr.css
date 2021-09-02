@@ -95,9 +95,9 @@ div.tt{
     border-radius: 20px;
 }
 .tt .send h5{
-    font-size:larger;
-    margin-top: 70px;
-    padding: 10px 40px;
+    font-size:25px;
+    margin-top: 2.83em;
+    padding: 0.4em 1.6em;
 }
 .send form{
     text-align: center;
@@ -117,7 +117,7 @@ div.tt{
     display:block;
     width: 6.25em;
     height: 3.125em;
-    margin-left:40px;
+    margin-left:2.5em;
     background: red;
     border: none;
     
@@ -131,31 +131,31 @@ div.tt{
 }
 .contact{
     position:relative;
-    width: 605px;
-    height: 455px;
-    margin-left: 50px;
+    width: 500px;
+    height: 435px;
+    margin-left: 20px;
     margin-top: 65px;
 }
 .contact .contacts{
     position: absolute;
     top: 0;
-    left: 30%;
-    width: 300px;
-    height: 450px;
+    left: 25%;
+    width: 250px;
+    height: 400px;
     background: white;
     overflow: hidden;
     border-radius: 20px;
     border: 2px solid ;
     transform:translateX(-50px) translateY(calc(30px* var(--i))) rotate(40deg) skew(-20deg,-10deg) scale(0.6);
     transition: 0.5s;
-    z-index: calc(-1 *var(--i))
+    z-index: calc(-1 *var(--i));
 }
 .contacts .cire{
     position: absolute;
     top: 40px;
     left: 50%;
     transform: translate(-50%);
-    clip-path: circle(300px);
+    clip-path: circle(250px);
     background: blue;
 }
 
@@ -163,13 +163,13 @@ div.tt{
     position: absolute;
     top:-100px;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-37%);
     width: 600px;
 }
 .contacts .content{
     position: relative;
-    margin: 300px 20px;
-    line-height: 25px;
+    margin: 250px 20px;
+    line-height: 20px;
 }
 
 #click_{
@@ -178,6 +178,6 @@ div.tt{
     bottom: 30px;
 }
 .contact:hover .contacts{
-    transform:translateY(0px) translateX(calc(150px + calc(350px *var(--i)))) rotate(0deg) skew(0deg,0deg) scale(1);
+    transform:translateY(15px) translateX(calc(150px + calc(280px *var(--i)))) rotate(0deg) skew(0deg,0deg) scale(1);
     opacity: 1;
 }

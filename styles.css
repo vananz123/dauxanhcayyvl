@@ -14,22 +14,26 @@ div.headerr{
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    transition: height 1s;
+    transition: height 0.5s;
 }
 div.headerr.skit{
-    height: 70px;
     position: fixed;
-    z-index: 99;
+    height: 100vh;
+    z-index: 9;
 }
 div.headerr.skit .navv{
-    right: 0;
+    right: -150%;
 }
 div.headerr.skit #logo{
-    top:10px;
+    /* top:10px;
     left: 10px;
-    width: 50px;
-    transform: translateX(0);
-    transition: all 1s;
+    width: 50px; */
+    top: 15%;
+    left: 50%;
+    width: 400px;
+    transform: translateX(-50%);
+    /* transform: translateX(0); */
+    transition: all 0.5s;
 }
 div.headerr #wall{
     position: absolute;
@@ -41,16 +45,18 @@ div.headerr #wall{
 img#logo{
     font-size: 10px;
     position: absolute;
-    top: 30%;
+    top: 15%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
     width: 40em;
+    opacity: 0.5;
+    border-radius: 50%;
 }
 nav.navv{
     position: absolute;
     top:10px;
-    right: -80%;
+    right: -150%;
     display: flex;
     justify-content:flex-end;
     transition:right 1s;
@@ -70,9 +76,59 @@ nav.navv{
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.705);
 }
 ul.nav_list li{
-   
+    position: relative;
     width: 100px;
 }
+ul.nav_list li .list_hide_meun{
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    width: 150px;
+    background-color: #fff;
+    transform: translate(-50%,5px);
+    border-radius: 10px;
+}
+ul.nav_list li .list_hide_meun > div:nth-child(1){
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    left: 50%;
+    background: #fff;
+    transform: translate(-50%,-6px) rotate(48deg);
+}
+ul.nav_list li .list_hide_meun > div{
+    margin-top: 0;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+ul.nav_list li .list_hide_profile{
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    width: 150px;
+    background-color: #fff;
+    transform: translate(-50%,5px);
+    border-radius: 10px;
+}
+ul.nav_list li .list_hide_profile > div:nth-child(1){
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    left: 50%;
+    background: #fff;
+    transform: translate(-50%,-6px) rotate(48deg);
+}
+ul.nav_list li .list_hide_profile > div{
+    margin-top: 0;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
 ul.nav_list li a{
     position: relative;
     text-decoration: none;
@@ -223,7 +279,9 @@ div.ss{
     left: 5%;
     transition: .3s;
     opacity: 0;
-    
+}
+.caption_left .caption_ > h4{
+    color: #ff3000;
 }
 .caption_right .caption_{
     position: absolute;

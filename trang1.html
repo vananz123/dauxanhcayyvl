@@ -206,7 +206,7 @@
         }
         .ef{
             position: fixed;
-            top: 100vh;
+            top: -50vh;
             left: 30%;
             background-color: aqua;
             width: 200px;
@@ -214,6 +214,7 @@
             overflow: hidden;
             border-radius: 20px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            /* overflow: hidden; */
         }
         .ef .form{
             width: 600px;
@@ -499,7 +500,7 @@
     
             $('#close').click(function(){
                 $('.ef').animate({
-                    "top":"100vh"
+                    "top":"-90vh"
                 },200).animate({
                     
                     "width":"200px",

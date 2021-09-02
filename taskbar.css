@@ -3,15 +3,18 @@ div.headerr .navbar{
     display: none;
 }
 .navbar .btn{
-    font-size: 30px;
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 7px;
+    right: 7px;
     z-index: 100;
+}
+.navbar .btn span{
+    font-size: 30px;
+    margin-left: 10px;
 }
 .navbar .taskbar{
     position: absolute;
-    top: 300px;
+    top: 200px;
     left: 50%;
     transform: translate(-50%);
     z-index: 90;
@@ -19,14 +22,17 @@ div.headerr .navbar{
 ul.task-item li{
     list-style-type: none;
     text-align: center;
+    margin-top: 15px;
 }
 ul.task-item li a{
-    
+    font-size: 20px;
     text-decoration:none;
     margin-top: 30px;
+    color: white;
+    text-transform: capitalize;
 }
 .taskbar .title{
-    font-size: 30px;
+    font-size: 35px;
     color: red;
 }
 div.headerr.show_header_m{
