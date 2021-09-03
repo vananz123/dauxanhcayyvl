@@ -1,14 +1,4 @@
 
-.r{
-    position: relative;
-    width: 500px;
-    height: 500px;
-    top: 200px;
-    left: 32%;
-    top: 0;
-    padding-bottom: 0px;
-    text-align: center;
-}
 
 div.tt{
     display: flex;

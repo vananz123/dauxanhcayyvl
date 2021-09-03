@@ -18,17 +18,10 @@ $(document).ready(function(){
       $('.gotop').removeClass("show")
     }
   })
-  $('.gotop').click(function(){
-    $('html,body').animate({
-      scrollTop:0
-    },1800)
-  })
-  // $(window).scroll(function(){
-  //   if($(window).scrollTop() >=2336){
-  //     $('body').css("background-image","url('https://c.pxhere.com/photos/e3/78/mug_coffee_cup_drink-98978.jpg!d')")
-  //   }else{
-  //     $('body').css("background-image","url(none)")
-  //   }
+  // $('.gotop').click(function(){
+  //   $('html,body').animate({
+  //     scrollTop:0
+  //   },1800)
   // })
   $('div.order').click(function(){
     event.preventDefault()
@@ -40,13 +33,12 @@ $(document).ready(function(){
     $(aa).on({
       mouseenter: function() {
           $(this).css({
-              "border-radius":"40px",
-              "background-color": "gold",
+              "transform":"scale(0.8)"
           })
       },
       mouseleave: function() {
           $(this).css({
-              "background-color":"white",
+            "transform":"scale(1)"
           })
       }
   })
@@ -97,7 +89,7 @@ $(document).ready(function(){
   }
   
   $(window).scroll(function(){
-    if($(window).scrollTop() >=2502 && $(window).scrollTop()<2990){
+    if($(window).scrollTop() >=3902 && $(window).scrollTop()<4290){
       animateNumber(4000, 1000, 0, function (number) {
         const formattedNumber = number.toLocaleString()
         $('#cups').text(formattedNumber+"+")
@@ -225,20 +217,15 @@ $(document).ready(function(){
         $('div.headerr').removeClass("skit")
       }
     })
-    // $('.navbar .btn').click(function(){
-    //   $(heightheader).css({
-    //     "height":"100vh"
-    //   })
-    //   $('div.headerr').removeClass("skit")
-    // })
   }
   showHeaderM();
 
   function nav_ani(){
     var ani =document.querySelector('.nav_list .ani.move')
     var nis =document.querySelectorAll('.nav_list > li')
+    var widthNav_list=$('.nav_list').width()
     function sett(j){
-      const m=500*1/5
+      const m=widthNav_list*1/5
       var kt;
       var p=`${m}px`
       var left=m*(j)

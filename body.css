@@ -10,16 +10,16 @@ body{
     background-position: center;
 }
 div.vl{
-    background: #fff;
     width: 100%;
 }
 #vl1 h2{
+    color: #FFFFFF;
     text-align: center;
     font-size: 38px;
 }
 #vl1 > div{
     display: block;
-    margin:0 auto 0;
+    margin:0 auto 0px;
 }
 div.orderonl{
     text-align: center;
@@ -28,6 +28,7 @@ div.orderonl{
 div.orderonl > img{
     font-size: 10px;
     width:30em;
+    transition: all 0.5s;
 }
 .rr{
     width: 100%;
