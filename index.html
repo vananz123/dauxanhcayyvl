@@ -40,9 +40,9 @@
               </a>
               <div class="list_hide_profile">
                 <div class="list_hide_profile_c"></div>
-                <div class="list_hide_profile_c">your account</div>
-                <div class="list_hide_profile_c">language</div>
-                <div class="list_hide_profile_c">log out</div>
+                <div class="list_hide_profile_c"><a href="javascripts:;">your account</a></div>
+                <div class="list_hide_profile_c"><a href="javascripts:;">language</a></div>
+                <div class="list_hide_profile_c"><a href="javascripts:;">log out</a></div>
               </div>
             </li>
             <li>
@@ -52,17 +52,25 @@
               </a>
               <div class="list_hide_meun">
                 <div class="list_hide_meun_c"></div>
-                <div class="list_hide_meun_c">coffee</div>
-                <div class="list_hide_meun_c">tea</div>
-                <div class="list_hide_meun_c">cake</div>
-                <div class="list_hide_meun_c">other</div>
+                <div class="list_hide_meun_c"><a href="">coffee</a></div>
+                <div class="list_hide_meun_c"><a href="">tea</a></div>
+                <div class="list_hide_meun_c"><a href="">cake</a></div>
+                <div class="list_hide_meun_c"><a href="">other</a></div>
               </div>
             </li>
             <li>
               <a href="trang1.html" target="_blank">
-                <i class="fas fa-shopping-basket"></i>
-                <span class="title">order</span>
+                <i class="fas fa-newspaper"></i>
+                <span class="title">news</span>
               </a>
+              <div class="list_hide_news">
+                <div class="list_hide_news_c"></div>
+                <div class="list_hide_news_c"><a href="#blog">blog</a></div>
+                <div class="list_hide_news_c"><a href="#partList">new product</a></div>
+                <div class="list_hide_news_c"><a href="">story coffee</a></div>
+                <div class="list_hide_news_c"><a href="">recruitment</a></div>
+                <div class="list_hide_news_c"><a href="">about us</a></div>
+              </div>
             </li>
             <li>
               <a href="#contact">
@@ -80,7 +88,7 @@
             </div>
           </div>
           <div class="shopping">
-            <a href="#" class="shoppings" target="_blank"><span class="fas fa-shopping-cart"></span></a>
+            <a href="trang1.html" class="shoppings" target="_blank"><span class="fas fa-shopping-cart"></span></a>
             <a href="sign.html" class="sgin" target="_blank"><span>sign in<br> &sgin up</span></a>
           </div>
         </nav>
@@ -125,17 +133,17 @@
           <div class="caption_left">
             <div  class="caption_ act">
               <h4>COFFEE SAMPA</h4>
-              <h2>Coffe drink gently <br>in the morning</h2>
+              <h3>Coffe drink gently <br>in the morning</h3>
               
             </div>
             <div  class="caption_">
               <h4>COFFEE PANDA</h4>
-              <h2>Coffe drink gently <br>in the morning</h2>
+              <h3>Coffe drink gently <br>in the morning</h3>
               
             </div>
             <div  class="caption_">
               <h4>COFFEE HOT</h4>
-              <h2>Coffe drink gently <br>in the morning</h2>
+              <h3>Coffe drink gently <br>in the morning</h3>
               
             </div>
           </div> 
@@ -160,7 +168,7 @@
         <div class="rr" id="menu">
           <div class="rrTitle">
             <span>menu</span>
-            <span>view all products</span>
+            <span><a href="trang1.html">view all products</a></span>
           </div>
           <br>
           <div class="owl-carousel owl-theme">
@@ -195,7 +203,7 @@
         </div>
       </section>
       <section>
-        <div class="parList">
+        <div class="parList" id="partList">
           <div class="partListTitle"><h3>new</h3></div>
           <div class="list" id="list">
             
@@ -207,12 +215,12 @@
       </section>
       
       <section class="rr2">
-        <div class="dev">
+        <div class="dev" id="blog">
           <img id="devImg" src="tai_nguyen/bg/tree-branch-plant-leaf-flower-red-1035441-pxhere.com.jpg">
           <div class="devBlog">
             <div class="devBlogTitle">
               <span>blog</span>
-              <span>xem them</span>
+              <span id="btnV">see more</span>
             </div>
             <div class="devBlogF">
               <img src="tai_nguyen/bg/Giaonhannoithanh_edited.jpg">
@@ -220,7 +228,7 @@
                 <p>news</p>
                 <p>Delivery within the city only with 15.000Đ</p>
                 <p>Không để bạn phải chờ lâu thêm nữa, Nhà chính thức mở lại dịch vụ Giao hàng tận nơi cho khu vực Hồ Chí Minh từ hôm nay. Bạn có...</p>
-                <div>Views</div>
+                <div id="btnViews">see more</div>
               </div>
             </div>
             <div class="devBlogS">
@@ -230,7 +238,7 @@
                   <p>news</p>
                   <p>Delivery within the city only with 0Đ</p>
                   <p>Không để bạn phải chờ lâu thêm nữa, Nhà chính thức mở lại dịch vụ Giao hàng tận nơi cho khu vực Hồ Chí Minh từ hôm nay. Bạn có...</p>
-                  <div>Views</div>
+                  <div id="btnViews">see more</div>
                 </div>
               </div>
             </div>
@@ -241,7 +249,7 @@
                   <p>news</p>
                   <p>Three years old birthday buy 1 get 2 free</p>
                   <p>Không để bạn phải chờ lâu thêm nữa, Nhà chính thức mở lại dịch vụ Giao hàng tận nơi cho khu vực Hồ Chí Minh từ hôm nay. Bạn có...</p>
-                  <div>Views</div>
+                  <div id="btnViews">see more</div>
                 </div>
               </div>
             </div>
@@ -270,13 +278,50 @@
           <div class="r">
             <div class="i">
               <div class="content">
-                <span>Coffee</span><br>
-                <span>$10</span>
+                <!-- <span>Coffee</span><br>
+                <span>$10</span> -->
               </div>
             </div>
-            <div class="ii"></div>
-            <div class="iii"></div>
-            <div class="iiii"></div>
+            
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="store" id="store">
+          <div class="storeContent">
+            <span>store</span>
+            <span id="btnV">see more</span>
+          </div>
+          <div class="stores">
+            <div class="storesContent">
+              <h3>THE COFFEE HOUSE SIGNATURE</h3>
+              <p>Với những nghệ nhân rang tâm huyết và đội ngũ Barista tài năng cùng những câu chuyện cà phê đầy cảm hứng, ngôi nhà Signature 19B Phạm Ngọc Thạch, Q.3, TP.HCM là không gian dành riêng cho những ai trót yêu say đắm hương vị của những hạt cà phê tuyệt hảo.</p>
+            </div>
+            <div class="storesImg">
+              <img src="tai_nguyen/bg/working-cafe-coffee-shop-coffee-people-restaurant-1224792-pxhere.com.jpg">
+            </div>
+          </div>
+          <div class="recritment">
+            <div class="recritmentTitle">
+              <span id="btnRe" class="fas fa-angle-up"></span>
+              <span>recritment</span>
+            </div>
+            <div class="recritmentContent">
+              <h3>What position do you want to apply for?</h3>
+              <span id="btnRe">office</span>
+              <span id="btnRe">client</span>
+              <p>see other jobs</p>
+            </div>
+          </div>
+          <div class="aboutUs">
+            <div class="aboutUsTitle">
+              <span id="btnAb" class="fas fa-angle-up"></span>
+              <span>about us</span>
+            </div>
+            <div class="recritmentContent">
+              <h3>What position do you want to apply for?</h3>
+              <span id="btnRe">finds</span>
+            </div>
           </div>
         </div>
       </section>
@@ -336,7 +381,6 @@
             </div>
           </div>
         </div>
-        
         <div class="modal_ct">
           <div class="bgg"></div>
           <div class="modal_box">

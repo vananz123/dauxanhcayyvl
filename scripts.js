@@ -135,49 +135,13 @@ $(document).ready(function(){
       
       $(ds_mon[j]).append('<img src='+r+'>')
       
-      $(ds_mon[j]).append('<div class="deal_list"></div>')
-      var rr=document.querySelectorAll('.list_s .deal_list')
-      $(rr[j]).append('<div class="deal_list0"><p>BEST DEAL</p></div><div class="deal_list1">BEST DEAL</div>')
-      // $(ds_mon[j]).append('<div class="deal_list1">BEST DEAL</div>')
+      $(ds_mon[j]).append('<div class="deal_list"><p>buy</p></div>')
       var price_t=`<p>${ramdomprice(4,7)}00000VND</p>`
       $(ds_mon[j]).append(price_t)
       
     }
   }
   dsmon();
-
-  var list=document.querySelectorAll('#list_ .list_s')
-  var list0=document.querySelectorAll('#list_ .list_s .deal_list .deal_list0')
-  var list1=document.querySelectorAll('#list_ .list_s .deal_list .deal_list1')
-  function hoverenter(h){
-      $(list[h]).css({
-        "transform":" translate(0,-10px)",
-        "background":"red"
-        
-      })
-      $(list0[h]).css({
-        "background":"white",
-        "width":"120px"
-      })
-  }
-  function hoverout(h){
-      $(list[h]).css({
-        "transform":" translate(0,0)",
-        "background":"#FFFFFF"
-      })
-      $(list0[h]).css({
-        "background":"#AA0000",
-        "width":"0"
-      })
-  }
-  for(let h=0;h<list.length;h++){
-      list[h].addEventListener("mouseenter",function(){
-          hoverenter(h)
-      })
-      list[h].addEventListener("mouseleave",function(){
-          hoverout(h)
-      })
-  }
   function sendsmit(){
     var modal_ct=".modal_ct .modal_box"
     var span=".modal_ct .modal_box .content span"
@@ -222,16 +186,12 @@ $(document).ready(function(){
     })
   }
   sendsmit();
+
   const widthHeaderr=65;
   function showHeaderM(){
     var heightheader=document.querySelector('div.headerr.skit')
     var headerrSkitNavv=document.querySelector('div.headerr.skit .navv')
     var headerrSkitlogo=document.querySelector('div.headerr.skit #logo')
-    function navvshow(obj1,obj2,obj3){
-      $(obj1).fadeToggle();
-      $(obj2).fadeToggle("slow");
-      $(obj3).fadeToggle(3000);
-    }
     $(window).scroll(function(){
       if($(window).scrollTop() > 5){
         $(heightheader).css({
@@ -265,9 +225,12 @@ $(document).ready(function(){
         $('div.headerr').removeClass("skit")
       }
     })
-    $('.navbar .btn').click(function(){
-      $('div.headerr').toggleClass("show_header_m")
-    })
+    // $('.navbar .btn').click(function(){
+    //   $(heightheader).css({
+    //     "height":"100vh"
+    //   })
+    //   $('div.headerr').removeClass("skit")
+    // })
   }
   showHeaderM();
 
@@ -296,10 +259,11 @@ $(document).ready(function(){
     var nis =document.querySelectorAll('.nav_list > li')
     var listProfile=document.querySelector('.nav_list li .list_hide_profile')
     var listMenu=document.querySelector('.nav_list li .list_hide_meun')
+    var listNews=document.querySelector('.nav_list li .list_hide_news')
     var heightheader=document.querySelectorAll('div.headerr.skit')
     //hàm ẩn đi list menu
     function headerrHide65(obj){
-      $(obj).css("display","none")
+      $(obj).hide()
       $(heightheader).css({
         "height":`${widthHeaderr}px`
       })
@@ -307,9 +271,9 @@ $(document).ready(function(){
     }
     //hàm hiện list menu
     function headerrShowe65(obj,height){
-      $(obj).css("display","block")
+      $(obj).show()
       $(heightheader).css({
-        "height":`${height+widthHeaderr}px`
+        "height":`${height+widthHeaderr-5}px`
       })
       $('div.headerr').addClass("skit")
     }
@@ -320,6 +284,9 @@ $(document).ready(function(){
       if(j==2){
         headerrShowe65(listMenu,$(listMenu).height())
       }
+      if(j==3){
+        headerrShowe65(listNews,$(listNews).height())
+      }
     }
     function setleave(j){
       if(j==1){
@@ -327,6 +294,9 @@ $(document).ready(function(){
       }
       if(j==2){
         headerrHide65(listMenu)
+      }
+      if(j==3){
+        headerrHide65(listNews)
       }
     }
     for(let j=0;j<nis.length;j++){
@@ -380,6 +350,19 @@ $(document).ready(function(){
     }
   }
   slider_mobile();
+  function stores(){
+    var btnRe=document.querySelector('#btnRe')
+    var btnAb=document.querySelector('#btnAb')
+    var storeRe=document.querySelector('.store .recritment')
+    var storeAs=document.querySelector('.store .aboutUs')
+    $(btnRe).click(function(){
+      $(storeRe).toggleClass("showRe")
+    })
+    $(btnAb).click(function(){
+      $(storeAs).toggleClass("showRe")
+    })
+  }
+  stores();
 });
 
 

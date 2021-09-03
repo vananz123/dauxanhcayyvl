@@ -5,78 +5,11 @@
     height: 500px;
     top: 200px;
     left: 32%;
-    background: blue;
     top: 0;
     padding-bottom: 0px;
     text-align: center;
 }
-.i{
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: white;
-    top:200px;
-    left: 190px;
-    cursor: pointer;
-    z-index: 11;
-    transition: .3s;
-    text-align: center;
-}
-.ii{
-    position:absolute;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    background: red;
-    top:220px;
-    left:210px;
-    transition: .3s;
 
-    
-}
-.iii{
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background: red;
-    top:220px;
-    left: 210px;
-    transition: .3s;
-}
-.iiii{
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: red;
-    top:220px;
-    left: 210px;
-    transition: .3s;
-}
-.i.show{
-    transform: scale(1.05);
-    background-color: red;
-}
-.ii.shows{
-    top:180px;
-    left: 280px;;
-}
-.iii.showss{
-    top:200px;
-    left: 160px;
-}
-.iiii.showsss{
-    top:335px;
-    left:210px;
-}
-
-.content{
-    padding-top:43px;
-    font-size: 25px;
-    
-}
 div.tt{
     display: flex;
     height: 600px;
@@ -145,8 +78,8 @@ div.tt{
     background: white;
     overflow: hidden;
     border-radius: 20px;
-    border: 2px solid ;
-    transform:translateX(-50px) translateY(calc(30px* var(--i))) rotate(40deg) skew(-20deg,-10deg) scale(0.6);
+    border: 1px solid ;
+    transform:translateX(-30px) translateY(calc(30px* var(--i))) rotate(40deg) skew(-20deg,-10deg) scale(0.6);
     transition: 0.5s;
     z-index: calc(-1 *var(--i));
 }
@@ -168,7 +101,7 @@ div.tt{
 }
 .contacts .content{
     position: relative;
-    margin: 250px 20px;
+    margin: 280px 20px;
     line-height: 20px;
 }
 
@@ -178,6 +111,6 @@ div.tt{
     bottom: 30px;
 }
 .contact:hover .contacts{
-    transform:translateY(15px) translateX(calc(150px + calc(280px *var(--i)))) rotate(0deg) skew(0deg,0deg) scale(1);
+    transform:translateY(15px) translateX(calc(130px + calc(260px *var(--i)))) rotate(0deg) skew(0deg,0deg) scale(1);
     opacity: 1;
 }

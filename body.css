@@ -1,4 +1,7 @@
 
+html {
+    scroll-behavior: smooth;
+  }
 body{
     background-image: url("https://c.pxhere.com/photos/e3/78/mug_coffee_cup_drink-98978.jpg!d");
     background-repeat: no-repeat;
@@ -49,9 +52,10 @@ div.orderonl > img{
     text-transform: uppercase;
     margin-left: 20px;
     border-bottom: 5px solid red;
+    text-decoration: none;
  }
  .rr .rrTitle span:nth-child(2){
-    margin-left: 47%;
+    margin-left: 65%;
     font-size: 16px;
     border: 2px solid black;
     text-transform: uppercase;
@@ -67,10 +71,10 @@ div.orderonl > img{
     background: #000000;
     color: aliceblue;
     align-items: center;
-    justify-content:space-between;
+    justify-content:center;
 }
 .foot .foots{
-    margin: 40px;
+    margin: 50px;
 }
 .infomation .infomations i{
     color: red;
@@ -126,16 +130,37 @@ div.dev{
     font-size: 40px;
     border-bottom: 5px solid red;
 }
-.devBlog .devBlogTitle span:nth-child(1){
+.devBlog .devBlogTitle span:nth-child(1),
+.store .storeContent span:nth-child(1){
     text-transform: uppercase;
     border-bottom: 5px solid red;
 }
-.devBlog .devBlogTitle span:nth-child(2){
+#btnV{
+    display: inline-block;
+    position: relative;
+    padding-left: 23px;
     margin-left: 70%;
     text-transform: capitalize;
-    font-size: 30px;
+    font-size: 16px;
+    width: 120px;
+    height: 35px;
     background: #FFFFFF;
-    border: 4px solid black;
+    border: 3px solid black;
+    z-index: 0;
+}
+#btnV::before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: 0;
+    width: 120px;
+    height: 32px;
+    background: #FF7F24;
+    z-index: -1;
+    transition:width 1s;
+}
+#btnV:hover::before{
+    width: 0;
 }
 .devBlog .devBlogF{
     width: 1000px;
@@ -171,7 +196,7 @@ div.dev{
 .devBlogSContent .devContent div,
 .devBlogTContent .devContent div{
     width: 120px;
-    height: 30px;
+    height: 35px;
     border: 3px solid black;
     text-align: center;
 }
@@ -194,6 +219,26 @@ div.dev{
     width: 100%;
     height:200px;
     
+}
+#btnViews{
+    position: relative;
+    z-index: 0;
+}
+#btnViews:after{
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 0px;
+    height: 35px;
+    background: red;
+    transition: width 1s;
+    border-bottom:3px solid white ;
+    border-right:3px solid white ;
+    z-index: -1;
+}
+#btnViews:hover:after{
+    width: 120px;
 }
 div.partList{
     position: relative;
@@ -239,6 +284,9 @@ div.partListTitle h3{
     width: 100%;
     
 }
+#list_ .list_s:hover{
+    background: red;
+}
 div.deal_list{
     font-size: 16px;
     position: relative;
@@ -250,38 +298,110 @@ div.deal_list{
     border-radius: 20px;
     background-color:tomato;
     overflow: hidden;
+    z-index: 0;
+}
+div.deal_list > p{
+    text-transform: capitalize;
+    padding-top: 8px;
+}
+div.deal_list::before{
+    content: '';
+    font-size: 16px;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 0em;
+    background: #FFFFFF;
+    height: 2.8125em;
+    /* padding-top: 0.625em; */
+    transition: width 1s;
+    z-index: -1;
+}
+#list_ .list_s:hover .deal_list::before{
+    width: 7.5em;
 }
 #list_ .list_s > p{
     font-size: 16px;
     padding-top: 1.25em;
 }
-.list_s .deal_list .deal_list0{
-    font-size: 16px;
-    position:absolute;
-    top: 0;
-    left: 0;
-    width: 0px;
-    height: 2.8125em;
+div.store{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background: #FFFFFF;
+    overflow:auto;
+}
+.store .storeContent{
+    width: 1000px;
+    height: 70px;
+    margin:0 auto 0;
+    font-size: 40px;
+    border-bottom: 5px solid red;
+}
+.store .stores{
+    width: 1000px;
+    height: 400px;
+    display: flex;
+    background: #FF7F24;
+    margin: 0 auto 0;
+}
+.store .stores .storesContent,
+.store .stores .storesImg{
+    width: 500px;
+    height: 400px;
+    
+}
+.store .stores .storesContent{
+    text-align: start;
+    margin: 60px 20px;
+}
+.store .stores .storesImg img{
+    width: 100%;
+    height: 400px;
+}
+.store .recritment,
+.store .aboutUs{
+    width: 1000px;
+    height: 70px;
+    background: #F8F8FF;
+    margin: 10px auto 0;
     overflow: hidden;
-    transition: width 1.2s;
+    transition: height 0.5s;
 }
-.list_s .deal_list .deal_list0 > p{
-    font-size: 16px;
-    position:absolute;
-    top: 0;
-    left: 0;
-    width: 7.5em;
-    height: 2.8125em;
-    padding-top: 0.625em;
+.store .recritment .recritmentTitle span,
+.store .aboutUs .aboutUsTitle span{
+    font-size: 35px;
+    margin: 15px 10px;
+    cursor: pointer;
 }
-.list_s .deal_list .deal_list1{
-    font-size: 16px;
-    position:absolute;
-    top: 0;
-    left: 0;
-    width: 7.5em;
-    height: 2.8125em;
-    padding-top: 0.625em;
+.store .recritment.showRe,
+.store .aboutUs.showRe{
+    height: 250px;
+}
+.store .recritment.showRe .recritmentTitle #btnRe,
+.store .aboutUs.showRe .aboutUsTitle #btnAb{
+    transform: rotate(180deg);
+}
+.recritmentContent{
+    margin: 10px auto 0;
+    width: 500px;
+    height: 200px;
+    text-align: center;
+}
+.recritmentContent span{
+    display: inline-block;
+    width: 220px;
+    height: 55px;
+    padding-top: 13px;
+    text-transform: uppercase;
+    background: #FFFFFF;
+    border: 1px solid black;
+}
+.recritmentContent span:hover{
+    background: #FF7F24;
+}
+.recritmentContent p:hover{
+    color: #FF7F24;
 }
 .footerd > div{
     margin: 50px;
@@ -371,9 +491,7 @@ div.deal_list{
     #list_ .list_s > p{
         font-size: 13px;
     }
-    .list_s .deal_list .deal_list0{
-        display: none;
-    }
+    
     div.deal_list{
         font-size: 10px;
         left: 50%;

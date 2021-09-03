@@ -79,54 +79,40 @@ ul.nav_list li{
     position: relative;
     width: 100px;
 }
-ul.nav_list li .list_hide_meun{
+ul.nav_list li .list_hide_meun,
+ul.nav_list li .list_hide_profile,
+ul.nav_list li .list_hide_news{
     display: none;
     position: absolute;
-    top: 30px;
+    top: 25px;
     left: 50%;
     width: 150px;
     background-color: #fff;
     transform: translate(-50%,5px);
     border-radius: 10px;
 }
-ul.nav_list li .list_hide_meun > div:nth-child(1){
+ul.nav_list li .list_hide_meun > div:nth-child(1),
+ul.nav_list li .list_hide_profile > div:nth-child(1),
+ul.nav_list li .list_hide_news > div:nth-child(1){
     display: block;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     position: relative;
     left: 50%;
     background: #fff;
-    transform: translate(-50%,-6px) rotate(48deg);
+    transform: translate(-50%,-5px) rotate(48deg);
 }
-ul.nav_list li .list_hide_meun > div{
+ul.nav_list li .list_hide_meun > div,
+ul.nav_list li .list_hide_profile > div,
+ul.nav_list li .list_hide_news > div{
     margin-top: 0;
     font-size: 20px;
     text-transform: capitalize;
 }
-
-ul.nav_list li .list_hide_profile{
-    display: none;
-    position: absolute;
-    top: 30px;
-    left: 50%;
-    width: 150px;
-    background-color: #fff;
-    transform: translate(-50%,5px);
-    border-radius: 10px;
-}
-ul.nav_list li .list_hide_profile > div:nth-child(1){
-    display: block;
-    width: 15px;
-    height: 15px;
-    position: relative;
-    left: 50%;
-    background: #fff;
-    transform: translate(-50%,-6px) rotate(48deg);
-}
-ul.nav_list li .list_hide_profile > div{
-    margin-top: 0;
-    font-size: 20px;
-    text-transform: capitalize;
+ul.nav_list li .list_hide_meun > div a:hover,
+ul.nav_list li .list_hide_profile > div a:hover,
+ul.nav_list li .list_hide_news > div a:hover{
+    color: #BB0000;
 }
 
 ul.nav_list li a{
@@ -243,7 +229,6 @@ div.ss{
     overflow: hidden;
     margin-left: 50%;
     transform: translate(-50%,50px);
-    border-radius: 10px;
     width: 80em;
 }
 .slider .sliders .tt{
@@ -279,6 +264,7 @@ div.ss{
     left: 5%;
     transition: .3s;
     opacity: 0;
+    text-align: end;
 }
 .caption_left .caption_ > h4{
     color: #ff3000;
@@ -289,6 +275,8 @@ div.ss{
     right: 5%;
     transition: .3s;
     opacity: 0;
+    text-align: start;
+    color: #FFF;
 }
 .caption_left .caption_.act{
     opacity: 1;
