@@ -24,6 +24,9 @@
     .list #list_{
         width: 880px;
     }
+    div.space{
+        height: 50px;
+    }
     /* #list_ .list_s{
         pointer-events: none;
     } */
@@ -146,8 +149,8 @@
     html{
         font-size: 10px;
     }
-    div.space{
-        height: 50px;
+    .navbar{
+        display: block;
     }
     div.rr{
         height: 300px;
@@ -411,7 +414,7 @@
         padding-top: 5px;
     }
     .gotop.show{
-        bottom: 35px;
+        bottom: 25px;
     }
 }
 

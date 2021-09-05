@@ -177,7 +177,7 @@ $(document).ready(function(){
     var heightheader=document.querySelector('div.headerr.skit')
     var headerrSkitNavv=document.querySelector('div.headerr.skit .navv')
     var headerrSkitlogo=document.querySelector('div.headerr.skit #logo')
-    if($(window).width()<=500){
+    if($(window).width()<=1024){
       $(heightheader).css({
         "height":`50px`
       })
@@ -307,14 +307,12 @@ $(document).ready(function(){
   }
   headerMeun();
   function slider_mobile(){
-    var navbar=document.querySelectorAll('div.navbar')
     var slider=document.querySelectorAll('.sliders .tt')
     var dot=document.querySelectorAll('.dot .dots')
     var capl=document.querySelectorAll('.caption_left .caption_')
     var capr=document.querySelectorAll('.caption_right .caption_')
     var width=$(window).width()
-    if(width <=768){
-      $(navbar).show("slow")
+    if(width <=768 & width >500){
       $('.slider .sliders').css({
         "width":width,
         "height":width
@@ -354,8 +352,14 @@ $(document).ready(function(){
     var navbar=document.querySelectorAll('div.navbar')
     var heightheader=document.querySelector('div.headerr.skit')
     var btnNavbar=document.querySelectorAll('#btnNavbar')
-    function navbarM(width,heightheader){
-      if(width <=1024 && width >500){
+    function showNavbar(navbar,width){
+      if(width <= 1024){
+        $(navbar).show()
+      }
+    }
+    showNavbar(navbar,width)
+    if(width <=1024 && width >500){
+      $(btnNavbar).click(function(){
         if($(heightheader).height()>65){
           $(heightheader).css({
             "height":`${widthHeaderr}px`
@@ -365,8 +369,10 @@ $(document).ready(function(){
             "height":"100vh"
           })
         }
-      }
-      if(width <=400){
+      })
+    }
+    if(width <=500){
+      $(btnNavbar).click(function(){
         if($(heightheader).height()>65){
           $(heightheader).css({
             "height":`${widthHeaderr-15}px`
@@ -376,22 +382,6 @@ $(document).ready(function(){
             "height":"100vh"
           })
         }
-      }
-    }
-    if(width <=1024 && width >500){
-      $(window).scroll(function(){
-        if($(window).scrollTop() >5){
-          $(navbar).show("slow")
-        }else{
-          $(navbar).hide()
-        }
-      })
-      $(btnNavbar).click(function(){
-        navbarM(width,heightheader)
-      })
-    }else{
-      $(btnNavbar).click(function(){
-        navbarM(width,heightheader)
       })
     }
   }
