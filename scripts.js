@@ -51,19 +51,12 @@ $(document).ready(function(){
             items:2
         },
         600:{
-            items:2
+            items:3
         },
         1000:{
             items:3
         }
     }
-  });
-  $('.i').hover(function(){
-    $(this).toggleClass("show")
-    $('.ii').toggleClass("shows")
-    $('.iii').toggleClass("showss")
-    $('.iiii').toggleClass("showsss")
-    $('.content').toggleClass("contents")
   });
 
  $('.ss_ span').click(function(){
@@ -128,7 +121,7 @@ $(document).ready(function(){
       $(ds_mon[j]).append('<img src='+r+'>')
       
       $(ds_mon[j]).append('<div class="deal_list"><p>buy</p></div>')
-      var price_t=`<p>${ramdomprice(4,7)}00000VND</p>`
+      var price_t=`<p>${ramdomprice(4,7)}0.000Đ</p>`
       $(ds_mon[j]).append(price_t)
       
     }
@@ -184,39 +177,56 @@ $(document).ready(function(){
     var heightheader=document.querySelector('div.headerr.skit')
     var headerrSkitNavv=document.querySelector('div.headerr.skit .navv')
     var headerrSkitlogo=document.querySelector('div.headerr.skit #logo')
-    $(window).scroll(function(){
-      if($(window).scrollTop() > 5){
-        $(heightheader).css({
-          "height":`${widthHeaderr}px`
-        })
-        $(headerrSkitNavv).css({
-          "right":"0"
-        })
-        $(headerrSkitlogo).css({
-          "top":"10px",
-          "left":"10px",
-          "width":"50px",
-          "opacity":"1",
-          "transform":"translateX(0)"
-        })
-        $('div.headerr').addClass("skit")
-      }else{
-        $(heightheader).css({
-          "height":"100vh"
-        })
-        $(headerrSkitNavv).css({
-          "right":"-150%"
-        })
-        $(headerrSkitlogo).css({
-          "top":"15%",
-          "left":"50%",
-          "width":"400px",
-          "opacity":"0.5",
-          "transform":"translateX(-50%)"
-        })
-        $('div.headerr').removeClass("skit")
-      }
-    })
+    if($(window).width()<=400){
+      $(heightheader).css({
+        "height":`50px`
+      })
+      $(headerrSkitNavv).css({
+        "right":"0"
+      })
+      $(headerrSkitlogo).css({
+        "top":"10px",
+        "left":"10px",
+        "width":"50px",
+        "opacity":"1",
+        "transform":"translateX(0)"
+      })
+      $('div.headerr').addClass("skit")
+    }else{
+      $(window).scroll(function(){
+        if($(window).scrollTop() > 5){
+          $(heightheader).css({
+            "height":`${widthHeaderr}px`
+          })
+          $(headerrSkitNavv).css({
+            "right":"0"
+          })
+          $(headerrSkitlogo).css({
+            "top":"10px",
+            "left":"10px",
+            "width":"50px",
+            "opacity":"1",
+            "transform":"translateX(0)"
+          })
+          $('div.headerr').addClass("skit")
+        }else{
+          $(heightheader).css({
+            "height":"100vh"
+          })
+          $(headerrSkitNavv).css({
+            "right":"-150%"
+          })
+          $(headerrSkitlogo).css({
+            "top":"15%",
+            "left":"50%",
+            "width":"400px",
+            "opacity":"0.5",
+            "transform":"translateX(-50%)"
+          })
+          $('div.headerr').removeClass("skit")
+        }
+      })
+    }
   }
   showHeaderM();
 
@@ -297,12 +307,14 @@ $(document).ready(function(){
   }
   headerMeun();
   function slider_mobile(){
+    var navbar=document.querySelectorAll('div.navbar')
     var slider=document.querySelectorAll('.sliders .tt')
     var dot=document.querySelectorAll('.dot .dots')
     var capl=document.querySelectorAll('.caption_left .caption_')
     var capr=document.querySelectorAll('.caption_right .caption_')
     var width=$(window).width()
-    if(width <600){
+    if(width <=768){
+      $(navbar).show("slow")
       $('.slider .sliders').css({
         "width":width,
         "height":width
@@ -337,6 +349,53 @@ $(document).ready(function(){
     }
   }
   slider_mobile();
+  function navbarMoblie(){
+    var width=$(window).width()
+    var navbar=document.querySelectorAll('div.navbar')
+    var heightheader=document.querySelector('div.headerr.skit')
+    var btnNavbar=document.querySelectorAll('#btnNavbar')
+    function navbarM(width,heightheader){
+      if(width <=1024 && width >400){
+        if($(heightheader).height()>65){
+          $(heightheader).css({
+            "height":`${widthHeaderr}px`
+          })
+        }else{
+          $(heightheader).css({
+            "height":"100vh"
+          })
+        }
+      }
+      if(width <=400){
+        if($(heightheader).height()>65){
+          $(heightheader).css({
+            "height":`${widthHeaderr-15}px`
+          })
+        }else{
+          $(heightheader).css({
+            "height":"100vh"
+          })
+        }
+      }
+    }
+    if(width <=1024 && width >400){
+      $(window).scroll(function(){
+        if($(window).scrollTop() >5){
+          $(navbar).show("slow")
+        }else{
+          $(navbar).hide()
+        }
+      })
+      $(btnNavbar).click(function(){
+        navbarM(width,heightheader)
+      })
+    }else{
+      $(btnNavbar).click(function(){
+        navbarM(width,heightheader)
+      })
+    }
+  }
+  navbarMoblie();
   function stores(){
     var btnRe=document.querySelector('#btnRe')
     var btnAb=document.querySelector('#btnAb')
@@ -350,6 +409,57 @@ $(document).ready(function(){
     })
   }
   stores();
+  const img=document.querySelectorAll('.tt > img');
+  function sliderBox(obj){
+    obj.forEach((item) => item.addEventListener("click",sliderzoom));
+    function sliderzoom(event){
+      const imgsrc=event.target.getAttribute("src")
+      console.log(imgsrc)
+      const templ=
+      `<div class="sliderBox">
+          <div>
+            <i class="fas fa-angle-left sliderBox_p"></i>
+          </div>
+          <div class="slideBox_content">
+            <img src="${imgsrc}" class="slider_img"/>
+          </div>
+          <div>
+            <i class="fas fa-angle-right sliderBox_n"></i>
+          </div>
+        </div>`;
+        document.body.insertAdjacentHTML("beforeend",templ);
+    }
+    let index=0;
+    document.body.addEventListener("click",function(event){
+      const sliderimg=document.querySelector(".slideBox_content img")
+      let slidersrc="";
+      if(event.target.matches(".sliderBox")){
+        event.target.parentNode.removeChild(event.target)
+      }else if(event.target.matches(".sliderBox_n")){
+        slidersrc=sliderimg.getAttribute("src")
+        index=[...obj].findIndex(item => item.getAttribute("src")===slidersrc);  
+        index=index +1;
+        
+        if(index > obj.length-1){
+          index=0;
+        }
+        const newsrc=[...obj][index].getAttribute("src")
+        sliderimg.setAttribute("src",newsrc)
+      }else if(event.target.matches(".sliderBox_p")){
+        slidersrc=sliderimg.getAttribute("src")
+        index=[...obj].findIndex(item => item.getAttribute("src")===slidersrc);  
+        index=index - 1;
+        
+        if(index < 0){
+          index=obj.length-1;
+        }
+        const newsrc=[...obj][index].getAttribute("src")
+        sliderimg.setAttribute("src",newsrc)
+      }
+    })
+    
+  }
+  sliderBox(img);
 });
 
 

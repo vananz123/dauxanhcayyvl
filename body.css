@@ -15,7 +15,7 @@ div.vl{
 #vl1 h2{
     color: #FFFFFF;
     text-align: center;
-    font-size: 38px;
+    font-size: 35px;
 }
 #vl1 > div{
     display: block;
@@ -26,13 +26,12 @@ div.orderonl{
     align-items: center;
 }
 div.orderonl > img{
-    font-size: 10px;
-    width:30em;
+    width:21.876rem;
     transition: all 0.5s;
 }
 .rr{
     width: 100%;
-    height: 500px;
+    height: 400px;
     background: #fff;
     
  }
@@ -87,10 +86,11 @@ div.orderonl > img{
     position: relative;
     width: 100%;
     height: 200px;
-    top: 0;
     background: #fff;
 }
 .diemso{
+    width: 1000px;
+    margin: 0 auto;
     display: flex;
     align-items:center;
     justify-content:center;
@@ -100,10 +100,10 @@ div.orderonl > img{
     text-align: center;
 }
 .cup{
-    font-size: 45px;
+    font-size: 35px;
 }
 .cup p{
-    font-size: 25px;
+    font-size: 17px;
 }
 
 div.dev{
@@ -130,6 +130,7 @@ div.dev{
     height: 70px;
     font-size: 40px;
     border-bottom: 5px solid red;
+    margin: 0 auto;
 }
 .devBlog .devBlogTitle span:nth-child(1),
 .store .storeContent span:nth-child(1){
@@ -137,14 +138,14 @@ div.dev{
     border-bottom: 5px solid red;
 }
 #btnV{
+    font-size: 16px;
     display: inline-block;
     position: relative;
     padding-left: 23px;
     margin-left: 70%;
     text-transform: capitalize;
-    font-size: 16px;
-    width: 120px;
-    height: 35px;
+    width: 7.5em;
+    height:  2.1855em;
     background: #FFFFFF;
     border: 3px solid black;
     z-index: 0;
@@ -154,11 +155,11 @@ div.dev{
     position: absolute;
     top: -2px;
     right: 0;
-    width: 120px;
-    height: 32px;
+    width: 7.5em;
+    height:  2.1855em;
     background: #FF7F24;
     z-index: -1;
-    transition:width 1s;
+    transition:width 0.5s;
 }
 #btnV:hover::before{
     width: 0;
@@ -167,6 +168,7 @@ div.dev{
     width: 1000px;
     height: 600px;
     background: #F8F8FF;
+    margin: 0 auto;
 }
 .devBlog .devBlogF > img{
     width: 100%;
@@ -193,22 +195,15 @@ div.dev{
 .devBlogTContent .devContent p:nth-child(3){
     font-size: small;
 }
-.devBlog .devBlogF .devContent div,
-.devBlogSContent .devContent div,
-.devBlogTContent .devContent div{
-    width: 120px;
-    height: 35px;
-    border: 3px solid black;
-    text-align: center;
-}
+
 /* second */
 .devBlog .devBlogS,
 .devBlog .devBlogT{
-    margin-top: 10px;
     display: flex;
     width: 1000px;
     height: 200px;
     background: #FF7F24;
+    margin: 10px auto;
 }
 .devBlog .devBlogS .devBlogSImg,
 .devBlog .devBlogT .devBlogTImg{
@@ -224,6 +219,10 @@ div.dev{
 #btnViews{
     position: relative;
     z-index: 0;
+    width: 7.5rem;
+    height: 2.1855rem;
+    border: 3px solid black;
+    text-align: center;
 }
 #btnViews:after{
     content: '';
@@ -231,15 +230,15 @@ div.dev{
     top: -3px;
     left: -3px;
     width: 0px;
-    height: 35px;
+    height: 2.1855rem;
     background: red;
-    transition: width 1s;
+    transition: width 0.5s;
     border-bottom:3px solid white ;
     border-right:3px solid white ;
     z-index: -1;
 }
 #btnViews:hover:after{
-    width: 120px;
+    width: 7.5rem;
 }
 div.partList{
     position: relative;
@@ -265,21 +264,20 @@ div.partListTitle h3{
 }
 .list #list_{
     display: flex;
+    width: 1000px;
     flex-wrap: wrap;
-    /* justify-items: center; */
-    /* justify-content: start; */
+    margin: 0 auto;
 }
 #list_ .list_s{
-    font-size: 16px;
-    margin-left: 1.5em;
+    margin-left: 1.5rem;
     margin-top: 10px;
-    width: 18.75em;
-    height: 28.125em;
+    width: 18.75rem;
+    height: 28.125rem;
     background: #FFFFFF;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: .4s;
+    /* transition: .4s; */
 }
 .list #list_ .list_s img {
     width: 100%;
@@ -289,13 +287,12 @@ div.partListTitle h3{
     background: red;
 }
 div.deal_list{
-    font-size: 16px;
     position: relative;
     top: 10px;
     left: 46.5%;
     transform: translateX(-50px);
-    width: 7.5em;
-    height: 2.8125em;
+    width: 7.5rem;
+    height: 2.8125rem;
     border-radius: 20px;
     background-color:tomato;
     overflow: hidden;
@@ -307,23 +304,21 @@ div.deal_list > p{
 }
 div.deal_list::before{
     content: '';
-    font-size: 16px;
     position:absolute;
     top: 0;
     left: 0;
-    width: 0em;
+    width: 0rem;
     background: #FFFFFF;
-    height: 2.8125em;
+    height: 2.8125rem;
     /* padding-top: 0.625em; */
-    transition: width 1s;
+    transition: width 0.5s;
     z-index: -1;
 }
 #list_ .list_s:hover .deal_list::before{
-    width: 7.5em;
+    width: 7.5rem;
 }
 #list_ .list_s > p{
-    font-size: 16px;
-    padding-top: 1.25em;
+    padding-top: 1.25rem;
 }
 div.store{
     position: relative;
@@ -432,123 +427,5 @@ div.store{
     
     
 }
-@media only screen and (max-width: 700px) {
-    img#logo{
-        font-size:3px;
-        top:8%;
-    }    
-    nav.navv{
-        display: none;
-    }
-    .slider{
-        height: 75vh;
-    }
-    .slider .sliders{
-        /* font-size: 100%; */
-        transform: translate(-50%,100px);
-        border-radius: 0;
-    }
-    div.dot{
-        margin:75px auto 0;
-    }
-    div.devs img{
-        font-size: 4px;
-    }
-    div.headerr .navbar{
-        display: block;
-    }
-    .caption_left .caption_{
-        top: 0;
-        left: 10px;
-        color: #F8F8FF;
-    }
-    .caption_right .caption_{
-        top: 40px;
-        right: 10px;
-        text-align: end;
-        color: #F8F8FF;
-    }
-    .caption_left .caption_ h2,
-    .caption_right .caption_ h2{
-        font-size: 12px;
-    }
-    div.orderonl > img{
-        font-size: 3.5px;
-    }
-    .rr{
-        height: 380px;
-    }
-    div.owl-carousel{
-        width: 100%;
-        border-radius: 0;
-    }  
-    div.list{
-        height: 550px;
-    }
-    #list_ .list_s{
-        font-size: 8.2px;
-        margin: 13px auto 0;
-    }
-    #list_ .list_s > p{
-        font-size: 13px;
-    }
-    
-    div.deal_list{
-        font-size: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .list_s .deal_list .deal_list1{
-        font-size: 10px;
-    }
-    .nguoidung{
-        height: 50px;
-    }
-    .diemso .cup{
-        margin: 10px;
-        text-align: center;
-    }
-    .cup{
-        font-size: 20px;
-    }
-    .cup p{
-        font-size: 15px;
-    }
-    div.r{
-        display: none;
-    }
-    div.space_img{
-        width: 100%;
-        height: 200px;
-    }
-    div.tt{
-        height: 420px;
-    }
-    .tt .contact{
-        display: none;
-    }
-    .tt .send{
-        font-size: 100%;
-        height: 400px;
-        border-radius: 0;
-    }
-    .tt .send h5{
-        font-size: 20px;
-    }
-    .tt .send form input{
-        font-size: 12px;
-    }
-    #sendmes{
-        font-size: 12px;
-    }
-    #sendsmit{
-        font-size: 12px;
-    }
-    .modal_ct .modal_box{
-        width: 350px;
-        height: 200px;
-    }
-    div.foot{
-        display: none;
-    }
-}
+
+

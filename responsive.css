@@ -1,0 +1,418 @@
+:root{
+    --widthm:340px
+}
+@media screen and (max-width:1367px){
+    html{
+        font-size: 16px;
+    }
+    .parList{
+        background: #fff;
+    }
+    .parList .partListTitle h3{
+        border-color: red;
+    }
+    div.rr{
+        height: 350px;
+    }
+}
+@media screen and (max-width:1025px){
+    html{
+        font-size: 14px;
+    }
+    .rr .rrTitle,
+    div.partListTitle,
+    .list #list_{
+        width: 880px;
+    }
+    /* #list_ .list_s{
+        pointer-events: none;
+    } */
+    .rr .rrTitle span:nth-child(2){
+        margin-left: 60%;
+    }
+    nav.navv{
+        display: none;
+    }
+    div.space{
+        background: #fff;
+    }
+    div.slider{
+        display: none;
+    }
+    .devBlog .devBlogTitle,
+    .store .storeContent{
+        width: 900px;
+    }
+
+    .devBlog .devBlogF,
+    .devBlog .devBlogS,
+    .devBlog .devBlogT,
+    .store .stores,
+    .store .recritment,
+    .store .aboutUs{
+        width: 900px;
+    }
+    div.orderonl > img{
+        width: 300px;
+    }
+    div.tt{
+        flex-wrap: wrap;
+        height: 1000px;
+    }
+    .contact{
+        pointer-events: none;
+    }
+    .contact .contacts{
+        transform:translateY(-50px) translateX(calc(120px + calc(260px *var(--i)))) rotate(0deg) skew(0deg,0deg) scale(1);
+    }
+    div.orderonl > img{
+        width: 200px;
+    }
+}
+@media only screen and (max-width: 769px) {  
+    html{
+        font-size: 14px;
+    }
+    div.rr{
+        height: 370px;
+    }
+    div.owl-carousel{
+        width: 600px;
+    }
+    #list{
+        width: 100%;
+    }
+    .rr .rrTitle span:nth-child(2){
+        margin-left: 40%;
+    }
+    .parList .partListTitle{
+        width: 600px;
+    }
+    .rr .rrTitle,
+    .list #list_{
+        width: 600px;
+    }
+    .dev{
+        height: 1200px;
+    }
+    .dev #devImg{
+        height: 1190px;
+    }
+    .dev .devBlog{
+        width: 100%;
+        height: 100%;
+    }
+    .devBlog .devBlogS,
+    .devBlog .devBlogT{
+        width: 600px;
+        height: 240px;
+    }
+    .devBlog .devBlogTitle,
+    .store .storeContent{
+        width: 600px;
+    }
+    #btnV{
+        margin-left: 55%;
+    }
+    .devBlog .devBlogF,
+    
+    .store .stores,
+    .store .recritment,
+    .store .aboutUs{
+        width: 600px;
+    }
+    .nguoidung .diemso{
+        width: 600px;
+        margin: 0 auto;
+    }
+    .diemso .cup{
+        margin: 60px;
+    }
+    .cup{
+        font-size: 25px;
+    }
+    .cup p{
+        font-size: 10px;
+    }
+    div.orderonl > img{
+        width: 200px;
+    }
+    div.foot{
+        flex-wrap: wrap;
+        height: 500px;
+    }
+}
+@media only screen and (max-width:376px) {
+    html{
+        font-size: 10px;
+    }
+    div.space{
+        height: 50px;
+    }
+    div.rr{
+        height: 300px;
+    }
+    div.owl-carousel{
+        width: 100%;
+        border-radius: 0;
+    }
+    .rr .rrTitle{
+        width: 100%;
+        border-bottom: 3px solid red;
+     }
+     .rr .rrTitle span:nth-child(1){
+        font-size: 20px;
+        margin-left: 20px;
+        border-bottom: 3px solid red;
+     }
+     .rr .rrTitle span:nth-child(2){
+        
+        font-size: 10px;
+        border: 2px solid black;
+     }
+    .rr .rrTitle span:nth-child(2){
+        margin-left: 20%;
+    }
+    /* div.partList{
+        position: relative;
+        width: 100%;
+        height: 1100px;
+    } */
+    .parList .partListTitle{
+        width: 100%;
+        height: 30px;
+    }
+    div.partListTitle h3{
+        font-size: 20px;
+        padding-left: 20px;
+        border-bottom: 3px solid white;
+    }
+    .list{
+        width: 100%;
+        height: 500px;
+        text-align: center;
+        margin: 0 auto 0;
+    }
+    .list #list_{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    #list_ .list_s{
+        margin: 10px auto;
+        width: 150px;
+        height: 220px;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        /* transition: .4s; */
+    }
+    .list #list_ .list_s img {
+        width: 100%;
+        
+    }
+    #list_ .list_s:hover{
+        background: red;
+    }
+    div.deal_list{
+        position: relative;
+        margin: 0 17px;
+        width: 80px;
+        height: 30px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    div.deal_list > p{
+        padding-top: 8px;
+    }
+    div.deal_list::before{
+        content: '';
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 30px;
+        transition: width 0.5s;
+    }
+    #list_ .list_s:hover .deal_list::before{
+        width: 80px;
+    }
+    #list_ .list_s > p{
+        padding-top: 1.25rem;
+    }
+
+    .dev #devImg{
+        height: 1450px;
+    }
+    .dev .devBlog{
+        width: 100%;
+        height: 1450px;
+    }
+    .devBlog .devBlogF > img{
+        height: 200px;
+    }
+    .devBlog .devBlogF{
+        width: var(--widthm);
+        height: 410px;
+    }
+    .devBlog .devBlogS,
+    .devBlog .devBlogT{
+        width: var(--widthm);
+        height: 410px;
+        flex-wrap: wrap;
+    }
+    .devBlog .devBlogTitle,
+    .store .storeContent{
+        width: 100%;
+        height: 40px;
+        font-size: 20px;
+        border-bottom: 3px solid red;
+    }
+    #btnV{
+        margin-left: 50%;
+        font-size: 10px;
+        padding-left: 13px;
+        border: 1px solid black;
+    }
+    .nguoidung{
+        display: none;
+    }
+    #vl1 h2{
+        font-size: 15px;
+    }
+    div.orderonl > img{
+        width: 100px;
+    }
+    
+    div.store{
+        width: 100%;
+        height: 600px;
+    }
+    .store .storeContent{
+        width: 100%;
+        height: 40px;
+        font-size: 20px;
+        border-bottom: 3px solid red;
+    }
+    .store .stores{
+        width: var(--widthm);
+        height: 370px;
+        position: relative;
+    }
+    .store .stores .storesImg{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: var(--widthm);
+        height: 200px;
+        
+    }
+    .store .stores .storesContent{
+        text-align: start;
+        margin: 60px 20px;
+    }
+    .store .stores .storesImg img{
+        width: 100%;
+        height: 200px;
+    }
+    .store .recritment,
+    .store .aboutUs{
+        width: var(--widthm);
+        height: 70px;
+        background: #F8F8FF;
+        margin: 10px auto 0;
+        overflow: hidden;
+        transition: height 0.5s;
+    }
+    .store .recritment .recritmentTitle span,
+    .store .aboutUs .aboutUsTitle span{
+        font-size: 35px;
+        margin: 15px 10px;
+        cursor: pointer;
+    }
+    .store .recritment.showRe,
+    .store .aboutUs.showRe{
+        height: 250px;
+    }
+    .store .recritment.showRe .recritmentTitle #btnRe,
+    .store .aboutUs.showRe .aboutUsTitle #btnAb{
+        transform: rotate(180deg);
+    }
+    .recritmentContent{
+        margin: 10px auto 0;
+        width: 300px;
+        height: 200px;
+        text-align: center;
+    }
+    .recritmentContent span{
+        display: inline-block;
+        width: 220px;
+        height: 55px;
+        padding-top: 13px;
+        text-transform: uppercase;
+        background: #FFFFFF;
+        border: 1px solid black;
+    }
+    
+    div.tt{
+        display: flex;
+        height: 350px;
+    
+    }
+    .tt .send{
+        margin-top: 2.5rem;
+        margin: 0 auto;
+        width: var(--widthm);
+        height:31.25rem;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .tt .send h5{
+        font-size:20px;
+        margin-top: 2em;
+        padding: 0.4em 1.8em;
+    }
+    #sendsmit{
+        display:block;
+        width: 6.25rem;
+        height: 3.125rem;
+        margin-left:3.4rem;
+        
+    }
+    .contacts{
+        display: none;
+    }
+    .foot{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        background: #000000;
+        color: aliceblue;
+        align-items: center;
+        justify-content:center;
+    }
+    .foot .foots{
+        margin: 20px;
+    }
+    .foots.jq{
+        display: none;
+    }
+    .infomation .infomations i{
+        color: red;
+    }
+    .foots.time{
+        color: #FF7F24;
+    }
+    .gotop {
+        width: 40px;
+        height: 40px;
+        font-size: 28px;
+    }
+    .gotop > i{
+        padding-top: 5px;
+    }
+    .gotop.show{
+        bottom: 35px;
+    }
+}
+
+
