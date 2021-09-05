@@ -177,7 +177,7 @@ $(document).ready(function(){
     var heightheader=document.querySelector('div.headerr.skit')
     var headerrSkitNavv=document.querySelector('div.headerr.skit .navv')
     var headerrSkitlogo=document.querySelector('div.headerr.skit #logo')
-    if($(window).width()<=400){
+    if($(window).width()<=500){
       $(heightheader).css({
         "height":`50px`
       })
@@ -355,7 +355,7 @@ $(document).ready(function(){
     var heightheader=document.querySelector('div.headerr.skit')
     var btnNavbar=document.querySelectorAll('#btnNavbar')
     function navbarM(width,heightheader){
-      if(width <=1024 && width >400){
+      if(width <=1024 && width >500){
         if($(heightheader).height()>65){
           $(heightheader).css({
             "height":`${widthHeaderr}px`
@@ -378,7 +378,7 @@ $(document).ready(function(){
         }
       }
     }
-    if(width <=1024 && width >400){
+    if(width <=1024 && width >500){
       $(window).scroll(function(){
         if($(window).scrollTop() >5){
           $(navbar).show("slow")
