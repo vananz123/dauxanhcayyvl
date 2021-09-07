@@ -115,50 +115,43 @@
 
       <div class="space"></div>
       <section>
-        
-        <div class="slider">
+        <div class="bodySlider">
           
-          <div class="sliders">
-            <div class="tt"><img src="https://c.pxhere.com/photos/1c/5b/coffee_coffee_beans_afternoon_tea-1087030.jpg!d"/></div>
-            <div class="tt"><img src="https://c.pxhere.com/photos/15/5a/coffee_Cup_Table_wood-1617499.jpg!d"/></div>
-            <div class="tt"><img src="https://c.pxhere.com/photos/a1/3c/Beverage_Cafe_Cappuccino_Chocolate_cocoa_counter_cozy_Cream-1623286.jpg!d"/></div>
-           
-          </div>
-          <div class="dot">
-            <div class="dots act"></div>
-            <div class="dots"></div>
-            <div class="dots"></div>
-           
-          </div>
-          <div class="caption_left">
-            <div  class="caption_ act">
-              <h4>COFFEE SAMPA</h4>
-              <h3>Coffe drink gently <br>in the morning</h3>
-              
+          <div class="slider">
+            <div class="dot">
+              <div class="dots act"></div>
+              <div class="dots"></div>
+              <div class="dots"></div>
             </div>
-            <div  class="caption_">
-              <h4>COFFEE PANDA</h4>
-              <h3>Coffe drink gently <br>in the morning</h3>
-              
+            <div class="caption_left">
+              <div  class="caption_ act">
+                <h4>COFFEE SAMPA</h4>
+                
+              </div>
+              <div  class="caption_">
+                <h4>COFFEE PANDA</h4>
+                
+              </div>
+              <div  class="caption_">
+                <h4>COFFEE HOT</h4>
+              </div>
             </div>
-            <div  class="caption_">
-              <h4>COFFEE HOT</h4>
-              <h3>Coffe drink gently <br>in the morning</h3>
-              
-            </div>
-          </div> 
-          <div class="caption_right">
-            <div  class="caption_ act">
-              <h2>Coffe drink gently <br>in the morning<br>water watererr</h2>
-              
-            </div>
-            <div  class="caption_">       
-              <h2>Coffe drink gently <br>in the morning<br>dau xanh cay</h2>
-              
-            </div>
-            <div  class="caption_">
-              <h2>Coffe drink gently <br>in the morning<br>ma no cayyy</h2>
-              
+            <div class="sliders">
+              <div class="tt"><img src="https://c.pxhere.com/photos/1c/5b/coffee_coffee_beans_afternoon_tea-1087030.jpg!d"/></div>
+              <div class="tt"><img src="https://c.pxhere.com/photos/15/5a/coffee_Cup_Table_wood-1617499.jpg!d"/></div>
+              <div class="tt"><img src="https://c.pxhere.com/photos/a1/3c/Beverage_Cafe_Cappuccino_Chocolate_cocoa_counter_cozy_Cream-1623286.jpg!d"/></div>
+             
+            </div> 
+            <div class="caption_right">
+              <div  class="caption_ act">
+                <span>Coffe drink gently in the morning </span>
+              </div>
+              <div  class="caption_">       
+                <span>Coffe drink gently in the morning</span>
+              </div>
+              <div  class="caption_">
+                <span>Coffe drink gently in the morning</span>
+              </div>
             </div>
           </div>
         </div>
@@ -445,15 +438,18 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
       var slider=document.querySelectorAll('.sliders .tt')
+      var slides=document.querySelectorAll('.slider .sliders')
       var dot=document.querySelectorAll('.dot .dots')
       var capl=document.querySelectorAll('.caption_left .caption_')
       var capr=document.querySelectorAll('.caption_right .caption_')
-      var r=$('.sliders .tt').css('width')
-      r=parseInt(r.slice(0,3))
+      var r=$('.slider').width();
+      $(slides).css({
+          "width":`${3*r}px`
+      })
       function setact(i){
           var m=`${i*-r}px`//800 la width cua img 
-          $(slider[0]).css({
-              "margin-left":m
+          $(slides).css({
+            "transform":`translateX(${m})`
           })
           for(dots of dot){
               dots.classList.remove('act');

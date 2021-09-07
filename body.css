@@ -1,7 +1,7 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
 body{
     background-image: url("https://c.pxhere.com/photos/e3/78/mug_coffee_cup_drink-98978.jpg!d");
     background-repeat: no-repeat;
@@ -67,7 +67,7 @@ div.orderonl > img{
  .foot{
     display: flex;
     width: 100%;
-    height: 300px;
+    height: auto;
     background: #000000;
     color: aliceblue;
     align-items: center;
@@ -85,11 +85,11 @@ div.orderonl > img{
 .nguoidung{
     position: relative;
     width: 100%;
-    height: 200px;
+    height: auto;
     background: #fff;
 }
 .diemso{
-    width: 1000px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     align-items:center;
@@ -109,24 +109,22 @@ div.orderonl > img{
 div.dev{
     position: relative;
     width: 100%;
-    height: 1150px;
+    height: auto;
 }
 .dev #devImg{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 1150px;
+    height: 1100px;
 }
 .dev .devBlog{
     position: relative;
-    width: 1000px;
-    margin:0px auto 0;
-    height: 1000px;
+    width: 100%;
     color: #000000;
 }
 .devBlog .devBlogTitle{
-    width: 1000px;
+    width: 70%;
     height: 70px;
     font-size: 40px;
     border-bottom: 5px solid red;
@@ -157,7 +155,7 @@ div.dev{
     right: 0;
     width: 7.5em;
     height:  2.1855em;
-    background: #FF7F24;
+    background:#ba4c35 ;
     z-index: -1;
     transition:width 0.5s;
 }
@@ -165,7 +163,7 @@ div.dev{
     width: 0;
 }
 .devBlog .devBlogF{
-    width: 1000px;
+    width: 70%;
     height: 600px;
     background: #F8F8FF;
     margin: 0 auto;
@@ -200,7 +198,7 @@ div.dev{
 .devBlog .devBlogS,
 .devBlog .devBlogT{
     display: flex;
-    width: 1000px;
+    width: 70%;
     height: 200px;
     background: #FF7F24;
     margin: 10px auto;
@@ -246,7 +244,7 @@ div.partList{
     height: 1100px;
 }
 div.partListTitle{
-    width: 1000px;
+    width: 70%;
     height: 50px;
     margin: 0 auto 0;
 }
@@ -257,16 +255,15 @@ div.partListTitle h3{
     border-bottom: 5px solid white;
 }
 .list{
-    width: 1000px;
+    width: 70%;
     height: 950px;
     text-align: center;
     margin: 30px auto 0;
 }
 .list #list_{
-    display: flex;
-    width: 1000px;
-    flex-wrap: wrap;
-    margin: 0 auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
 }
 #list_ .list_s{
     margin-left: 1.5rem;
@@ -284,17 +281,15 @@ div.partListTitle h3{
     
 }
 #list_ .list_s:hover{
-    background: red;
+    background:rgba(171, 19, 24, 0.19);
 }
 div.deal_list{
     position: relative;
-    top: 10px;
-    left: 46.5%;
-    transform: translateX(-50px);
     width: 7.5rem;
     height: 2.8125rem;
     border-radius: 20px;
-    background-color:tomato;
+    background-color:#ba4c35;
+    margin: 10px auto;
     overflow: hidden;
     z-index: 0;
 }
@@ -323,19 +318,18 @@ div.deal_list::before{
 div.store{
     position: relative;
     width: 100%;
-    height: 700px;
+    height: auto;
     background: #FFFFFF;
-    overflow:auto;
 }
 .store .storeContent{
-    width: 1000px;
+    width: 70%;
     height: 70px;
     margin:0 auto 0;
     font-size: 40px;
     border-bottom: 5px solid red;
 }
 .store .stores{
-    width: 1000px;
+    width: 70%;
     height: 400px;
     display: flex;
     background: #FF7F24;
@@ -343,7 +337,7 @@ div.store{
 }
 .store .stores .storesContent,
 .store .stores .storesImg{
-    width: 500px;
+    width: 50%;
     height: 400px;
     
 }
@@ -357,7 +351,7 @@ div.store{
 }
 .store .recritment,
 .store .aboutUs{
-    width: 1000px;
+    width: 70%;
     height: 70px;
     background: #F8F8FF;
     margin: 10px auto 0;

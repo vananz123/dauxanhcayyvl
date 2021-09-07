@@ -111,7 +111,7 @@ ul.nav_list li .list_hide_news > div{
 ul.nav_list li .list_hide_meun > div a:hover,
 ul.nav_list li .list_hide_profile > div a:hover,
 ul.nav_list li .list_hide_news > div a:hover{
-    color: #BB0000;
+    color: #ba4c35;
 }
 
 ul.nav_list li a{
@@ -130,7 +130,7 @@ ul.nav_list li a{
     width:100px;
     left:0;
     height: 100%;
-    background: #BB0000;
+    background: #ba4c35;
     border-radius: 20px;
     z-index: 0;
     transition: left .4s ease-in-out;
@@ -161,7 +161,8 @@ div.ss{
     left: 0;
     width: 50px;
     height: 50px;
-    background-color: #fff;
+    background-color:#FFF;
+    color: #ba4c35;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -197,7 +198,7 @@ div.ss{
     right: 15px;
     bottom: -50px;
     text-align: center;
-    background: #ff3000;
+    background: #ba4c35;
     width: 50px;
     height: 50px;
     font-size: 28px;
@@ -216,32 +217,37 @@ div.ss{
     bottom: 25px;
 }
 /* img anh nen */
-.slider{
+div.bodySlider{
     width: 100%;
-    height: 100vh;
+    height: auto;
+    background: #000000;
+}
+.slider{
+    width: 65%;
+    height: auto;
     position: relative;
-    background: linear-gradient(black 30%,white 60%);
+    overflow: hidden;
+    margin: 0 auto ;
+    border-radius: 10px;
 }
 .slider .sliders{
     display: flex;
-    overflow: hidden;
-    margin-left: 50%;
-    transform: translate(-50%,50px);
-    width: 50rem;
+    transition: transform 0.25s linear;
 }
 .slider .sliders .tt{
     transition: .4s ease;
 }
 .slider .sliders .tt img{
-    
-    display: inline-block;
-    width: 50rem;
+    width: 100%;
 }
 .dot{
-    position: relative;
+    position: absolute;
     display:flex;
-    margin:0 auto 50px;
-    width: 75px;
+    bottom: 2%;
+    left: 50%;
+    transform:translate(-50%);
+    width: auto;
+    z-index: 1;
 }
 .dot .dots{
     width: 20px;
@@ -249,29 +255,29 @@ div.ss{
     border-radius: 50%;
     border: 2px solid gold;
     cursor: pointer;
-    margin-left: 5px;
 }
 .dots.act{
     background: white;
 }
+
 .caption_left .caption_{
     position: absolute;
-    top: 30%;
-    left: 5%;
+    width: auto;
+    top: 2%;
+    left: 1%;
     transition: .3s;
     opacity: 0;
-    text-align: end;
+    z-index: 1;
 }
 .caption_left .caption_ > h4{
     color: #ff3000;
 }
 .caption_right .caption_{
     position: absolute;
-    top: 30%;
-    right: 5%;
+    bottom: 2%;
+    right: 1%;
     transition: .3s;
     opacity: 0;
-    text-align: start;
     color: #FFF;
 }
 .caption_left .caption_.act{

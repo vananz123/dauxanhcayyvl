@@ -1,5 +1,5 @@
 :root{
-    --widthm:340px
+    --widthm:95%;
 }
 @media screen and (max-width:1367px){
     html{
@@ -15,14 +15,14 @@
         height: 350px;
     }
 }
-@media screen and (max-width:1025px){
+@media screen and (max-width:1024px){
     html{
         font-size: 14px;
     }
+
     .rr .rrTitle,
-    div.partListTitle,
-    .list #list_{
-        width: 880px;
+    div.partListTitle{
+        width: 100%;
     }
     div.space{
         height: 50px;
@@ -39,12 +39,9 @@
     div.space{
         background: #fff;
     }
-    div.slider{
-        display: none;
-    }
     .devBlog .devBlogTitle,
     .store .storeContent{
-        width: 900px;
+        width: 90%;
     }
 
     .devBlog .devBlogF,
@@ -53,20 +50,19 @@
     .store .stores,
     .store .recritment,
     .store .aboutUs{
-        width: 900px;
+        width: 90%;
     }
     div.orderonl > img{
         width: 300px;
     }
     div.tt{
         flex-wrap: wrap;
-        height: 1000px;
     }
     .contact{
         pointer-events: none;
     }
     .contact .contacts{
-        transform:translateY(-50px) translateX(calc(120px + calc(260px *var(--i)))) rotate(0deg) skew(0deg,0deg) scale(1);
+        transform:translateY(-10px) translateX(calc(120px + calc(260px *var(--i)))) rotate(0deg) skew(0deg,0deg) scale(1);
     }
     div.orderonl > img{
         width: 200px;
@@ -79,40 +75,42 @@
     div.rr{
         height: 370px;
     }
+    .slider{
+        width: 100%;
+        border-radius: 0;
+    }
     div.owl-carousel{
         width: 600px;
     }
-    #list{
-        width: 100%;
+    .list{
+        width:100%;
+    }
+    #list_{
+        width: var(--widthm);
     }
     .rr .rrTitle span:nth-child(2){
         margin-left: 40%;
     }
-    .parList .partListTitle{
-        width: 600px;
-    }
     .rr .rrTitle,
     .list #list_{
-        width: 600px;
+        width: 100%;
     }
     .dev{
         height: 1200px;
     }
     .dev #devImg{
-        height: 1190px;
+        height: 1100px;
     }
     .dev .devBlog{
         width: 100%;
-        height: 100%;
     }
     .devBlog .devBlogS,
     .devBlog .devBlogT{
-        width: 600px;
-        height: 240px;
+        width: var(--widthm);
     }
     .devBlog .devBlogTitle,
     .store .storeContent{
-        width: 600px;
+        width: 100%;
     }
     #btnV{
         margin-left: 55%;
@@ -122,11 +120,7 @@
     .store .stores,
     .store .recritment,
     .store .aboutUs{
-        width: 600px;
-    }
-    .nguoidung .diemso{
-        width: 600px;
-        margin: 0 auto;
+        width: var(--widthm);
     }
     .diemso .cup{
         margin: 60px;
@@ -142,7 +136,6 @@
     }
     div.foot{
         flex-wrap: wrap;
-        height: 500px;
     }
 }
 @media only screen and (max-width:500px) {
@@ -153,7 +146,7 @@
         display: block;
     }
     div.rr{
-        height: 300px;
+        height: 320px;
     }
     div.owl-carousel{
         width: 100%;
@@ -176,11 +169,7 @@
     .rr .rrTitle span:nth-child(2){
         margin-left: 20%;
     }
-    /* div.partList{
-        position: relative;
-        width: 100%;
-        height: 1100px;
-    } */
+
     .parList .partListTitle{
         width: 100%;
         height: 30px;
@@ -192,30 +181,30 @@
     }
     .list{
         width: 100%;
-        height: 500px;
-        text-align: center;
-        margin: 0 auto 0;
+        height: 350px;
     }
     .list #list_{
-        display: flex;
-        width: 100%;
-        flex-wrap: wrap;
+        margin-top:0px;
+        grid-template-columns: unset;
+        grid-auto-flow: column;
+        grid-auto-columns: 80%;
+        grid-gap: 30px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-snap-stop:always;
     }
     #list_ .list_s{
-        margin: 10px auto;
-        width: 150px;
-        height: 220px;
-        border-radius: 5px;
-        overflow: hidden;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        position: relative;
+        margin-top: 10px;
+        width: 100%;
+        height: 250px;
+        scroll-snap-align: center;
+        box-shadow: unset;
         /* transition: .4s; */
     }
     .list #list_ .list_s img {
         width: 100%;
         
-    }
-    #list_ .list_s:hover{
-        background: red;
     }
     div.deal_list{
         position: relative;
@@ -242,15 +231,8 @@
     }
     #list_ .list_s > p{
         padding-top: 1.25rem;
-    }
-
-    .dev #devImg{
-        height: 1450px;
-    }
-    .dev .devBlog{
-        width: 100%;
-        height: 1450px;
-    }
+    } */
+    
     .devBlog .devBlogF > img{
         height: 200px;
     }
@@ -286,10 +268,11 @@
     div.orderonl > img{
         width: 100px;
     }
-    
+    .dev #devImg{
+        opacity: 0;
+    }
     div.store{
         width: 100%;
-        height: 600px;
     }
     .store .storeContent{
         width: 100%;
@@ -299,15 +282,15 @@
     }
     .store .stores{
         width: var(--widthm);
-        height: 370px;
+        height: 450px;
         position: relative;
     }
     .store .stores .storesImg{
         position: absolute;
         left: 0;
         bottom: 0;
-        width: var(--widthm);
-        height: 200px;
+        width: 100%;
+        height: 250px;
         
     }
     .store .stores .storesContent{
@@ -316,12 +299,11 @@
     }
     .store .stores .storesImg img{
         width: 100%;
-        height: 200px;
+        height: 250px;
     }
     .store .recritment,
     .store .aboutUs{
         width: var(--widthm);
-        height: 70px;
         background: #F8F8FF;
         margin: 10px auto 0;
         overflow: hidden;
@@ -333,14 +315,7 @@
         margin: 15px 10px;
         cursor: pointer;
     }
-    .store .recritment.showRe,
-    .store .aboutUs.showRe{
-        height: 250px;
-    }
-    .store .recritment.showRe .recritmentTitle #btnRe,
-    .store .aboutUs.showRe .aboutUsTitle #btnAb{
-        transform: rotate(180deg);
-    }
+
     .recritmentContent{
         margin: 10px auto 0;
         width: 300px;
@@ -358,13 +333,10 @@
     }
     
     div.tt{
-        display: flex;
         height: 350px;
-    
     }
     .tt .send{
-        margin-top: 2.5rem;
-        margin: 0 auto;
+        margin: 20px auto;
         width: var(--widthm);
         height:31.25rem;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -382,21 +354,6 @@
         
     }
     .contacts{
-        display: none;
-    }
-    .foot{
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        background: #000000;
-        color: aliceblue;
-        align-items: center;
-        justify-content:center;
-    }
-    .foot .foots{
-        margin: 20px;
-    }
-    .foots.jq{
         display: none;
     }
     .infomation .infomations i{

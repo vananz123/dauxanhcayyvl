@@ -2,7 +2,7 @@
 
 div.tt{
     display: flex;
-    height: 600px;
+    height: auto;
     background:white;
     justify-content:center;
     justify-items: center;
@@ -11,6 +11,7 @@ div.tt{
 .tt .send{
     margin-top: 2.5rem;
     margin-left: 15px;
+    margin-bottom: 10px;
     width: 31.25rem;
     height:31.25rem;
     background: white;
