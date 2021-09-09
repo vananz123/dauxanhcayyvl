@@ -42,23 +42,20 @@ div.orderonl > img{
     border-radius: 10px;
     overflow: hidden;
  }
- .rr .rrTitle{
-    width: 1000px;
+.rrTitle{
+    width: 70%;
+    height: 60px;
     margin:0 auto;
-    border-bottom: 5px solid red;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 5px solid #cb321a;
  }
- .rr .rrTitle span:nth-child(1){
-    font-size: 45px;
+ .rrTitle span:nth-child(1){
+    padding: 0;
+    font-size: 40px;
     text-transform: uppercase;
-    margin-left: 20px;
-    border-bottom: 5px solid red;
+    border-bottom: 2px solid #cb321a;
     text-decoration: none;
- }
- .rr .rrTitle span:nth-child(2){
-    margin-left: 65%;
-    font-size: 16px;
-    border: 2px solid black;
-    text-transform: uppercase;
  }
  .item h5{
     text-align: center;
@@ -77,7 +74,7 @@ div.orderonl > img{
     margin: 50px;
 }
 .infomation .infomations i{
-    color: red;
+    color: #cb321a;
 }
 .foots.time{
     color: #FF7F24;
@@ -123,30 +120,21 @@ div.dev{
     width: 100%;
     color: #000000;
 }
-.devBlog .devBlogTitle{
-    width: 70%;
-    height: 70px;
-    font-size: 40px;
-    border-bottom: 5px solid red;
-    margin: 0 auto;
-}
-.devBlog .devBlogTitle span:nth-child(1),
-.store .storeContent span:nth-child(1){
-    text-transform: uppercase;
-    border-bottom: 5px solid red;
-}
+
 #btnV{
     font-size: 16px;
-    display: inline-block;
     position: relative;
-    padding-left: 23px;
-    margin-left: 70%;
+    text-align: center;
+    margin-top: 12px;
     text-transform: capitalize;
     width: 7.5em;
     height:  2.1855em;
-    background: #FFFFFF;
-    border: 3px solid black;
+    background: var(--colorhover);
+    border-radius: var(--boderbtn);
+    border: 2px solid #9b9ba1;
+    overflow: hidden;
     z-index: 0;
+    padding-top: 4px;
 }
 #btnV::before{
     content: '';
@@ -155,9 +143,10 @@ div.dev{
     right: 0;
     width: 7.5em;
     height:  2.1855em;
-    background:#ba4c35 ;
+    background:#FFFFFF ;
     z-index: -1;
-    transition:width 0.5s;
+    border-radius: inherit;
+    transition:width 0.2s;
 }
 #btnV:hover::before{
     width: 0;
@@ -229,7 +218,7 @@ div.dev{
     left: -3px;
     width: 0px;
     height: 2.1855rem;
-    background: red;
+    background: #cb321a;
     transition: width 0.5s;
     border-bottom:3px solid white ;
     border-right:3px solid white ;
@@ -241,92 +230,99 @@ div.dev{
 div.partList{
     position: relative;
     width: 100%;
-    height: 1100px;
-}
-div.partListTitle{
-    width: 70%;
-    height: 50px;
-    margin: 0 auto 0;
-}
-div.partListTitle h3{
-    font-size: 40px;
-    padding-left: 20px;
-    text-transform: uppercase;
-    border-bottom: 5px solid white;
+    height: auto;
 }
 .list{
     width: 70%;
-    height: 950px;
+    height: auto;
     text-align: center;
     margin: 30px auto 0;
-}
-.list #list_{
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 20px;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
 }
-#list_ .list_s{
+.list .list_{
     margin-left: 1.5rem;
-    margin-top: 10px;
-    width: 18.75rem;
-    height: 28.125rem;
-    background: #FFFFFF;
-    border-radius: 15px;
+    width: 20rem;
+    height: auto;
+    position: relative;
+    border-radius: var(--boderbtn);
     overflow: hidden;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    /* transition: .4s; */
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
-.list #list_ .list_s img {
+.list .listImg{
+    position: relative;
     width: 100%;
-    
 }
-#list_ .list_s:hover{
-    background:rgba(171, 19, 24, 0.19);
+.list_ .listImg > img {
+    width: 100%;
+    height: 270px;
+    border-radius: 0 0 var(--boderbtn) 0;
+    z-index: 0;
 }
 div.deal_list{
-    position: relative;
-    width: 7.5rem;
-    height: 2.8125rem;
-    border-radius: 20px;
-    background-color:#ba4c35;
-    margin: 10px auto;
-    overflow: hidden;
-    z-index: 0;
+    width: 4.5rem;
+    height: 35px;
+    border-radius: 0 0 var(--boderbtn) var(--boderbtn);
+    background:#e4e0e4;
+    margin: 0;
 }
 div.deal_list > p{
     text-transform: capitalize;
-    padding-top: 8px;
+    padding-top: 2px;
 }
-div.deal_list::before{
-    content: '';
-    position:absolute;
+.list_ .bglist{
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(white,black);
+    opacity: 0;
+    border-radius: 0 0 var(--boderbtn) 0;
+}
+.bglist_c{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: var(--heightbtn);
+    height: var(--heightbtn);
+    border-radius:var(--boderbtn);
+    padding-top: 10px;
+    text-align: center;
+    opacity: 0;
+    background: #F8F8FF;
+    color: #9b9ba1;
+}
+.bglistTitle{
+    position: absolute;
     top: 0;
     left: 0;
-    width: 0rem;
-    background: #FFFFFF;
-    height: 2.8125rem;
-    /* padding-top: 0.625em; */
-    transition: width 0.5s;
-    z-index: -1;
+    width: 100px;
+    height: 35px;
+    opacity: 1;
+    border-radius: 0 0 10px 0;
+    background: var(--colorbtn);
+    transition: opacity 0.2s;
 }
-#list_ .list_s:hover .deal_list::before{
-    width: 7.5rem;
+.bglistTitle > p{
+    text-transform: uppercase;
+    padding-top: 4px;
 }
-#list_ .list_s > p{
-    padding-top: 1.25rem;
+.list .listImg:hover .bglistTitle{
+    opacity: 0;
+}
+.list .listImg:hover .bglist{
+    opacity: 0.4;
+}
+.list .listImg:hover .bglist_c{
+    opacity: 1;
 }
 div.store{
     position: relative;
     width: 100%;
     height: auto;
     background: #FFFFFF;
-}
-.store .storeContent{
-    width: 70%;
-    height: 70px;
-    margin:0 auto 0;
-    font-size: 40px;
-    border-bottom: 5px solid red;
 }
 .store .stores{
     width: 70%;
@@ -416,10 +412,8 @@ div.store{
     padding-bottom: 5px;
 }
 .noname:hover{
-    background-color: red;
+    background-color: #cb321a;
     transform: scale(1.2);
-    
-    
 }
 
 

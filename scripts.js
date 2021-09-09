@@ -58,10 +58,6 @@ $(document).ready(function(){
         }
     }
   });
-
- $('.ss_ span').click(function(){
-   $('.ss_').toggleClass("act")
- })
  //diemso
  function animateNumber(finalNumber, duration = 5000, startNumber = 0, callback) {
   let currentNumber = startNumber
@@ -109,24 +105,32 @@ $(document).ready(function(){
   var or=document.querySelectorAll('div.order a')
 //lsit list_ ds mon
 
-  var so_mon=4
+  const so_mon=7
   function dsmon(){
+    var templist=document.querySelector('#list')
     for(var i=0;i<so_mon;i++){
-    $('#list_').append('<div class="list_s"></div>') 
-    }
-    var ds_mon=document.querySelectorAll('#list_ .list_s')
-    for(var j=0;j<ds_mon.length;j++){
-      var r=`tai_nguyen/cake/cake_${j+1}.png`
-      
-      $(ds_mon[j]).append('<img src='+r+'>')
-      
-      $(ds_mon[j]).append('<div class="deal_list"><p>buy</p></div>')
-      var price_t=`<p>${ramdomprice(4,7)}0.000Đ</p>`
-      $(ds_mon[j]).append(price_t)
-      
+    const temp=`
+    <div class="list_">
+        <div class="listImg">
+          <img src="tai_nguyen/cake/cake_${i+1}.png"/>
+          <div class="bglist"><p>san pham moi!</p></div>
+          <div class="bglistTitle">
+            <p>new !</P>
+          </div>
+          <a href="trang1.html">
+            <div class="bglist_c fas fa-cart-plus"></div>
+          </a>
+        </div>
+      <div class="deal_list">
+        <p>${ramdomprice(4,7)}0.000Đ</p>
+      </div>
+    </div>
+    `
+      templist.insertAdjacentHTML("beforeend",temp)
     }
   }
   dsmon();
+  
   function sendsmit(){
     var modal_ct=".modal_ct .modal_box"
     var span=".modal_ct .modal_box .content span"
@@ -172,56 +176,53 @@ $(document).ready(function(){
   }
   sendsmit();
 
-  const widthHeaderr=65;
+  const widthHeaderr=60;
   function showHeaderM(){
     var heightheader=document.querySelector('div.headerr.skit')
-    var headerrSkitNavv=document.querySelector('div.headerr.skit .navv')
+    var showopac=document.querySelector('nav.navv')
     var headerrSkitlogo=document.querySelector('div.headerr.skit #logo')
+    function chuyenlogo(obj,top,left,width){
+      $(obj).css({
+        "top":`${top}px`,
+        "left":`${left}px`,
+        "width":`${width}px`,
+        "opacity":"1",
+        "transform":"translateX(0)"
+      })
+    }
     if($(window).width()<=1024){
       $(heightheader).css({
         "height":`50px`
       })
-      $(headerrSkitNavv).css({
-        "right":"0"
-      })
-      $(headerrSkitlogo).css({
-        "top":"10px",
-        "left":"10px",
-        "width":"50px",
-        "opacity":"1",
-        "transform":"translateX(0)"
-      })
+      chuyenlogo(headerrSkitlogo,0,0,50);
       $('div.headerr').addClass("skit")
     }else{
       $(window).scroll(function(){
         if($(window).scrollTop() > 5){
+          $('#wall').css("opacity","0")
           $(heightheader).css({
             "height":`${widthHeaderr}px`
           })
-          $(headerrSkitNavv).css({
-            "right":"0"
+          $(showopac).css({
+            "opacity":"1"
           })
-          $(headerrSkitlogo).css({
-            "top":"10px",
-            "left":"10px",
-            "width":"50px",
-            "opacity":"1",
-            "transform":"translateX(0)"
-          })
+
+          chuyenlogo(headerrSkitlogo,2,0,60);
           $('div.headerr').addClass("skit")
         }else{
+          $('#wall').css("opacity","1")
           $(heightheader).css({
             "height":"100vh"
           })
-          $(headerrSkitNavv).css({
-            "right":"-150%"
+          $(showopac).css({
+            "opacity":"0"
           })
           $(headerrSkitlogo).css({
-            "top":"15%",
+            "top":"0",
             "left":"50%",
-            "width":"400px",
-            "opacity":"0.5",
-            "transform":"translateX(-50%)"
+            "width":"600px",
+            "opacity":"0.8",
+            "transform":"translate(-50%,-25px)"
           })
           $('div.headerr').removeClass("skit")
         }
@@ -335,7 +336,7 @@ $(document).ready(function(){
       $(btnNavbar).click(function(){
         if($(heightheader).height()>65){
           $(heightheader).css({
-            "height":`${widthHeaderr-15}px`
+            "height":`${widthHeaderr-10}px`
           })
         }else{
           $(heightheader).css({
