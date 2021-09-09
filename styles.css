@@ -7,6 +7,8 @@ html{
     --colorbtn:#ffffff;
     --colorhover:#F3F3F4;
     --heightbtn:35px
+    --colorssblck:#9b9ba1;
+    --colorblackwhite:#e4e0e4;
 }
 *{
     margin: 0;

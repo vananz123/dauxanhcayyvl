@@ -179,7 +179,7 @@ $(document).ready(function(){
   const widthHeaderr=60;
   function showHeaderM(){
     var heightheader=document.querySelector('div.headerr.skit')
-    var showopac=document.querySelector('nav.navv')
+    var showopac=document.querySelector('.headerr nav.navv')
     var headerrSkitlogo=document.querySelector('div.headerr.skit #logo')
     function chuyenlogo(obj,top,left,width){
       $(obj).css({

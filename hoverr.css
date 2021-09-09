@@ -16,7 +16,7 @@ div.tt{
     height:31.25rem;
     background: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 20px;
+    border-radius: var(--boderbtn);
 }
 .tt .send h5{
     font-size:25px;
@@ -30,10 +30,14 @@ div.tt{
     width: 26.25rem;
     height: 3.125rem;
     margin-bottom: 20px;
-    border: 1px solid black;
+    border: none;
     outline: none;
+    background: var(--colorhover);
     
-    
+}
+.send form input:hover{
+    background: none;
+    border: 1px solid #9b9ba1;
 }
 #sendsmit{
     display:block;
@@ -65,7 +69,7 @@ div.tt{
     height: 400px;
     background: white;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: var(--boderbtn);
     border: 1px solid ;
     transform:translateX(-30px) translateY(calc(30px* var(--i))) rotate(40deg) skew(-20deg,-10deg) scale(0.6);
     transition: 0.5s;
