@@ -77,26 +77,26 @@ $(document).ready(function(){
   requestAnimationFrame(updateNumber)
   }
   
-  $(window).scroll(function(){
-    if($(window).scrollTop() >=3902 && $(window).scrollTop()<4290){
-      animateNumber(4000, 1000, 0, function (number) {
-        const formattedNumber = number.toLocaleString()
-        $('#cups').text(formattedNumber+"+")
-      })
-      animateNumber(220, 1000, 0, function (number) {
-        const formattedNumber = number.toLocaleString()
-        $('#orderdays').text(formattedNumber+"+")
-      })
-      animateNumber(60, 1000, 0, function (number) {
-        const formattedNumber = number.toLocaleString()
-        $('#nhan_vien').text(formattedNumber)
-      })
-      animateNumber(40, 1000, 0, function (number) {
-        const formattedNumber = number.toLocaleString()
-        $('#at_hour').text(formattedNumber)
-      })
-    }
-  })
+  // $(window).scroll(function(){
+  //   if($(window).scrollTop() >=3902 && $(window).scrollTop()<4290){
+  //     animateNumber(4000, 1000, 0, function (number) {
+  //       const formattedNumber = number.toLocaleString()
+  //       $('#cups').text(formattedNumber+"+")
+  //     })
+  //     animateNumber(220, 1000, 0, function (number) {
+  //       const formattedNumber = number.toLocaleString()
+  //       $('#orderdays').text(formattedNumber+"+")
+  //     })
+  //     animateNumber(60, 1000, 0, function (number) {
+  //       const formattedNumber = number.toLocaleString()
+  //       $('#nhan_vien').text(formattedNumber)
+  //     })
+  //     animateNumber(40, 1000, 0, function (number) {
+  //       const formattedNumber = number.toLocaleString()
+  //       $('#at_hour').text(formattedNumber)
+  //     })
+  //   }
+  // })
 //foots
   var m=$('.foots.jq')
   for(var i=0;i<7;i++){
@@ -105,9 +105,9 @@ $(document).ready(function(){
   var or=document.querySelectorAll('div.order a')
 //lsit list_ ds mon
 
-  const so_mon=7
+  const so_mon=7 //số danh sach muốn tạo
   function dsmon(){
-    var templist=document.querySelector('#list')
+    var templist=document.querySelector('#list')//thẻ html muốn thêm 
     for(var i=0;i<so_mon;i++){
     const temp=`
     <div class="list_">
@@ -125,8 +125,8 @@ $(document).ready(function(){
         <p>${ramdomprice(4,7)}0.000Đ</p>
       </div>
     </div>
-    `
-      templist.insertAdjacentHTML("beforeend",temp)
+    `//temp là các thành phần html muốn thêm vào 
+      templist.insertAdjacentHTML("beforeend",temp) //dùng insertAdjacentHTML để thêm vào beforeend là thêm vào sao
     }
   }
   dsmon();
@@ -176,62 +176,29 @@ $(document).ready(function(){
   }
   sendsmit();
 
-  const widthHeaderr=60;
+  const widthHeaderr=50;
   function showHeaderM(){
-    var heightheader=document.querySelector('div.headerr.skit')
-    var showopac=document.querySelector('.headerr nav.navv')
-    var headerrSkitlogo=document.querySelector('div.headerr.skit #logo')
-    function chuyenlogo(obj,top,left,width){
-      $(obj).css({
-        "top":`${top}px`,
-        "left":`${left}px`,
-        "width":`${width}px`,
-        "opacity":"1",
-        "transform":"translateX(0)"
-      })
+    var headerrSkitlogo=document.querySelector('div.headerr #logo')
+    function chuyenlogo(obj,right,width){
+      if(width <=1024){
+        $(obj).css({
+          "left":"unset",
+          "right":`${right}px`
+        })
+      }else{
+        $(obj).css({
+          "right":"unset",
+          "left":`${right}px`
+        })
+      }
     }
-    if($(window).width()<=1024){
-      $(heightheader).css({
-        "height":`50px`
-      })
-      chuyenlogo(headerrSkitlogo,0,0,50);
-      $('div.headerr').addClass("skit")
-    }else{
-      $(window).scroll(function(){
-        if($(window).scrollTop() > 5){
-          $('#wall').css("opacity","0")
-          $(heightheader).css({
-            "height":`${widthHeaderr}px`
-          })
-          $(showopac).css({
-            "opacity":"1"
-          })
-
-          chuyenlogo(headerrSkitlogo,2,0,60);
-          $('div.headerr').addClass("skit")
-        }else{
-          $('#wall').css("opacity","1")
-          $(heightheader).css({
-            "height":"100vh"
-          })
-          $(showopac).css({
-            "opacity":"0"
-          })
-          $(headerrSkitlogo).css({
-            "top":"0",
-            "left":"50%",
-            "width":"600px",
-            "opacity":"0.8",
-            "transform":"translate(-50%,-25px)"
-          })
-          $('div.headerr').removeClass("skit")
-        }
-      })
-    }
+    const widthM=$(window).width();
+    chuyenlogo(headerrSkitlogo,0,widthM);
   }
   showHeaderM();
 
   function nav_ani(){
+    
     var ani =document.querySelector('.nav_list .ani.move')
     var nis =document.querySelectorAll('.nav_list > li')
     var widthNav_list=$('.nav_list').width()
@@ -265,15 +232,13 @@ $(document).ready(function(){
       $(heightheader).css({
         "height":`${widthHeaderr}px`
       })
-      $('div.headerr').addClass("skit")
     }
     //hàm hiện list menu
     function headerrShowe65(obj,height){
       $(obj).show()
       $(heightheader).css({
-        "height":`${height+widthHeaderr-5}px`
+        "height":`${height+widthHeaderr}px`
       })
-      $('div.headerr').addClass("skit")
     }
     function setenter(j){
       if(j==1){
@@ -286,61 +251,50 @@ $(document).ready(function(){
         headerrShowe65(listNews,$(listNews).height())
       }
     }
-    function setleave(j){
-      if(j==1){
-        headerrHide65(listProfile)
-      }
-      if(j==2){
-        headerrHide65(listMenu)
-      }
-      if(j==3){
-        headerrHide65(listNews)
-      }
+    function setleave(){
+      headerrHide65(listProfile)
+      headerrHide65(listMenu)
+      headerrHide65(listNews)
     }
     for(let j=0;j<nis.length;j++){
       nis[j].addEventListener('mouseenter',function(){
         setenter(j)
       })
       nis[j].addEventListener('mouseleave',function(){
-        setleave(j)
+        setleave();
       })
     }
   }
   headerMeun();
-  
   function navbarMoblie(){
     var width=$(window).width()
     var navbar=document.querySelectorAll('div.navbar')
-    var heightheader=document.querySelector('div.headerr.skit')
+    var heightheader=document.querySelector('div.headerr')
     var btnNavbar=document.querySelectorAll('#btnNavbar')
     function showNavbar(navbar,width){
       if(width <= 1024){
-        $(navbar).show()
+        $(navbar).show();
       }
     }
-    showNavbar(navbar,width)
-    if(width <=1024 && width >500){
-      $(btnNavbar).click(function(){
-        if($(heightheader).height()>65){
-          $(heightheader).css({
-            "height":`${widthHeaderr}px`
-          })
-        }else{
-          $(heightheader).css({
-            "height":"100vh"
-          })
-        }
+    showNavbar(navbar,width);
+    if(width <=1024){
+      var gggg=document.querySelectorAll('.navbarshape > div > a')
+      $(gggg).click(function(){
+        $(heightheader).css({
+          "height":`${widthHeaderr}px`
+        })
       })
-    }
-    if(width <=500){
       $(btnNavbar).click(function(){
         if($(heightheader).height()>65){
           $(heightheader).css({
-            "height":`${widthHeaderr-10}px`
+            "height":`${widthHeaderr}px`,
+            "overflow":"hidden"
           })
         }else{
+          $(heightheader).css("overflow","unset")
           $(heightheader).css({
-            "height":"100vh"
+            "height":"100vh",
+            "overflow-y":"auto"
           })
         }
       })
@@ -411,6 +365,19 @@ $(document).ready(function(){
     
   }
   sliderBox(img);
+  function navbarMbtn(){
+    var btnli=document.querySelectorAll('ul.task-item li')
+    var downM=document.querySelectorAll('div.navbarshape')
+    function setbtn(j){
+      $(downM[j-2]).toggleClass("show")//do bo đi phàn title vo trang chủ nen tru 2
+    }
+    for(let j=0;j< btnli.length;j++){
+      btnli[j].addEventListener('click',function(){
+        setbtn(j)
+      })
+    }
+  }
+  navbarMbtn();
 });
 
 

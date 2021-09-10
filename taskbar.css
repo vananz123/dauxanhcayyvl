@@ -1,44 +1,77 @@
 
-div.headerr .navbar{
+.btnTaskbar{
+    width: 35px;
+    height: 35px;
+    margin-top: 8px;
+    z-index: 11;
+    text-align: right;
     display: none;
 }
-.navbar .btn{
-    position: absolute;
-    top: 7px;
-    right: 7px;
-    z-index: 100;
+.btnTaskbar > span{
+    font-size: 22px;
+    padding-top: 5px;
 }
-.navbar .btn span{
-    font-size: 30px;
-    margin-left: 10px;
+div.headerr .navbar{
+    position: relative;
+    width: 100%;
+    display: none;
 }
 .navbar .taskbar{
-    position: absolute;
-    top: 200px;
-    left: 50%;
-    transform: translate(-50%);
-    z-index: 90;
+    width: 95%;
+    height: auto;
+    margin:0 auto;
 }
-ul.task-item li{
-    list-style-type: none;
-    text-align: center;
-    margin-top: 15px;
+.navbar .taskbar ul{
+    text-align: start;
 }
-ul.task-item li a{
-    font-size: 20px;
-    text-decoration:none;
-    margin-top: 30px;
-    color: white;
-    text-transform: capitalize;
+ul.task-item{
+    height: auto;
 }
-.taskbar .title{
-    font-size: 35px;
+ul.task-item li:nth-child(1) > a{
+    font-size: 25px;
     color: red;
 }
-div.headerr.show_header_m{
-    position: fixed;
-    top: 0;
-    left: 0;
+ul.task-item > li{
+    margin-top: 10px;
+    padding: 10px 10px 10px 0;
+    list-style-type: none;
+    height: auto;
+    width: 100%;
 }
+.downM{
+    display: flex;
+    justify-content: space-between;
+}
+.downM > span,#navbarSign > a{
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration:none;
+    color: var(--boderbtn);
+    text-transform: capitalize;
+}
+.downM > i{
+    font-size: 16px;
+}
+div.navbarshape{
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    transition: all .0.5s;
+}
+div.navbarshape > div{
+    border-left: 1px solid var(--colorssblck);
+    padding:5% 0 5% 10%;
+}
+div.navbarshape > div > a{
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--colorssblck);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+div.navbarshape.show{
+    height: auto;
+}
+
 
 

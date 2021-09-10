@@ -19,18 +19,29 @@
     html{
         font-size: 14px;
     }
-
     .rrTitle{
         width: 90%;
     }
     div.space{
         height: 50px;
     }
-    /* #list_ .list_s{
-        pointer-events: none;
-    } */
-    nav.navv{
+    .btnTaskbar{
+        display: block;
+    }
+    .nav_list{
         display: none;
+    }
+    div.sign{
+        display: none;
+    }
+    nav.navv{
+        justify-content: flex-start;
+    }
+    /* div.headerr{
+        display: block;
+    } */
+    div.headerr .navbar{
+        display: block;
     }
     div.space{
         background: #fff;
