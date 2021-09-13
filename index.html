@@ -17,6 +17,7 @@
       <script src="owlcarousel/owl.carousel.min.js"></script>
       <link rel="stylesheet" href="body.css" type="text/css">
       <link rel="stylesheet" href="responsive.css"/>
+      
 
     </head>
     <body>
@@ -157,6 +158,8 @@
         <div class="bodySlider">
           
           <div class="slider">
+            <div class="prevbtn"><i class="fas fa-arrow-alt-circle-left"></i></div>
+            <div class="nextbtn"><i class="fas fa-arrow-alt-circle-right"></i></div>
             <div class="dot">
               <div class="dots act"></div>
               <div class="dots"></div>
@@ -176,6 +179,7 @@
               </div>
             </div>
             <div class="sliders">
+              
               <div class="tt"><img src="https://c.pxhere.com/photos/1c/5b/coffee_coffee_beans_afternoon_tea-1087030.jpg!d"/></div>
               <div class="tt"><img src="https://c.pxhere.com/photos/15/5a/coffee_Cup_Table_wood-1617499.jpg!d"/></div>
               <div class="tt"><img src="https://c.pxhere.com/photos/a1/3c/Beverage_Cafe_Cappuccino_Chocolate_cocoa_counter_cozy_Cream-1623286.jpg!d"/></div>
@@ -320,7 +324,7 @@
           </div>
           <div class="recritment">
             <div class="recritmentTitle">
-              <span id="btnRe" class="fas fa-angle-up"></span>
+              <span id="btnRe" class="fas fa-angle-down"></span>
               <span>recritment</span>
             </div>
             <div class="recritmentContent">
@@ -332,7 +336,7 @@
           </div>
           <div class="aboutUs">
             <div class="aboutUsTitle">
-              <span id="btnAb" class="fas fa-angle-up"></span>
+              <span id="btnAb" class="fas fa-angle-down"></span>
               <span>about us</span>
             </div>
             <div class="recritmentContent">
@@ -474,14 +478,32 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
       var slides=document.querySelectorAll('.slider .sliders')
+      const leng=document.querySelectorAll('.tt > img').length
       var dot=document.querySelectorAll('.dot .dots')
       var capl=document.querySelectorAll('.caption_left .caption_')
       var capr=document.querySelectorAll('.caption_right .caption_')
       var r=$('.slider').width();
+      const nextbtn=document.querySelector('div.nextbtn')
+      const prevbtn=document.querySelector('div.prevbtn')
       $(slides).css({
           "width":`${3*r}px`
       })
+      
       function setact(i){
+          $(nextbtn).click(function(){
+            if(i==leng-1){
+              setact(i-(leng-1));
+            }else{
+              setact(i+1);
+            }
+          })
+          $(prevbtn).click(function(){
+            if(i==0){
+              setact(i+(leng-1));
+            }else{
+              setact(i-1);
+            }
+          })
           var m=`${i*-r}px`
           $(slides).css({
             "transform":`translateX(${m})`
@@ -501,8 +523,9 @@
       }
       for(let i=0;i<dot.length;i++){
         dot[i].addEventListener('click',function(){
-            setact(i)
+          setact(i)
         })
       }
+      setact(0)//giá trị mặc định khi dot khi dc click
   </script>
 </html>

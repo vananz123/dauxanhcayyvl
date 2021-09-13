@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cà Phê TIRAMISU</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="img/icons.jpg" rel="shortcut icon" />
+        <link rel="stylesheet" href="styles.css" type="text/css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="search.css"/>
+        <link rel="stylesheet" href="taskbar.css"/>
+        <script src="scripts.js"></script>
+        
+       
+    </head>
+    <style>
+          * {
+            box-sizing: border-box;
+        }
+        section.body 
+        {
+            margin-left: 150px;
+            margin-top: 100px;
+        }
+        .logo-coffee {
+            cursor: pointer;
+        }
+        .logo {
+            width: 7rem;
+            margin-left: 50px;
+        }
+        .menus img {
+            height: 2.2rem;
+            width:2.2rem;
+        }
+        ul.menu {
+            list-style-type:none;
+        }
+        .menus {
+            display:flex;
+            align-items: center;
+            padding: 10px 12px;
+            margin: 3px 0;
+            border-radius:6px;
+        }
+        .menu1 {
+            font-size: 1.4rem;
+            text-transform: capitalize;
+            margin-left: 10px;
+        }
+        div.img 
+        {
+            margin-left: 100px;
+            width: 450px;
+            border:1px solid lightgray  ;
+
+        }
+        img
+        {
+            max-width: 100%;
+        }
+        div.thanh1
+        {
+            
+           
+            width: 70%;
+            background: #EA8025;
+            height: 5px;
+            border-radius:3px ;
+        }
+        .name2 
+        {
+            display: flex;
+            padding: 20px;
+            padding-top: 15px;
+        }
+        div.name1
+        {
+            padding-left: 40px;
+            font-size: 30px;
+            align-content: center;
+            margin-left: 30px;
+            padding: 15px;
+        }
+        p.thousand 
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            margin-top: 15px;
+            color: #EA8025;
+            
+        }
+        div.buy 
+        {
+            background: #EA8025;
+            display:inline-block ;
+            color: white;
+            padding: 15px 30px;
+            font-weight: 700;
+            font-size: 18px;
+            font-family:Arial, Helvetica, sans-serif;
+            width: 60%;
+            text-align: center;
+            margin-top: 20px;
+
+        }
+        a
+        {
+            text-decoration: none;
+            color:white;
+        }
+        section.subconten
+        {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+        .ele
+        {
+            font-size: 30px;
+            text-align: center;
+
+        }
+        div.thanh
+        {
+            margin-left: 150px;
+            margin-right: 150px;
+            width: 70%;
+            background: #EA8025;
+            height: 3px;
+            border-radius:3px ;
+        }
+
+        div.them
+        {
+            margin-top: 25px;
+            margin-left: 20px;
+            width: 30%;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 30px;
+            height: 300px;
+            text-align: center;
+        }
+        div.canthem
+        {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom:  300px;
+            
+        }
+        div.name3
+        {
+            color:black;
+            margin-top: 10px;
+            margin-left: 30px;
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+
+
+        }
+        div.name3 > a
+        {
+            color:black;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        div.name3 > a:hover
+        {
+            color:#EA8025;
+        }
+        div.thousanh1
+        {
+            color:#EA8025;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 40px;
+            margin-left: -150px;
+        }
+        div.buy1 
+        {
+            background: #EA8025;
+            display:inline-block ;
+            color: white;
+            
+            font-weight: 500;
+            font-size: 18px;
+            font-family:Arial, Helvetica, sans-serif;
+            width: 60%;
+            text-align: center;
+            margin-top: 100px;
+            margin-left: -150px;
+
+        }
+        div.buy1 > a
+        {
+            padding: 15px 30px;
+            display: block;
+            transition: transform 1s;
+        }
+        div.buy1 > a:hover
+        {
+            background-color: white;
+            color:tomato;
+            transform: scale(1,1);
+            transform-origin: left center;
+        }
+        ul.footer {
+          list-style-type:none;
+          padding: 25px;
+          margin:10px;
+          background-color:rgba(0,0,0,.87);
+         
+      }
+      ul.footer>li {
+          max-width:100%;
+          padding-right:15px;
+
+         
+         
+      }
+      .footer {
+           
+           background-color: rgba(0,0,0,.87);
+           color:aliceblue;
+       }
+      .footer_time-hours {
+          color:chocolate;  
+      }
+      .sup {
+          padding: 25px;
+      }
+      
+      nav>ul.footer {
+        display:flex;
+        margin: auto;
+        padding: 35px;
+      }
+     ul.diachi {
+         line-height: 2,5;
+     }
+    ul.subcontent {
+        padding: 25px;
+        
+    }
+    ul.subcontent:hover
+    {
+        color:brown;
+    }
+    </style>
+    <body>
+        <section class="body">
+        <nav style="float:left">
+            <ul  class="menu">
+                <h2>Popular</h2>
+                <li class="menus">
+                  <img src="baitaplon/icon/coffe.png" alt="coffe"/>  
+                  <span class="menu1">Coffe</span>
+                </li>
+                <li class="menus">
+                    <img src="baitaplon/icon/Fresh water1.jpg" alt="fresh water" />
+                  <span class="menu1">Fresh water</span>
+              </li>
+              <li class="menus">
+                  <img src="baitaplon/icon/milk tea.png" alt="milk tea" />
+                  <span class="menu1">Milk tea</span>
+              </li>
+              <li class="menus">
+                  <img src="baitaplon/icon/cake.png" alt="cake" />
+                  <span class="menu1">Cake</span>
+              </li>
+            </ul>
+        </nav> 
+      <section class="name2">
+        <div class="img" >
+            <img id="imgnew" src="tai_nguyen/coffee/cafe_1.png" title="Cà Phê TIRAMISU"/>
+        </div>
+        <div class="name1">
+            <p>CÀ PHÊ TIRAMISU</p>
+            <div class="thanh1"></div>
+            <p class="thousand">15000VNG</p>
+            <div><b>Choose your options</b></div>
+            <div><input  type="radio" name="buy"/>Mua 4 phần giảm 5%</div>
+            <div><input type="radio" name="buy"/>Mua 8 phần giảm 7% free ship</div>
+            <div><input type="radio" name="buy"/>Mua 12 phần giảm 10% free ship</div>
+            <a href="#" ><div class="buy">Mua Ngay</div></a>
+           <div>Gọi giao hàng tận nơi:<a href="#" style="color:lightsalmon">033066889</a></div>
+        </div>
+    </section>
+    </section>
+        <section class="subconten">
+            <div class="subcontet1">
+                <div>
+                    <h3 class="ele">Có Thể bạn thích</h3>
+
+                </div>
+                <div class="thanh"></div>
+           <div class="canthem">
+            <div class="them">
+                <a href="#"><img src="tai_nguyen/coffee/cafe_3.png " title="PUDDING Cà phê"/> </a>
+                <div class="name3"><a href="#"><b>PUDDING Cà phê</b></a></div>
+                <div class="thousanh1">30000Đ </div>
+                <div class="buy1"><a href="#">Mua Ngay</a></div>
+
+            </div>
+            <div class="them">
+               <a href="#"> <img src="tai_nguyen/cake/cake_12.png " title="Bánh Mì Cà Phê"/> </a>
+                <div class="name3"><a href="#"><b>Bánh Mì Cà Phê</b></a></div>
+                <div class="thousanh1">17000Đ </div>
+                <div class="buy1"><a href="#" >Mua Ngay</a></div>
+
+            </div>
+            <div class="them">
+                <a href="#"><img src="tai_nguyen/coffee/cafe_6.png" title="Cà Phê Mocha"/> </a>
+                <div class="name3"><a href="#"><b>Cà Phê Mocha</b></a></div>
+                <div class="thousanh1">20000Đ </div>
+                <div class="buy1"><a href="#" >Mua Ngay</a></div>
+
+            </div>
+           
+        </div>
+        </div>
+        </section>
+    <footer class="footer">
+            <nav>
+                <ul class="footer">
+                    <li class="sub">
+                         
+                        <ul class="footer subcontent">
+                            <li class="footer_time-day">Monday</li>
+                            <li class="footer_time-day">Tuesday</li>
+                                <li class="footer_time-day">Wednesday</li>
+                                <li class="footer_time-day">Thursday</li>
+                                <li class="footer_time-day">Friday</li>
+                                <li class="footer_time-day">Saturday</li>
+                                <li class="footer_time-day">Sunday</li>
+                        </ul>
+                    </li>
+                    <li class="sub">
+                        
+                        <ul class="footer subcontent">
+                            <li>.... </li>
+                            <li>.... </li>
+                            <li>.... </li>
+                            <li>.... </li>
+                            <li>.... </li>
+                            <li>.... </li>
+                            <li>.... </li>
+                        </ul>
+                    </li>
+                    <li class="sub">
+                        
+                        <ul class="footer subcontent">
+                           <li class="footer_time-hours ">Closed</li>
+                           <li class="footer_time-hours ">8.00-20.00</li>
+                            <li class="footer_time-hours ">8.00-20.00</li>
+                            <li class="footer_time-hours ">8.00-20.00</li>
+                            <li class="footer_time-hours ">8.00-20.00</li>
+                            <li class="footer_time-hours ">8.00-20.00</li>
+                            <li class="footer_time-hours ">9.00-12.00</li>
+                            
+                        </ul>
+                    </li>
+                    <li class="sub">
+                        
+                        <ul class="footer subcontent diachi">
+                           <li style="font-size: 25px;" ><h4>Address</h4></li>
+                           <li ><a style="text-decoration: none;color:aliceblue" href="#"><i style="color:chocolate;" class="fas fa-phone-alt"></i>&emsp;+456789 235</a></li>
+                            <li ><a style="text-decoration: none;color:aliceblue" href="#"><i style="color:chocolate;" class="fas fa-envelope-open-text"></i>&emsp;coffe@gmail.com</a></li>
+                            <li><a style="text-decoration: none;color:aliceblue"href="#"><i style="color:chocolate;" class="fas fa-building"></i>&emsp;375 Nguyễn kiệm</a></li>
+                           <li>
+                          <a href="#">
+                            <i style="color:chocolate;"class="fab fa-instagram"></i> 
+                          </a>&emsp;
+                          <a href="#"><i style="color:rgb(45, 136, 255);" class="fab fa-facebook"></i></a>&emsp;
+                          <a><i style="color:red" class="fab fa-youtube"></i></a>
+                            
+                             
+                        </li>
+                       
+                        </ul>
+                    </li>
+                    <li style="margin-left: 300px;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1499666993473!2d106.67767731460603!3d10.799823892305671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528d772c9449b%3A0x7dbaf1e77dfb181!2zMzc1IE5ndXnhu4VuIEtp4buHbSwgUGjGsOG7nW5nIDksIFBow7ogTmh14bqtbiwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1629461577241!5m2!1svi!2s" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </li>
+                 </ul>     
+            </nav>
+        </footer>
+        <a href="#">
+            <div class="gotop">
+              <i class="fas fa-angle-up"></i>
+            </div>
+          </a>
+    </body>
+    <script src="./pa.js"></script>
+</html>

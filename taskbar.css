@@ -60,7 +60,7 @@ div.navbarshape{
 }
 div.navbarshape > div{
     border-left: 1px solid var(--colorssblck);
-    padding:5% 0 5% 10%;
+    padding:15px 0 15px 15px;
 }
 div.navbarshape > div > a{
     text-decoration: none;

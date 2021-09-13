@@ -18,7 +18,7 @@ html{
 }
 div.space{
     width: 100%;
-    height: 100px;
+    height: 50px;
     background: #000000;
 }
 div.headerr{
@@ -245,9 +245,10 @@ div.ss{
 }
 /* img anh nen */
 div.bodySlider{
+    padding-top: 40px;
     width: 100%;
     height: auto;
-    background: #000000;
+    background: #060405;
 }
 .slider{
     width: 65%;
@@ -256,6 +257,26 @@ div.bodySlider{
     overflow: hidden;
     margin: 0 auto ;
     border-radius: 10px;
+}
+div.prevbtn{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    z-index: 11;
+}
+div.nextbtn{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    z-index: 11;
+}
+div.prevbtn > i,div.nextbtn >i{
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+div.prevbtn:hover,div.nextbtn:hover{
+    transform: scale(1.2);
 }
 .slider .sliders{
     display: flex;
@@ -280,6 +301,7 @@ div.bodySlider{
     width: 20px;
     height: 20px;
     border-radius: 50%;
+    margin: 10px;
     border: 2px solid gold;
     cursor: pointer;
 }

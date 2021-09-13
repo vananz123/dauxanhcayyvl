@@ -106,14 +106,17 @@ $(document).ready(function(){
 //lsit list_ ds mon
 
   const so_mon=7 //số danh sach muốn tạo
+  const namedisk=['cheesecake cà phê','cupcake cà phê','muffin cà phê','rau cau cà phê','cà phê ai len','sữa lắc cà phê','trà sữa cà phê']
   function dsmon(){
     var templist=document.querySelector('#list')//thẻ html muốn thêm 
+    
+    var dd=document.querySelectorAll('.bglist > p')
     for(var i=0;i<so_mon;i++){
     const temp=`
     <div class="list_">
         <div class="listImg">
           <img src="tai_nguyen/cake/cake_${i+1}.png"/>
-          <div class="bglist"><p>san pham moi!</p></div>
+          <div class="bglist"><p>${namedisk[i]}</p></div>
           <div class="bglistTitle">
             <p>new !</P>
           </div>
@@ -127,10 +130,23 @@ $(document).ready(function(){
     </div>
     `//temp là các thành phần html muốn thêm vào 
       templist.insertAdjacentHTML("beforeend",temp) //dùng insertAdjacentHTML để thêm vào beforeend là thêm vào sao
+
     }
+   
   }
   dsmon();
-  
+  function findx(){
+    for(var i=0;i<so_mon ;i++){
+      if(
+        $(namedisk[i]).indexOf($('.ss .ss_ > input').val()) != -1){
+        alert("ok")
+      }
+      
+    }
+  }
+  $('.ss .ss_ > span').click(function(){
+    findx();
+  })
   function sendsmit(){
     var modal_ct=".modal_ct .modal_box"
     var span=".modal_ct .modal_box .content span"
@@ -278,6 +294,7 @@ $(document).ready(function(){
     }
     showNavbar(navbar,width);
     if(width <=1024){
+      $('body').css("background-image","unset")
       var gggg=document.querySelectorAll('.navbarshape > div > a')
       $(gggg).click(function(){
         $(heightheader).css({
