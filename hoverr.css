@@ -30,14 +30,13 @@ div.tt{
     width: 26.25rem;
     height: 3.125rem;
     margin-bottom: 20px;
-    border: none;
+    border: 1px solid #9b9ba1;
     outline: none;
     background: var(--colorhover);
     
 }
 .send form input:hover{
     background: none;
-    border: 1px solid #9b9ba1;
 }
 #sendsmit{
     display:block;

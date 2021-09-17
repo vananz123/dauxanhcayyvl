@@ -258,25 +258,30 @@ div.bodySlider{
     margin: 0 auto ;
     border-radius: 10px;
 }
-div.prevbtn{
+div.movebtn{
+    opacity: 0;
     position: absolute;
     top: 50%;
-    left: 10px;
     z-index: 11;
+    transition: opacity 0.5s;
+}
+div.prevbtn{
+    left: 10px;
 }
 div.nextbtn{
-    position: absolute;
-    top: 50%;
     right: 10px;
-    z-index: 11;
 }
-div.prevbtn > i,div.nextbtn >i{
+div.movebtn > i{
     font-size: 30px;
     color: white;
     cursor: pointer;
 }
-div.prevbtn:hover,div.nextbtn:hover{
+div.movebtn:hover{
     transform: scale(1.2);
+    opacity: 1;
+}
+.slider:hover .movebtn{
+    opacity: 1;
 }
 .slider .sliders{
     display: flex;

@@ -7,10 +7,7 @@ $(document).ready(function(){
     $(this).toggleClass("click");
     $('.taskbar').toggleClass("show");
   });
-  $('.search').click(function(){
-    $(this).toggleClass("click");
-    $('.ss').toggleClass("show");
-  });
+
   $(window).scroll(function(){
     if($(window).scrollTop() >=350){
       $('.gotop').addClass("show")
@@ -18,11 +15,7 @@ $(document).ready(function(){
       $('.gotop').removeClass("show")
     }
   })
-  // $('.gotop').click(function(){
-  //   $('html,body').animate({
-  //     scrollTop:0
-  //   },1800)
-  // })
+
   $('div.order').click(function(){
     event.preventDefault()
   })
@@ -136,57 +129,63 @@ $(document).ready(function(){
   }
   dsmon();
   function findx(){
-    for(var i=0;i<so_mon ;i++){
-      if(
-        $(namedisk[i]).indexOf($('.ss .ss_ > input').val()) != -1){
-        alert("ok")
-      }
-      
-    }
-  }
-  $('.ss .ss_ > span').click(function(){
-    findx();
-  })
-  function sendsmit(){
-    var modal_ct=".modal_ct .modal_box"
-    var span=".modal_ct .modal_box .content span"
-    var smit=document.querySelectorAll('.tt .send form input')
-    $('#sendsmit').click(function(){
-      event.preventDefault()
-    })
-    $('.close button').click(function(){
-      $('.bgg').hide()
-      $(modal_ct).toggleClass("shows")
-    })
-    
-    function ret(){
-      for(var i=0;i<smit.length-1;i++){
-        if($(smit[i]).val() == ""){
-          return i;
+    $('.ss .ss_ > span').click(function(){
+      var kw=$('#kw').val();
+      var item =$('.listImg .bglist p')
+      for(var i=0;i<item.length;i++){
+        if($(item[i]).text().indexOf(kw) >= 0){
+          console.log("oke")
+          $(item[i]).parent().parent().css("border","3px solid black")
+          $('html,body').scrollTop($('.list').offset().top)
         }
       }
-      return -1;
+      setTimeout(function(){
+          var t=document.querySelectorAll('.listImg')
+          for(var i=0;i<t.length;i++){
+            $(t[i]).css("border","none")
+          }
+      },3000)
+    })  
+  }
+  findx();
+  
+  function sendsmit(){
+    const namesmit =$('#namesmit')
+    const emailsmit=$('#emailsmit')
+    function checkMessNull(obj){
+      $(obj).css("border","1px solid red")
     }
-    function err(j){
-      for(j;j < smit.length-1;j++){
-        $(smit[j]).css("border-color","red")
-      }
-      $('.bgg').show()
-      $(modal_ct).toggleClass("shows")
-      $(span).text("Please enter full infomation")
+    function checkMess(obj){
+      $(obj).css("border","1px solid #9b9ba1")
+    }
+    function clear(obj,obj1,obj2){
+      $(obj).val('')
+      $(obj1).val('')
+      $(obj2).val('')
     }
     $('#sendsmit').click(function(){
-      ret();
-      if(ret()==-1){
-        $('.bgg').show()
-        $(modal_ct).toggleClass("shows")
-        $(span).text("Comptele send messenger")
-        var check=ret()
-        for(var h=0;h < smit.length-1;h++){
-          $(smit[h]).css("border-color","black")
+        event.preventDefault()
+      })
+    $('#sendsmit').click(function(){
+      if($(namesmit).val() != "" && $(emailsmit).val() != ""){
+        checkMess(namesmit)
+        checkMess(emailsmit)
+        if(confirm("Bạn chắc chắn muốn gửi email cho chúng tôi")==true){
+          alert("Đã gửi")
+          clear(namesmit,emailsmit,$('#sendmes'))
         }
       }else{
-        err(ret());
+        alert("Vui lòng nhập đầy đủ thông tin")
+        if($(namesmit).val() == ""){
+          checkMessNull(namesmit)
+        }else{
+          checkMess(namesmit)
+        }
+        if($(emailsmit).val() == ""){
+          checkMessNull(emailsmit)
+        }else{
+          checkMess(emailsmit)
+        }
       }
     })
   }
@@ -395,6 +394,26 @@ $(document).ready(function(){
     }
   }
   navbarMbtn();
+
+  function animateWow(){
+    $("div.devBlogS").addClass("wow animate__slideInLeft")
+    $("div.devBlogT").addClass("wow animate__slideInRight")
+    $("div.recritment").addClass("wow animate__slideInLeft")
+    $("div.aboutUs").addClass("wow animate__slideInRight")
+    $("div.rrTitle").addClass("wow animate__slideInLeft")
+    wow = new WOW(
+      {
+      boxClass:     'wow',      // default
+      animateClass: 'animate__animated', // default
+      offset:       0,          // default
+      mobile:       true,       // default
+      live:         true        // default
+    }
+    )
+    wow.init();
+  }
+  animateWow();
 });
+
 
 
