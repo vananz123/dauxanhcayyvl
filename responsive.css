@@ -41,9 +41,6 @@
     nav.navv{
         justify-content: flex-start;
     }
-    /* div.headerr{
-        display: block;
-    } */
     div.headerr .navbar{
         display: block;
     }
@@ -197,6 +194,7 @@
     }
     .devBlog .devBlogF{
         width: var(--widthm);
+        height: auto;
     }
     .devBlog .devBlogS,
     .devBlog .devBlogT{
@@ -204,7 +202,7 @@
         height: 410px;
         flex-wrap: wrap;
     }
-    #btnV{
+    .btnV{
         font-size: 10px;
         border: 1px solid black;
     }
@@ -220,15 +218,6 @@
     .dev #devImg{
         opacity: 0;
     }
-    div.store{
-        width: 100%;
-    }
-    .store .storeContent{
-        width: 100%;
-        height: 40px;
-        font-size: 20px;
-        border-bottom: 3px solid red;
-    }
     .store .stores{
         width: var(--widthm);
         height: 450px;
@@ -243,8 +232,8 @@
         
     }
     .store .stores .storesContent{
-        text-align: start;
-        margin: 60px 20px;
+        width: 100%;
+        
     }
     .store .stores .storesImg img{
         width: 100%;
@@ -255,8 +244,6 @@
         width: var(--widthm);
         background: #F8F8FF;
         margin: 10px auto 0;
-        overflow: hidden;
-        transition: height 0.5s;
     }
     .store .recritment .recritmentTitle span,
     .store .aboutUs .aboutUsTitle span{
@@ -285,31 +272,15 @@
         height: 350px;
     }
     .tt .send{
-        margin: 20px auto;
-        width: var(--widthm);
-        height:31.25rem;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin: 10px auto;
     }
     .tt .send h5{
-        font-size:20px;
+        font-size:15px;
         margin-top: 2em;
         padding: 0.4em 1.8em;
     }
-    #sendsmit{
-        display:block;
-        width: 6.25rem;
-        height: 3.125rem;
-        margin-left:3.4rem;
-        
-    }
     .contacts{
         display: none;
-    }
-    .infomation .infomations i{
-        color: red;
-    }
-    .foots.time{
-        color: #FF7F24;
     }
     .gotop {
         width: 40px;

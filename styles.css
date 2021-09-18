@@ -87,9 +87,6 @@ ul.nav_list li{
     position: relative;
 }
 
-/* .meunshape > div a:hover{
-    color: #cb321a;
-} */
 .meunshape > div::after{
     content: '';
     position: absolute;
@@ -344,7 +341,7 @@ div.movebtn:hover{
 div#vl1 > h2{
     margin-top: 20px;
 }
-div#btnV > a{
+div.btnV > a{
     text-decoration: none;
     color: #000000;
     

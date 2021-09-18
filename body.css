@@ -121,7 +121,7 @@ div.dev{
     color: #000000;
 }
 
-#btnV{
+.btnV{
     font-size: 16px;
     position: relative;
     text-align: center;
@@ -136,7 +136,7 @@ div.dev{
     z-index: 0;
     padding-top: 4px;
 }
-#btnV::before{
+.btnV::before{
     content: '';
     position: absolute;
     top: -2px;
@@ -148,7 +148,7 @@ div.dev{
     border-radius: inherit;
     transition:width 0.2s;
 }
-#btnV:hover::before{
+.btnV:hover::before{
     width: 0;
 }
 .devBlog .devBlogF{
