@@ -49,7 +49,6 @@
     }
     .devBlog .devBlogF,
     .devBlog .devBlogS,
-    .devBlog .devBlogT,
     .store .stores,
     .store .recritment,
     .store .aboutUs{
@@ -108,8 +107,7 @@
     .dev .devBlog{
         width: 100%;
     }
-    .devBlog .devBlogS,
-    .devBlog .devBlogT{
+    .devBlog .devBlogS{
         width: var(--widthm);
     }
     .devBlog .devBlogF,
@@ -196,8 +194,7 @@
         width: var(--widthm);
         height: auto;
     }
-    .devBlog .devBlogS,
-    .devBlog .devBlogT{
+    .devBlog .devBlogS{
         width: var(--widthm);
         height: 410px;
         flex-wrap: wrap;

@@ -3,11 +3,6 @@ $(document).ready(function(){
     return Math.floor(Math.random() * (max - min + 1) ) + min;
   }
   //header
-  $('.btn').click(function(){
-    $(this).toggleClass("click");
-    $('.taskbar').toggleClass("show");
-  });
-
   $(window).scroll(function(){
     if($(window).scrollTop() >=350){
       $('.gotop').addClass("show")
@@ -51,45 +46,7 @@ $(document).ready(function(){
         }
     }
   });
- //diemso
- function animateNumber(finalNumber, duration = 5000, startNumber = 0, callback) {
-  let currentNumber = startNumber
-  function updateNumber() {
-      if (currentNumber < finalNumber) {
-      let inc = Math.ceil(finalNumber / (duration / 17))
-      if (currentNumber + inc > finalNumber) {
-          currentNumber = finalNumber
-          callback(currentNumber)
-      } else {
-          currentNumber += inc
-          callback(currentNumber)
-          requestAnimationFrame(updateNumber)
-      }
-      }
-  }
-  requestAnimationFrame(updateNumber)
-  }
-  
-  // $(window).scroll(function(){
-  //   if($(window).scrollTop() >=3902 && $(window).scrollTop()<4290){
-  //     animateNumber(4000, 1000, 0, function (number) {
-  //       const formattedNumber = number.toLocaleString()
-  //       $('#cups').text(formattedNumber+"+")
-  //     })
-  //     animateNumber(220, 1000, 0, function (number) {
-  //       const formattedNumber = number.toLocaleString()
-  //       $('#orderdays').text(formattedNumber+"+")
-  //     })
-  //     animateNumber(60, 1000, 0, function (number) {
-  //       const formattedNumber = number.toLocaleString()
-  //       $('#nhan_vien').text(formattedNumber)
-  //     })
-  //     animateNumber(40, 1000, 0, function (number) {
-  //       const formattedNumber = number.toLocaleString()
-  //       $('#at_hour').text(formattedNumber)
-  //     })
-  //   }
-  // })
+
 //foots
   var m=$('.foots.jq')
   for(var i=0;i<7;i++){
@@ -129,23 +86,41 @@ $(document).ready(function(){
   }
   dsmon();
   function findx(){
-    $('.ss .ss_ > span').click(function(){
-      var kw=$('#kw').val();
-      var item =$('.listImg .bglist p')
+    const kw=$('#kw');
+    var item =$('.listImg .bglist p')
+
+    function findItem(){
       for(var i=0;i<item.length;i++){
-        if($(item[i]).text().indexOf(kw) >= 0){
-          console.log("oke")
+        if($(item[i]).text().indexOf(kw.val()) >= 0){
           $(item[i]).parent().parent().css("border","3px solid black")
           $('html,body').scrollTop($('.list').offset().top)
         }
       }
+    }
+    function setTime(){
       setTimeout(function(){
-          var t=document.querySelectorAll('.listImg')
-          for(var i=0;i<t.length;i++){
-            $(t[i]).css("border","none")
-          }
-      },3000)
+        var t=document.querySelectorAll('.listImg')
+        for(var i=0;i<t.length;i++){
+          $(t[i]).css("border","none")
+        }
+    },3000)
+    }
+    $('div.xclode').click( ()=>{
+      kw.val("")
+    })
+    $('.ss .ss_ > span').click(function(){
+      findItem();
+      setTime();
+      
     })  
+    $('#kw').keypress(function(event){
+      var keycode = (event.keyCode ? event.keyCode : event.which);
+      if (keycode == '13') {
+        findItem();
+        setTime();
+      }
+    });
+    
   }
   findx();
   
@@ -213,13 +188,11 @@ $(document).ready(function(){
   showHeaderM();
 
   function nav_ani(){
-    
     var ani =document.querySelector('.nav_list .ani.move')
     var nis =document.querySelectorAll('.nav_list > li')
     var widthNav_list=$('.nav_list').width()
     function sett(j){
-      const m=widthNav_list*1/5
-      var kt;
+      const m=widthNav_list*1/5 // width là 500 mỗi phần tử cần 100px lap 1/5
       var p=`${m}px`
       var left=m*(j)
       $(ani).css({
@@ -237,10 +210,7 @@ $(document).ready(function(){
   nav_ani();
   function headerMeun(){
     var nis =document.querySelectorAll('.nav_list > li')
-    var listProfile=document.querySelector('.nav_list li .list_hide_profile')
-    var listMenu=document.querySelector('.nav_list li .list_hide_meun')
-    var listNews=document.querySelector('.nav_list li .list_hide_news')
-    var heightheader=document.querySelectorAll('div.headerr.skit')
+    var heightheader=document.querySelectorAll('div.headerr')
     //hàm ẩn đi list menu
     function headerrHide65(obj){
       $(obj).hide()
@@ -256,20 +226,12 @@ $(document).ready(function(){
       })
     }
     function setenter(j){
-      if(j==1){
-        headerrShowe65(listProfile,$(listProfile).height())
-      }
-      if(j==2){
-        headerrShowe65(listMenu,$(listMenu).height())
-      }
-      if(j==3){
-        headerrShowe65(listNews,$(listNews).height())
-      }
+      const m=$(nis[j]).children(".meunshape")
+      headerrShowe65(m,$(m).height())
     }
     function setleave(){
-      headerrHide65(listProfile)
-      headerrHide65(listMenu)
-      headerrHide65(listNews)
+      const m=$(nis).children(".meunshape")
+      headerrHide65(m)
     }
     for(let j=0;j<nis.length;j++){
       nis[j].addEventListener('mouseenter',function(){
@@ -281,7 +243,8 @@ $(document).ready(function(){
     }
   }
   headerMeun();
-  function navbarMoblie(){
+
+  function navbarMoblie(){ //hàm của Mobile
     var width=$(window).width()
     var navbar=document.querySelectorAll('div.navbar')
     var heightheader=document.querySelector('div.headerr')
@@ -320,67 +283,16 @@ $(document).ready(function(){
   function stores(){
     var btnRe=document.querySelector('.recritmentTitle')
     var btnAb=document.querySelector('.aboutUsTitle')
-    var storeRe=document.querySelector('.store .recritment')
-    var storeAs=document.querySelector('.store .aboutUs')
+    const store =document.querySelectorAll('.store')
     $(btnRe).click(function(){
-      $(storeRe).toggleClass("showRe")
+      $(store).children(".recritment").toggleClass("showRe")
     })
     $(btnAb).click(function(){
-      $(storeAs).toggleClass("showRe")
+      $(store).children(".aboutUs").toggleClass("showRe")
     })
   }
   stores();
-  const img=document.querySelectorAll('.tt > img');
-  function sliderBox(obj){
-    obj.forEach((item) => item.addEventListener("click",sliderzoom));
-    function sliderzoom(event){
-      const imgsrc=event.target.getAttribute("src")
-      console.log(imgsrc)
-      const templ=
-      `<div class="sliderBox">
-          <div>
-            <i class="fas fa-angle-left sliderBox_p"></i>
-          </div>
-          <div class="slideBox_content">
-            <img src="${imgsrc}" class="slider_img"/>
-          </div>
-          <div>
-            <i class="fas fa-angle-right sliderBox_n"></i>
-          </div>
-        </div>`;
-        document.body.insertAdjacentHTML("beforeend",templ);
-    }
-    let index=0;
-    document.body.addEventListener("click",function(event){
-      const sliderimg=document.querySelector(".slideBox_content img")
-      let slidersrc="";
-      if(event.target.matches(".sliderBox")){
-        event.target.parentNode.removeChild(event.target)
-      }else if(event.target.matches(".sliderBox_n")){
-        slidersrc=sliderimg.getAttribute("src")
-        index=[...obj].findIndex(item => item.getAttribute("src")===slidersrc);  
-        index=index +1;
-        
-        if(index > obj.length-1){
-          index=0;
-        }
-        const newsrc=[...obj][index].getAttribute("src")
-        sliderimg.setAttribute("src",newsrc)
-      }else if(event.target.matches(".sliderBox_p")){
-        slidersrc=sliderimg.getAttribute("src")
-        index=[...obj].findIndex(item => item.getAttribute("src")===slidersrc);  
-        index=index - 1;
-        
-        if(index < 0){
-          index=obj.length-1;
-        }
-        const newsrc=[...obj][index].getAttribute("src")
-        sliderimg.setAttribute("src",newsrc)
-      }
-    })
-    
-  }
-  sliderBox(img);
+  
   function navbarMbtn(){
     var btnli=document.querySelectorAll('ul.task-item li')
     var downM=document.querySelectorAll('div.navbarshape')
@@ -396,11 +308,13 @@ $(document).ready(function(){
   navbarMbtn();
 
   function animateWow(){
-    $("div.devBlogS").addClass("wow animate__slideInLeft")
-    $("div.devBlogT").addClass("wow animate__slideInRight")
+
+    $("div.devBlogS.dev2").addClass("wow animate__slideInLeft")
+    $("div.devBlogS.dev3").addClass("wow animate__slideInRight")
     $("div.recritment").addClass("wow animate__slideInLeft")
     $("div.aboutUs").addClass("wow animate__slideInRight")
     $("div.rrTitle").addClass("wow animate__slideInLeft")
+    $('div.slider').addClass("wow animate__slideInUp")
     wow = new WOW(
       {
       boxClass:     'wow',      // default

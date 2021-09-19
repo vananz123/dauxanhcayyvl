@@ -131,10 +131,18 @@ ul.nav_list li a{
 div.ss{
     position: relative;
     width: 270px;
-    height:52px;
+    height:auto;
     align-items: center;
     text-align: center;
-    z-index: 1;
+    z-index: 0;
+}
+div.xclode{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color:#9b9ba1;
+    right: 5px;
+  
 }
 .ss_{
     position: absolute;
@@ -142,7 +150,7 @@ div.ss{
     left:10px;
     width: 250px;
     height: 40px;
-    background:rgb(243, 243, 244);
+    background:#9b9ba1;
     border-radius: var(--boderbtn);
     overflow: hidden;
     transition: .4s;
@@ -151,9 +159,7 @@ div.ss{
 .ss_ span{
     position: absolute;
     padding: 10px 0px;
-    left: 0;
-    width: 45px;
-    height: 45px;
+    left: 10px;
     background-color:inherit;
     color: #e4e0e4;
     font-size: 20px;
@@ -161,7 +167,7 @@ div.ss{
 .ss_ input{
     position: absolute;
     top: 0;
-    left: 50px;
+    left: 35px;
     outline: none;
     border: none;
     height: 100%;
@@ -175,7 +181,6 @@ div.ss{
 }
 .shopping{
     display: flex;
-    /* margin-left: 20%; */
 }
 
 .sign{
@@ -183,7 +188,6 @@ div.ss{
     width: 200px;
     height: 35px;
     display: flex;
-    /* background: #cb321a; */
     border-radius: var(--boderbtn);
     z-index: 0;
 }
