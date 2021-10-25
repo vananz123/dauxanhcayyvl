@@ -15,8 +15,11 @@
         height: 350px;
     }
     .list{
-        width: 90%;
+        width: 70%;
         grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    }
+    div.orderonl > img{
+        width: 300px;
     }
 }
 @media screen and (max-width:1024px){
@@ -66,18 +69,19 @@
     .contact .contacts{
         transform:translateY(-10px) translateX(calc(120px + calc(260px *var(--i)))) rotate(0deg) skew(0deg,0deg) scale(1);
     }
-    div.orderonl > img{
-        width: 200px;
-    }
+    
     .list{
         width: 90%;
         grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    }
+    div.orderonl > img{
+        width: 200px;
     }
     
 }
 @media only screen and (max-width: 769px) {  
     html{
-        font-size: 14px;
+        font-size: 12px;
     }
     div.rr{
         height: 370px;
@@ -136,6 +140,9 @@
 @media only screen and (max-width:500px) {
     html{
         font-size: 10px;
+    }
+    .space{
+        display: none;
     }
     .navbar{
         display: block;

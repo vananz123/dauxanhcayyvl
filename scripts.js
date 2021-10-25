@@ -86,10 +86,10 @@ $(document).ready(function(){
   }
   dsmon();
   function findx(){
-    const kw=$('#kw');
-    var item =$('.listImg .bglist p')
+    const kw=$('#kw'); //thẻ input
+    var item =$('.listImg .bglist p') //thể p muốn tím
 
-    function findItem(){
+    function findItem(){ // thay hàm tương ứng
       for(var i=0;i<item.length;i++){
         if($(item[i]).text().indexOf(kw.val()) >= 0){
           $(item[i]).parent().parent().css("border","3px solid black")
@@ -97,7 +97,7 @@ $(document).ready(function(){
         }
       }
     }
-    function setTime(){
+    function setTime(){ //thay hàm tương ứng
       setTimeout(function(){
         var t=document.querySelectorAll('.listImg')
         for(var i=0;i<t.length;i++){
@@ -146,8 +146,13 @@ $(document).ready(function(){
         checkMess(namesmit)
         checkMess(emailsmit)
         if(confirm("Bạn chắc chắn muốn gửi email cho chúng tôi")==true){
-          alert("Đã gửi")
-          clear(namesmit,emailsmit,$('#sendmes'))
+          if($(emailsmit).val().indexOf("@") == -1 || $(emailsmit).val().indexOf("@") == 0){
+            alert("Sai cú pháp mail")
+            checkMessNull(emailsmit)
+          }else{
+            alert("Đã gửi")
+            clear(namesmit,emailsmit,$('#sendmes'))
+          }
         }
       }else{
         alert("Vui lòng nhập đầy đủ thông tin")
@@ -165,6 +170,7 @@ $(document).ready(function(){
     })
   }
   sendsmit();
+
 
   const widthHeaderr=50;
   function showHeaderM(){
@@ -186,13 +192,15 @@ $(document).ready(function(){
     chuyenlogo(headerrSkitlogo,0,widthM);
   }
   showHeaderM();
+  
 
   function nav_ani(){
     var ani =document.querySelector('.nav_list .ani.move')
     var nis =document.querySelectorAll('.nav_list > li')
+    
     var widthNav_list=$('.nav_list').width()
     function sett(j){
-      const m=widthNav_list*1/5 // width là 500 mỗi phần tử cần 100px lap 1/5
+      const m=widthNav_list*1/(nis.length) // width là 500 mỗi phần tử cần 100px lap 1/5
       var p=`${m}px`
       var left=m*(j)
       $(ani).css({
@@ -327,6 +335,59 @@ $(document).ready(function(){
     wow.init();
   }
   animateWow();
+  function animateNumber(finalNumber, duration = 5000, startNumber = 0, callback) {
+    let currentNumber = startNumber
+    function updateNumber() {
+        if (currentNumber < finalNumber) {
+          let inc = Math.ceil(finalNumber / (duration / 17))
+          if (currentNumber + inc > finalNumber) {
+              currentNumber = finalNumber
+              callback(currentNumber)
+          } else {
+              currentNumber += inc
+              callback(currentNumber)
+              requestAnimationFrame(updateNumber)
+          }
+        }
+    }
+    requestAnimationFrame(updateNumber)
+    }
+    function numberTIme(){
+      var cups=null;
+    var orderdays=null;
+    var nhan_vien=null;
+    var at_hour=null;
+    $(window).scroll(function(){
+      if($(window).scrollTop() >=3901){
+        
+        if(cups===null){
+          animateNumber(4000, 1000, 0, function (number) {
+            cups = number.toLocaleString()
+            $('#cups').text(cups+"+")
+          })
+        }
+        if(orderdays===null){
+          animateNumber(220, 1000, 0, function (number) {
+            orderdays = number.toLocaleString()
+            $('#orderdays').text(orderdays+"+")
+          })
+        }
+        if(nhan_vien===null){
+          animateNumber(60, 1000, 0, function (number) {
+            nhan_vien = number.toLocaleString()
+           $('#nhan_vien').text(nhan_vien)
+         })
+        }
+        if(at_hour===null){
+          animateNumber(40, 1000, 0, function (number) {
+            at_hour = number.toLocaleString()
+           $('#at_hour').text(at_hour)
+         })
+        }
+      }
+    })
+    }
+    numberTIme();
 });
 
 
