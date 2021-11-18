@@ -42,7 +42,7 @@
         display: none;
     }
     nav.navv{
-        justify-content: flex-start;
+        justify-content: flex-end;
     }
     div.headerr .navbar{
         display: block;

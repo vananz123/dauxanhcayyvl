@@ -57,6 +57,7 @@ $(document).ready(function(){
 
   const so_mon=7 //số danh sach muốn tạo
   const namedisk=['cheesecake cà phê','cupcake cà phê','muffin cà phê','rau cau cà phê','cà phê ai len','sữa lắc cà phê','trà sữa cà phê']
+  const pricedisk=[10,10,10,10,10,10,10,10,10,10]
   function dsmon(){
     var templist=document.querySelector('#list')//thẻ html muốn thêm 
     
@@ -70,12 +71,10 @@ $(document).ready(function(){
           <div class="bglistTitle">
             <p>new !</P>
           </div>
-          <a href="trang1.html">
-            <div class="bglist_c fas fa-cart-plus"></div>
-          </a>
+          <div class="bglist_c fas fa-cart-plus"></div>
         </div>
       <div class="deal_list">
-        <p>${ramdomprice(4,7)}0.000Đ</p>
+        <p>${pricedisk[i]}.000Đ</p>
       </div>
     </div>
     `//temp là các thành phần html muốn thêm vào 
@@ -173,25 +172,25 @@ $(document).ready(function(){
 
 
   const widthHeaderr=50;
-  function showHeaderM(){
-    var headerrSkitlogo=document.querySelector('div.headerr #logo')
-    function chuyenlogo(obj,right,width){
-      if(width <=1024){
-        $(obj).css({
-          "left":"unset",
-          "right":`${right}px`
-        })
-      }else{
-        $(obj).css({
-          "right":"unset",
-          "left":`${right}px`
-        })
-      }
-    }
-    const widthM=$(window).width();
-    chuyenlogo(headerrSkitlogo,0,widthM);
-  }
-  showHeaderM();
+  // function showHeaderM(){
+  //   var headerrSkitlogo=document.querySelector('div.headerr #logo')
+  //   function chuyenlogo(obj,right,width){
+  //     if(width <=1024){
+  //       $(obj).css({
+  //         "left":"unset",
+  //         "right":`${right}px`
+  //       })
+  //     }else{
+  //       $(obj).css({
+  //         "right":"unset",
+  //         "left":`${right}px`
+  //       })
+  //     }
+  //   }
+  //   const widthM=$(window).width();
+  //   chuyenlogo(headerrSkitlogo,0,widthM);
+  // }
+  // showHeaderM();
   
 
   function nav_ani(){
@@ -388,6 +387,33 @@ $(document).ready(function(){
     })
     }
     numberTIme();
+    $(".btnShopping").click(function(){
+      $("div.shopBar").toggleClass("show");
+    })
+    function AddShoping(){
+      const soMon =document.querySelectorAll("div.bglist_c");
+      const tAdd=document.querySelector("div.shoBarCon");
+      for(let i=0;i<soMon.length;i++){
+        $(soMon[i]).click(()=>{
+          
+          const t =`<div class="shopItem">
+          <img src="${$(soMon[i]).parent().children(0).attr("src")}"/>
+          <div>
+            <p>${namedisk[i]}</p>
+            <p>${pricedisk[i]}.000Đ</p>
+          </div>
+          <div class="shopX">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>`
+          tAdd.insertAdjacentHTML("afterbegin",t);
+        })
+      }
+      $(tAdd).on("click", "div.shopItem div.shopX i", function() {
+        $(this).parent().parent().remove()
+      })
+    }
+    AddShoping();
 });
 
 

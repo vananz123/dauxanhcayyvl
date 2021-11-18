@@ -4,10 +4,21 @@
     height: 35px;
     margin-top: 8px;
     z-index: 11;
-    text-align: right;
+    text-align: left;
     display: none;
 }
+.btnShopping{
+    width: 35px;
+    height: 35px;
+    margin-top: 8px;
+    z-index: 11;
+    text-align: left;
+}
 .btnTaskbar > span{
+    font-size: 22px;
+    padding-top: 5px;
+}
+.btnShopping > span{
     font-size: 22px;
     padding-top: 5px;
 }
@@ -71,6 +82,56 @@ div.navbarshape > div > a{
 }
 div.navbarshape.show{
     height: auto;
+}
+div.shopBar{
+    position: fixed;
+    top: 50px;
+    right: -300px;
+    overflow: hidden;
+    z-index: 111;
+    transition: right 0.5s;
+}
+div.shopBar.show{
+    right: 0;
+}
+.shopBar .shoBarCon{
+    position: relative;
+    width: 300px;
+    height: 100vh;
+    background: whitesmoke;
+   
+}
+.shopBar .shoBarCon .shopItem{
+    position: relative;
+    width: 90%;
+    margin:0 auto 10px;
+    display: flex;
+    justify-content: flex-start;
+
+}
+.shopBar .shoBarCon .shopItem > img {
+    width: 60px;
+}
+.shopBar .shoBarCon .shopItem p{
+    margin-bottom: 0px;
+    padding-left: 5px;
+    font-size: 19px;
+}
+.shopBar .shoBarCon .checkOut{
+    width: 80%;
+    margin:0 auto 0;
+    padding-top:30px ; 
+       
+}
+.shopBar .shoBarCon .checkOut > button{
+    width: 100%;
+    height: 40px;
+}
+div.shopX{
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    cursor: pointer;
 }
 
 
