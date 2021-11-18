@@ -56,34 +56,78 @@ $(document).ready(function(){
 //lsit list_ ds mon
 
   const so_mon=7 //số danh sach muốn tạo
-  const namedisk=['cheesecake cà phê','cupcake cà phê','muffin cà phê','rau cau cà phê','cà phê ai len','sữa lắc cà phê','trà sữa cà phê']
-  const pricedisk=[10,10,10,10,10,10,10,10,10,10]
+  const SO_GOI_CAFE=3;
+  const namedisk=['cheesecake cà phê','cupcake cà phê','muffin cà phê','rau cau cà phê','cà phê ai len','sữa lắc cà phê','trà sữa cà phê'
+,"Euta cafe","Cà phê Kimbo","Cà phê thái nguyên"]
+  const pricedisk=[50,50,70,40,50,50,50,200,300,250]
   function dsmon(){
     var templist=document.querySelector('#list')//thẻ html muốn thêm 
-    
+    var templist1=document.querySelector('#list1')
     var dd=document.querySelectorAll('.bglist > p')
     for(var i=0;i<so_mon;i++){
-    const temp=`
-    <div class="list_">
-        <div class="listImg">
-          <img src="tai_nguyen/cake/cake_${i+1}.png"/>
-          <div class="bglist"><p>${namedisk[i]}</p></div>
-          <div class="bglistTitle">
-            <p>new !</P>
+      const temp=`
+      <div class="list_">
+          <div class="listImg">
+            <img src="tai_nguyen/cake/cake_${i+1}.png"/>
+            <div class="bglist"><p>${namedisk[i]}</p></div>
+            <div class="bglistTitle">
+              <p>new !</P>
+            </div>
+            <div class="bglist_c fas fa-cart-plus"></div>
           </div>
-          <div class="bglist_c fas fa-cart-plus"></div>
+        <div class="deal_list">
+          <p>${pricedisk[i]}.000Đ</p>
         </div>
-      <div class="deal_list">
-        <p>${pricedisk[i]}.000Đ</p>
       </div>
-    </div>
-    `//temp là các thành phần html muốn thêm vào 
+      `//temp là các thành phần html muốn thêm vào 
       templist.insertAdjacentHTML("beforeend",temp) //dùng insertAdjacentHTML để thêm vào beforeend là thêm vào sao
-
+    }
+    for(var i=0;i<SO_GOI_CAFE;i++){
+      const temp=`
+      <div class="list_">
+          <div class="listImg">
+            <img src="tai_nguyen/goicafe/goi_cafe_${i+1}.png"/>
+            <div class="bglist"><p>${namedisk[i+so_mon]}</p></div>
+            <div class="bglistTitle">
+              <p>new !</P>
+            </div>
+            <div class="bglist_c fas fa-cart-plus"></div>
+          </div>
+        <div class="deal_list">
+          <p>${pricedisk[i+so_mon]}.000Đ</p>
+        </div>
+      </div>
+      `//temp là các thành phần html muốn thêm vào 
+      templist1.insertAdjacentHTML("beforeend",temp) //dùng insertAdjacentHTML để thêm vào beforeend là thêm vào sao
     }
    
   }
   dsmon();
+  function AddShoping(){
+    const soMon =document.querySelectorAll("div.bglist_c");
+    const tAdd=document.querySelector("div.shoBarCon");
+    for(let i=0;i<soMon.length;i++){
+      $(soMon[i]).click(()=>{
+        
+        const t =`<div class="shopItem">
+        <img src="${$(soMon[i]).parent().children(0).attr("src")}"/>
+        <div>
+          <p>${namedisk[i]}</p>
+          <p>${pricedisk[i]}.000Đ</p>
+        </div>
+        <div class="shopX">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>`
+        tAdd.insertAdjacentHTML("afterbegin",t);
+      })
+    }
+    $(tAdd).on("click", "div.shopItem div.shopX i", function() {
+      $(this).parent().parent().remove()
+    })
+  }
+  AddShoping();
+
   function findx(){
     const kw=$('#kw'); //thẻ input
     var item =$('.listImg .bglist p') //thể p muốn tím
@@ -172,26 +216,6 @@ $(document).ready(function(){
 
 
   const widthHeaderr=50;
-  // function showHeaderM(){
-  //   var headerrSkitlogo=document.querySelector('div.headerr #logo')
-  //   function chuyenlogo(obj,right,width){
-  //     if(width <=1024){
-  //       $(obj).css({
-  //         "left":"unset",
-  //         "right":`${right}px`
-  //       })
-  //     }else{
-  //       $(obj).css({
-  //         "right":"unset",
-  //         "left":`${right}px`
-  //       })
-  //     }
-  //   }
-  //   const widthM=$(window).width();
-  //   chuyenlogo(headerrSkitlogo,0,widthM);
-  // }
-  // showHeaderM();
-  
 
   function nav_ani(){
     var ani =document.querySelector('.nav_list .ani.move')
@@ -390,30 +414,6 @@ $(document).ready(function(){
     $(".btnShopping").click(function(){
       $("div.shopBar").toggleClass("show");
     })
-    function AddShoping(){
-      const soMon =document.querySelectorAll("div.bglist_c");
-      const tAdd=document.querySelector("div.shoBarCon");
-      for(let i=0;i<soMon.length;i++){
-        $(soMon[i]).click(()=>{
-          
-          const t =`<div class="shopItem">
-          <img src="${$(soMon[i]).parent().children(0).attr("src")}"/>
-          <div>
-            <p>${namedisk[i]}</p>
-            <p>${pricedisk[i]}.000Đ</p>
-          </div>
-          <div class="shopX">
-            <i class="fas fa-times"></i>
-          </div>
-        </div>`
-          tAdd.insertAdjacentHTML("afterbegin",t);
-        })
-      }
-      $(tAdd).on("click", "div.shopItem div.shopX i", function() {
-        $(this).parent().parent().remove()
-      })
-    }
-    AddShoping();
 });
 
 
