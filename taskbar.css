@@ -90,6 +90,7 @@ div.shopBar{
     overflow: hidden;
     z-index: 111;
     transition: right 0.5s;
+    overflow-y: auto;
 }
 div.shopBar.show{
     right: 0;
