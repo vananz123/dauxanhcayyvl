@@ -90,7 +90,7 @@ $(document).ready(function(){
 
     function findItem(){ // thay hàm tương ứng
       for(var i=0;i<item.length;i++){
-        if($(item[i]).text().indexOf(kw.val()) >= 0){
+        if($(item[i]).text().toLowerCase().indexOf(kw.val().toLowerCase()) >= 0){
           $(item[i]).parent().parent().css("border","3px solid black")
           $('html,body').scrollTop($('.list').offset().top)
         }
