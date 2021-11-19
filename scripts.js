@@ -260,7 +260,6 @@ $(document).ready(function(){
         "width":p,
         "left":left
       })     
-
     }
     for(let j=0;j<nis.length;j++){
       nis[j].addEventListener('mouseover',function(){
@@ -444,6 +443,7 @@ $(document).ready(function(){
     $(".btnShopping").click(function(){
       $("div.shopBar").toggleClass("show");
     })
+
 });
 
 

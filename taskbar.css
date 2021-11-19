@@ -94,6 +94,7 @@ div.navbarshape.show{
 div.shopBar{
     position: fixed;
     top: 50px;
+    height: 100vh;
     right: -300px;
     overflow: hidden;
     z-index: 111;
