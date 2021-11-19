@@ -55,16 +55,20 @@ $(document).ready(function(){
   var or=document.querySelectorAll('div.order a')
 //lsit list_ ds mon
 
-  const so_mon=7 //số danh sach muốn tạo
+  const SO_CAKE=6 //số danh sach muốn tạo
   const SO_GOI_CAFE=3;
-  const namedisk=['cheesecake cà phê','cupcake cà phê','muffin cà phê','rau cau cà phê','cà phê ai len','sữa lắc cà phê','trà sữa cà phê'
-,"Euta cafe","Cà phê Kimbo","Cà phê thái nguyên"]
-  const pricedisk=[50,50,70,40,50,50,50,200,300,250]
+  const SO_CAFE=6;
+  const namedisk=['cheesecake cà phê','cupcake cà phê','muffin cà phê','kem cà phê','kem cà phê sữa','bánh mì cà phê']
+  const priceDisk=[50,50,70,40,50,60]
+  const nameDrink=['cà phê tiramisu','cà phê ai len','pubbing cà phê','sữa lắc cà phê','trà sữa cà phê','cà phê mocha']
+  const priceDirnk=[50,50,70,40,50,50,50]
+  const nameCoffeeBeans =["Euta cafe","Cà phê Kimbo","Cà phê thái nguyên"];
+  const priceBeans=[200,300,250]
   function dsmon(){
     var templist=document.querySelector('#list')//thẻ html muốn thêm 
     var templist1=document.querySelector('#list1')
-    var dd=document.querySelectorAll('.bglist > p')
-    for(var i=0;i<so_mon;i++){
+    var templist2=document.querySelector('#list2')
+    for(var i=0;i<SO_CAKE;i++){
       const temp=`
       <div class="list_">
           <div class="listImg">
@@ -76,29 +80,47 @@ $(document).ready(function(){
             <div class="bglist_c fas fa-cart-plus"></div>
           </div>
         <div class="deal_list">
-          <p>${pricedisk[i]}.000Đ</p>
+          <p>${priceDisk[i]}.000Đ</p>
         </div>
       </div>
       `//temp là các thành phần html muốn thêm vào 
       templist.insertAdjacentHTML("beforeend",temp) //dùng insertAdjacentHTML để thêm vào beforeend là thêm vào sao
     }
-    for(var i=0;i<SO_GOI_CAFE;i++){
+    for(var i=0;i<SO_CAFE;i++){
       const temp=`
       <div class="list_">
           <div class="listImg">
-            <img src="tai_nguyen/goicafe/goi_cafe_${i+1}.png"/>
-            <div class="bglist"><p>${namedisk[i+so_mon]}</p></div>
+            <img src="tai_nguyen/coffee/cafe_${i+1}.png"/>
+            <div class="bglist"><p>${nameDrink[i]}</p></div>
             <div class="bglistTitle">
               <p>new !</P>
             </div>
             <div class="bglist_c fas fa-cart-plus"></div>
           </div>
         <div class="deal_list">
-          <p>${pricedisk[i+so_mon]}.000Đ</p>
+          <p>${priceDirnk[i]}.000Đ</p>
+        </div>
+      </div>
+      `
+      templist1.insertAdjacentHTML("beforeend",temp) 
+    }
+    for(var i=0;i<SO_GOI_CAFE;i++){
+      const temp=`
+      <div class="list_">
+          <div class="listImg">
+            <img src="tai_nguyen/goicafe/goi_cafe_${i+1}.png"/>
+            <div class="bglist"><p>${nameCoffeeBeans[i]}</p></div>
+            <div class="bglistTitle">
+              <p>new !</P>
+            </div>
+            <div class="bglist_c fas fa-cart-plus"></div>
+          </div>
+        <div class="deal_list">
+          <p>${priceBeans[i]}.000Đ</p>
         </div>
       </div>
       `//temp là các thành phần html muốn thêm vào 
-      templist1.insertAdjacentHTML("beforeend",temp) //dùng insertAdjacentHTML để thêm vào beforeend là thêm vào sao
+      templist2.insertAdjacentHTML("beforeend",temp) //dùng insertAdjacentHTML để thêm vào beforeend là thêm vào sao
     }
    
   }
@@ -113,8 +135,8 @@ $(document).ready(function(){
         <div class="shopItem">
           <img src="${$(soMon[i]).parent().children(0).attr("src")}"/>
           <div>
-            <p>${namedisk[i]}</p>
-            <p>${pricedisk[i]}.000Đ</p>
+            <p>${$(soMon[i]).parent().children(".bglist").children("p").text()}</p>
+            <p>${$(soMon[i]).parent().parent().children(".deal_list").children("p").text()}</p>
           </div>
           <div class="shopX">
             <i class="fas fa-times"></i>
