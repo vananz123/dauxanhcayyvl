@@ -264,6 +264,7 @@ div.deal_list > p{
     background: #F8F8FF;
     color: #9b9ba1;
     z-index: 11;
+    cursor: pointer;
 }
 .bglistTitle{
     position: absolute;

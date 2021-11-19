@@ -19,8 +19,14 @@
     padding-top: 5px;
 }
 .btnShopping > span{
+    top: 0;
+    right: 0;
     font-size: 22px;
     padding-top: 5px;
+}
+.btnShopping > span >p{
+    color: red;
+    font-size: 10px;
 }
 div.headerr .navbar{
     position: relative;

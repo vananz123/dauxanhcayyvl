@@ -106,25 +106,33 @@ $(document).ready(function(){
   function AddShoping(){
     const soMon =document.querySelectorAll("div.bglist_c");
     const tAdd=document.querySelector("div.shoBarCon");
+    const dem=document.querySelector("div.btnShopping > span > p")
     for(let i=0;i<soMon.length;i++){
       $(soMon[i]).click(()=>{
-        
-        const t =`<div class="shopItem">
-        <img src="${$(soMon[i]).parent().children(0).attr("src")}"/>
-        <div>
-          <p>${namedisk[i]}</p>
-          <p>${pricedisk[i]}.000Đ</p>
-        </div>
-        <div class="shopX">
-          <i class="fas fa-times"></i>
-        </div>
-      </div>`
+        const t =`
+        <div class="shopItem">
+          <img src="${$(soMon[i]).parent().children(0).attr("src")}"/>
+          <div>
+            <p>${namedisk[i]}</p>
+            <p>${pricedisk[i]}.000Đ</p>
+          </div>
+          <div class="shopX">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>`
         tAdd.insertAdjacentHTML("afterbegin",t);
+        const soItem=document.querySelectorAll("div.shopItem")
+        $(dem).text(soItem.length);
       })
+
     }
     $(tAdd).on("click", "div.shopItem div.shopX i", function() {
       $(this).parent().parent().remove()
+      const soItem=document.querySelectorAll("div.shopItem")
+      $(dem).text(soItem.length);
     })
+    
+    
   }
   AddShoping();
 
