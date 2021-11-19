@@ -94,11 +94,12 @@ div.navbarshape.show{
 div.shopBar{
     position: fixed;
     top: 50px;
-    height: auto;
+    height: 100vh;
     right: -300px;
     overflow: hidden;
     z-index: 111;
     transition: right 0.5s;
+    overflow-y: auto;
 }
 div.shopBar.show{
     right: 0;
