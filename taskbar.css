@@ -94,11 +94,12 @@ div.navbarshape.show{
 div.shopBar{
     position: fixed;
     top: 50px;
-    height: 100vh;
+    height: auto;
     right: -300px;
     overflow: hidden;
     z-index: 111;
     transition: right 0.5s;
+    background: whitesmoke;
     overflow-y: auto;
 }
 div.shopBar.show{
@@ -107,20 +108,19 @@ div.shopBar.show{
 .shopBar .shoBarCon{
     position: relative;
     width: 300px;
-    height: auto;
-    background: whitesmoke;
+    height: 100vh;
    
 }
 .shopBar .shoBarCon .shopItem{
     position: relative;
     width: 90%;
     margin:0 auto 10px;
-    display: flex;
-    justify-content: flex-start;
-
+    /* display: flex;
+    justify-content: flex-start; */
 }
 .shopBar .shoBarCon .shopItem > img {
     width: 60px;
+    float: left;
 }
 .shopBar .shoBarCon .shopItem p{
     margin-bottom: 0px;
@@ -137,6 +137,15 @@ div.shopBar.show{
     height: 40px;
     margin-top: 50px;
     margin-bottom: 50px;
+}
+div.checkOut > div{
+    margin-top: 30px;
+}
+div.shopAdd{
+    clear:left;
+}
+div.shopAdd input{
+    width: 100px;
 }
 div.shopX{
     position: absolute;

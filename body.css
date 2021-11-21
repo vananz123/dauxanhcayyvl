@@ -231,9 +231,12 @@ div.partList{
     z-index: 0;
 }
 div.deal_list{
+    position: absolute;
+    left: 0;
+    bottom: 0;
     width: 4.5rem;
     height: 35px;
-    border-radius: 0 0 var(--boderbtn) var(--boderbtn);
+    border-radius: 0 var(--boderbtn) 0 var(--boderbtn);
     background:#e4e0e4;
     margin: 0;
 }
