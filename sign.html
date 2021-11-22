@@ -1,16 +1,30 @@
-
+Duy Lê
 <!DOCTYPE html>
 <html>
     <head>
         <title>sign</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="img/icons.jpg" rel="shortcut icon" />
+        <link rel="stylesheet" href="styles.css" type="text/css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="search.css"/>
+        <link rel="stylesheet" href="hoverr.css"/>
+        <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="owlcarousel//assets/owl.theme.default.min.css">
+        <link rel="stylesheet" href="taskbar.css"/>
+        <script src="scripts.js"></script>
+        <script src="owlcarousel/owl.carousel.min.js"></script>
+       
+        <link rel="stylesheet" href="responsive.css"/>
     </head>
     <style>
         *{
+            list-style-type: none;
             margin: 0;
             padding: 0;
+
         }
         section
         {
@@ -19,11 +33,11 @@
             align-items: center;
             min-height: 100vh;
             transition: 0,5s;
-            background-color: aqua;
+            background-color:rgba(35, 15, 121, 0.836);
         }
         section.active 
         {
-            background: #f43648;
+            background: #41060c;
         }
         .container 
         {
@@ -166,39 +180,191 @@
         {
             color:#333;
         }
-       
+       a
+       {
+        text-decoration: none;
+       }
+        div.face
+       {
+           margin-top: 20px;
+           color: #000;
+           align-items: center;
+           width: 300px;
+           border-radius: 10px;
+           padding: 10px 20px;
+       }
+       div.face:hover
+       {
+           background-color: rgb(155, 151, 151);
+       }
+       div.matkhau
+       {
+           width: 300px;
+           padding: 5px;
+          
+       }
+       a.forgot{
+           text-decoration: blue;
+       }
+       div.loginhoac
+       {
+           width:95px;
+           background-color: #333;
+           height: 1px;
+           margin: 8px;
+
+       }
+       div.hoac
+       {
+           display: flex;
+           flex-wrap: wrap;
+           margin:15px
+       }
+       .footer{
+           
+           background-color: rgba(0,0,0,.87);
+           color:aliceblue;
+       }
+       ul.col {
+           color:aliceblue;
+           font-size: 20px;
+           padding: 10px;
+           list-style-type: none;
+           display: flex;
+       }
+       a 
+       {
+           text-decoration: none;
+           color:black;
+       }
+       .center
+        {
+           text-align: center;
+       }
+
+.pagination {
+ display: inline-block;
+}
+
+.pagination a {
+ color: black;
+ float: left;
+ padding: 8px 16px;
+ text-decoration: none;
+ transition: background-color .3s;
+ border: 1px solid #ddd;
+ margin: 0 4px;
+}
+
+.pagination a.active {
+ background-color: #4CAF50;
+ color: white;
+ border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+     ul.footer {
+         list-style-type:none;
+         padding: 25px;
+         margin:10px;
+         background-color:rgba(0,0,0,.87);
+        
+     }
+       ul.footer {
+          list-style-type:none;
+          padding: 25px;
+          margin:10px;
+          background-color:rgba(0,0,0,.87);
+         
+      }
+      ul.footer>li {
+          max-width:100%;
+          padding-right:15px;
+
+         
+         
+      }
+      .footer_time-hours {
+          color:chocolate;  
+      }
+      .sup {
+          padding: 25px;
+      }
+      
+      nav>ul.footer {
+        display:flex;
+        margin: auto;
+        padding: 35px;
+      }
+     ul.diachi {
+         line-height: 2,5;
+     }
+    ul.subcontent {
+        padding: 25px;
+        
+    }
+    ul.subcontent:hover
+    {
+        color:brown;
+    }
+    img.gg
+    {
+        width: 1.2rem;
+        margin-bottom: -3px;
+        margin-right: -1px;
+        margin-left: 7px;
+    }
+    div.gg1 
+    {
+        margin-top: -9px;
+        margin-left: -10px;
+    }
     </style>
     <body>
         <section>
         <div class="container">
             <div class="bluebg">
                 <div class="box signin">
-                    <h2>ALready Have an Account?</h2>
-                    <button class="signinBtn">Sign in</button>
+                    <h2>Vui lòng đăng nhập vào tài khoản</h2>
+                    <button class="signinBtn">Đăng nhập</button>
                 </div>
                 <div class="box signup">
-                    <h2>Don't Have an Account?</h2>
-                    <button class="signupBtn">Sign up</button>
+                    <h2>Không có tài khoản vui lòng đăng ký</h2>
+                    <button class="signupBtn">Đăng ký</button>
                 </div>
             </div>
             <div class="formBx">
                 <div class="form signinForm">
                     <form>
-                        <h3>Sign In</h3>
-                        <input type="text" placeholder="Username">
-                        <input type="password" placeholder="Password">
+                        <h3>Đăng Nhập</h3>
+                        <input type="text" placeholder="Tên đăng nhập">
+                        <input type="password" placeholder="Mật khẩu">
+                        <div class="matkhau"><input type="checkbox" style="margin-left: -90px;" ><span style="margin-left: -84px;" >Lưu mật khẩu</span></div>
                         <input type="submit" value="Login">
-                        <a href="#" class="forgot">Forgot Password</a>
+                        
+                        <a href="#" class="forgot">Quên mật khẩu</a>
+                        <div class="hoac">
+                            <div class="loginhoac"></div>HOẶC<div class="loginhoac"></div>
+                        </div>
+                        <a href="#"> <div class="face">
+                                <i style="color:rgb(45, 136, 255);" class="fab fa-facebook"></i> Đăng nhập với facebook
+                            </div>
+                        </a>
+                        <a href="#"> 
+                            <div class="face gg1">
+                                <img class="gg" src="https://www.google.com/favicon.ico"> Đăng nhập với Google
+                            </div>
+                        </a>
                     </form>
                 </div>
 
                 <div class="form signupForm">
                     <form>
-                        <h3>Sign Up</h3>
-                        <input type="text" placeholder="Usernaame">
-                        <input type="text" placeholder="Email Address">
-                        <input type="password" placeholder="Password">
-                        <input type="password" placeholder=" Confirm Password">
+                        <h3>Đăng Ký</h3>
+                        <input type="text" placeholder="Tên đăng nhập">
+                        <input type="text" placeholder="Địa chỉ email">
+                        <input type="password" placeholder="Nhập mật khẩu">
+                        <input type="password" placeholder=" Nhập lại mật khẩu">
                         <input type="submit" value="Register">
                         
                     </form>
@@ -208,7 +374,71 @@
             
             </div>
         </section>
-            
+        <footer class="footer">
+            <nav>
+                <ul class="footer">
+                    <li class="sub">
+                         
+                        <ul class="footer subcontent">
+                            <li class="footer_time-day">Monday</li>
+                            <li class="footer_time-day">Tuesday</li>
+                                <li class="footer_time-day">Wednesday</li>
+                                <li class="footer_time-day">Thursday</li>
+                                <li class="footer_time-day">Friday</li>
+                                <li class="footer_time-day">Saturday</li>
+                                <li class="footer_time-day">Sunday</li>
+                        </ul>
+                    </li>
+                    <li class="sub">
+                        
+                        <ul class="footer subcontent">
+                            <li>.... </li>
+                            <li>.... </li>
+                            <li>.... </li>
+                            <li>.... </li>
+                            <li>.... </li>
+                            <li>.... </li>
+                            <li>.... </li>
+                        </ul>
+                    </li>
+                    <li class="sub">
+                        
+                        <ul class="footer subcontent">
+                           <li class="footer_time-hours ">Closed</li>
+                           <li class="footer_time-hours ">8.00-20.00</li>
+                            <li class="footer_time-hours ">8.00-20.00</li>
+                            <li class="footer_time-hours ">8.00-20.00</li>
+                            <li class="footer_time-hours ">8.00-20.00</li>
+                            <li class="footer_time-hours ">8.00-20.00</li>
+                            <li class="footer_time-hours ">9.00-12.00</li>
+                            
+                        </ul>
+                    </li>
+                    <li class="sub">
+                        
+                        <ul class="footer subcontent diachi">
+                           <li style="font-size: 25px;" ><h4>Address</h4></li>
+                           <li ><a style="text-decoration: none;color:aliceblue" href="#"><i style="color:chocolate;" class="fas fa-phone-alt"></i>&emsp;+456789 235</a></li>
+                            <li ><a style="text-decoration: none;color:aliceblue" href="#"><i style="color:chocolate;" class="fas fa-envelope-open-text"></i>&emsp;coffe@gmail.com</a></li>
+                            <li><a style="text-decoration: none;color:aliceblue"href="#"><i style="color:chocolate;" class="fas fa-building"></i>&emsp;375 Nguyễn kiệm</a></li>
+                           <li>
+                          <a href="#">
+                            <i style="color:chocolate;"class="fab fa-instagram"></i> 
+                          </a>&emsp;
+                          <a href="#"><i style="color:rgb(45, 136, 255);" class="fab fa-facebook"></i></a>&emsp;
+                          <a><i style="color:red" class="fab fa-youtube"></i></a>
+                            
+                             
+                        </li>
+                       
+                        </ul>
+                    </li>
+                    <li style="margin-left: 300px;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1499666993473!2d106.67767731460603!3d10.799823892305671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528d772c9449b%3A0x7dbaf1e77dfb181!2zMzc1IE5ndXnhu4VuIEtp4buHbSwgUGjGsOG7nW5nIDksIFBow7ogTmh14bqtbiwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1629461577241!5m2!1svi!2s" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </li>
+                 </ul>     
+            </nav>
+        </footer>  
     </body>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

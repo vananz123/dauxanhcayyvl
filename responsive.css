@@ -15,7 +15,7 @@
         height: 350px;
     }
     .list{
-        width: 70%;
+        width: 90%;
         grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
     }
     div.orderonl > img{

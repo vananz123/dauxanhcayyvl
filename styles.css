@@ -249,7 +249,7 @@ div.bodySlider{
     padding-top: 40px;
     width: 100%;
     height: auto;
-    background: #060405;
+    /* background: #060405; */
 }
 .slider{
     width: 65%;
@@ -286,7 +286,7 @@ div.movebtn:hover{
 }
 .slider .sliders{
     display: flex;
-    transition: transform 0.25s linear;
+    transition: transform 0.5s linear;
 }
 .slider .sliders .tt{
     transition: .4s ease;

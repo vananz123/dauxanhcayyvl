@@ -3,11 +3,11 @@ $(document).ready(function(){
     const SO_GOI_CAFE=3;
     const SO_CAFE=6;
     const namedisk=['cheesecake cà phê','cupcake cà phê','muffin cà phê','kem cà phê','kem cà phê sữa','bánh mì cà phê']
-    const priceDisk=[50,50,70,40,50,60]
+    const priceDisk=[50000,50000,70000,40000,50000,60000]
     const nameDrink=['cà phê tiramisu','cà phê ai len','pubbing cà phê','sữa lắc cà phê','trà sữa cà phê','cà phê mocha']
-    const priceDirnk=[50,50,70,40,50,50,50]
+    const priceDirnk=[50000,50000,70000,40000,50000,50000,50000]
     const nameCoffeeBeans =["Euta cafe","Cà phê Kimbo","Cà phê thái nguyên"];
-    const priceBeans=[200,300,250]
+    const priceBeans=[200000,300000,250000]
    
     function dsmon(){
       var templist=document.querySelector('#list')
@@ -25,7 +25,7 @@ $(document).ready(function(){
               <div class="bglist_c fas fa-cart-plus"></div>
               <div class="deal_list">
                 <p>
-                <span>${priceDirnk[i]}.000</span><sup>đ</sup>
+                <span>${priceDirnk[i].toLocaleString("de-DE")}</span><sup>đ</sup>
                 </p>
               </div>
             </div>
@@ -45,7 +45,7 @@ $(document).ready(function(){
               <div class="bglist_c fas fa-cart-plus"></div>
               <div class="deal_list">
                 <p>
-                <span>${priceDisk[i]}.000</span><sup>đ</sup>
+                <span>${priceDisk[i].toLocaleString("de-DE")}</span><sup>đ</sup>
                 </p>
               </div>
             </div>
@@ -65,7 +65,7 @@ $(document).ready(function(){
               <div class="bglist_c fas fa-cart-plus"></div>
               <div class="deal_list">
                 <p>
-                <span>${priceBeans[i]}.000</span><sup>đ</sup>
+                <span>${priceBeans[i].toLocaleString("de-DE")}</span><sup>đ</sup>
                 </p>
               </div>
             </div>
@@ -89,7 +89,6 @@ $(document).ready(function(){
         
       }})
     })
-    
     function addListProduct(productImg,productName,productPrice){
       const tAdd=document.querySelector("div.shoBarCon");
       const t =`
@@ -113,6 +112,7 @@ $(document).ready(function(){
       }else{
         tAdd.insertAdjacentHTML("afterbegin",t);
       }
+      checkPay();
       sumTotal();
       inputChange();
       const btnDel =document.querySelectorAll("div.shopItem .shopX");
@@ -123,6 +123,18 @@ $(document).ready(function(){
       })
       resetBtn();
     }
+    function checkPay(){
+      const allPrice =document.querySelectorAll("div.shoBarCon .shopItem");
+      if(allPrice.length !=0){
+        $("div.checkOut > div:nth-child(1)").css("display","none")
+        $("div.checkOut #thanhtoan").addClass("show");
+        $("div.checkOut > div:nth-child(2)").addClass("show");
+      }else{
+        $("div.checkOut #thanhtoan").removeClass("show");
+        $("div.checkOut > div:nth-child(2)").removeClass("show");
+        $("div.checkOut > div:nth-child(1)").css("display","block")
+      }
+    }
     function resetBtn(){
       const allPrice =document.querySelectorAll("div.shoBarCon .shopItem");
       const btn =document.querySelector("div.btnShopping p");
@@ -132,19 +144,19 @@ $(document).ready(function(){
       $(del).parent().parent().remove();
       sumTotal();
       resetBtn();
+      checkPay();
     }
     function sumTotal(){
       const allPrice =document.querySelectorAll("div.shoBarCon .shopItem");
       var toTal =0;
       for(let i=0;i<allPrice.length;i++){
-        var toTal1=parseInt(allPrice[i].querySelector("div.titleItem .priceItem span").innerHTML);
-        var toTal2=parseInt(allPrice[i].querySelector("input").value);
+        var toTal1=parseFloat(allPrice[i].querySelector("div.titleItem .priceItem span").innerHTML);
+        var toTal2=parseFloat(allPrice[i].querySelector("input").value);
         var total3 =toTal1*toTal2;
         toTal +=total3;
       }
       const sumTotal=document.querySelector("#sumPrice")
-      sumTotal.innerText=`${toTal}.000`
-      console.log(toTal);
+      sumTotal.innerText=`${toTal.toLocaleString("de-DE")}.000`;
     }
     function checkAdd(productName){
       const check=document.querySelectorAll("div.shopItem .titleItem .nameItem");

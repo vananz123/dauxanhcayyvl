@@ -95,7 +95,7 @@ div.shopBar{
     position: fixed;
     top: 50px;
     height: auto;
-    right: -300px;
+    right: -320px;
     overflow: hidden;
     z-index: 111;
     transition: right 0.5s;
@@ -130,16 +130,26 @@ div.shopBar.show{
 .shopBar .shoBarCon .checkOut{
     width: 80%;
     margin:0 auto 0;
-       
+    height: auto;
 }
 .shopBar .shoBarCon .checkOut > button{
     width: 100%;
     height: 40px;
     margin-top: 50px;
     margin-bottom: 50px;
+    display: none;
+}
+div.checkOut > div:nth-child(2){
+    display: none;
 }
 div.checkOut > div{
     margin-top: 30px;
+}
+div.checkOut > div:nth-child(2).show{
+    display: block;
+}
+div.checkOut #thanhtoan.show{
+    display: block;
 }
 div.shopAdd{
     clear:left;
