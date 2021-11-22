@@ -49,46 +49,6 @@ $(document).ready(function(){
   for(var i=0;i<7;i++){
       m.append("<div>...</div>")
   }
-  var or=document.querySelectorAll('div.order a')
-  function findx(){
-    const kw=$('#kw'); //thẻ input
-    var item =$('.listImg .bglist p') //thể p muốn tím
-
-    function findItem(){ // thay hàm tương ứng
-      for(var i=0;i<item.length;i++){
-        if($(item[i]).text().toLowerCase().indexOf(kw.val().toLowerCase()) >= 0){
-          $(item[i]).parent().parent().css("border","3px solid black")
-          $('html,body').scrollTop($('.list').offset().top)
-        }
-      }
-    }
-    function setTime(){ //thay hàm tương ứng
-      setTimeout(function(){
-        var t=document.querySelectorAll('.listImg')
-        for(var i=0;i<t.length;i++){
-          $(t[i]).css("border","none")
-        }
-    },3000)
-    }
-    $('div.xclode').click( ()=>{
-      kw.val("")
-    })
-    $('.ss .ss_ > span').click(function(){
-      findItem();
-      setTime();
-      
-    })  
-    $('#kw').keypress(function(event){
-      var keycode = (event.keyCode ? event.keyCode : event.which);
-      if (keycode == '13') {
-        findItem();
-        setTime();
-      }
-    });
-    
-  }
-  findx();
-  
   function sendsmit(){
     const namesmit =$('#namesmit')
     const emailsmit=$('#emailsmit')
