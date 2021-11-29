@@ -5,19 +5,16 @@ Duy Lê
         <title>sign</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link href="img/icons.jpg" rel="shortcut icon" />
-        <link rel="stylesheet" href="styles.css" type="text/css">
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-        <link rel="stylesheet" href="search.css"/>
-        <link rel="stylesheet" href="hoverr.css"/>
-        <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
-        <link rel="stylesheet" href="owlcarousel//assets/owl.theme.default.min.css">
-        <link rel="stylesheet" href="taskbar.css"/>
-        <script src="scripts.js"></script>
-        <script src="owlcarousel/owl.carousel.min.js"></script>
+      <link href="img/icons.jpg" rel="shortcut icon" />
+      <link rel="stylesheet" href="styles.css" type="text/css">
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+     
+      <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+          />
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
        
-        <link rel="stylesheet" href="responsive.css"/>
     </head>
     <style>
         *{
@@ -220,11 +217,6 @@ Duy Lê
            flex-wrap: wrap;
            margin:15px
        }
-       .footer{
-           
-           background-color: rgba(0,0,0,.87);
-           color:aliceblue;
-       }
        ul.col {
            color:aliceblue;
            font-size: 20px;
@@ -242,63 +234,26 @@ Duy Lê
            text-align: center;
        }
 
-.pagination {
- display: inline-block;
-}
+    .pagination {
+    display: inline-block;
+    }
 
-.pagination a {
- color: black;
- float: left;
- padding: 8px 16px;
- text-decoration: none;
- transition: background-color .3s;
- border: 1px solid #ddd;
- margin: 0 4px;
-}
+    .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color .3s;
+        border: 1px solid #ddd;
+        margin: 0 4px;
+    }
 
-.pagination a.active {
- background-color: #4CAF50;
- color: white;
- border: 1px solid #4CAF50;
-}
-
-.pagination a:hover:not(.active) {background-color: #ddd;}
-     ul.footer {
-         list-style-type:none;
-         padding: 25px;
-         margin:10px;
-         background-color:rgba(0,0,0,.87);
-        
-     }
-       ul.footer {
-          list-style-type:none;
-          padding: 25px;
-          margin:10px;
-          background-color:rgba(0,0,0,.87);
-         
-      }
-      ul.footer>li {
-          max-width:100%;
-          padding-right:15px;
-
-         
-         
-      }
-      .footer_time-hours {
-          color:chocolate;  
-      }
-      .sup {
-          padding: 25px;
-      }
-      
-      nav>ul.footer {
-        display:flex;
-        margin: auto;
-        padding: 35px;
-      }
-     ul.diachi {
-         line-height: 2,5;
-     }
+    .pagination a.active {
+        background-color: #4CAF50;
+        color: white;
+        border: 1px solid #4CAF50;
+    }
+    .pagination a:hover:not(.active) {background-color: #ddd;}
     ul.subcontent {
         padding: 25px;
         
@@ -318,6 +273,27 @@ Duy Lê
     {
         margin-top: -9px;
         margin-left: -10px;
+    }
+    .foot{
+        display: flex;
+        width: 100%;
+        height: auto;
+        background: #000000;
+        color: aliceblue;
+        align-items: center;
+        justify-content:center;
+    }
+    .foot .foots{
+        margin: 50px;
+    }
+    .infomation .infomations i{
+        color: #cb321a;
+    }
+    .infomation .infomations a{
+        color: #fff;
+    }
+    .foots.time{
+        color: #FF7F24;
     }
     </style>
     <body>
@@ -374,70 +350,61 @@ Duy Lê
             
             </div>
         </section>
-        <footer class="footer">
-            <nav>
-                <ul class="footer">
-                    <li class="sub">
-                         
-                        <ul class="footer subcontent">
-                            <li class="footer_time-day">Monday</li>
-                            <li class="footer_time-day">Tuesday</li>
-                                <li class="footer_time-day">Wednesday</li>
-                                <li class="footer_time-day">Thursday</li>
-                                <li class="footer_time-day">Friday</li>
-                                <li class="footer_time-day">Saturday</li>
-                                <li class="footer_time-day">Sunday</li>
-                        </ul>
-                    </li>
-                    <li class="sub">
-                        
-                        <ul class="footer subcontent">
-                            <li>.... </li>
-                            <li>.... </li>
-                            <li>.... </li>
-                            <li>.... </li>
-                            <li>.... </li>
-                            <li>.... </li>
-                            <li>.... </li>
-                        </ul>
-                    </li>
-                    <li class="sub">
-                        
-                        <ul class="footer subcontent">
-                           <li class="footer_time-hours ">Closed</li>
-                           <li class="footer_time-hours ">8.00-20.00</li>
-                            <li class="footer_time-hours ">8.00-20.00</li>
-                            <li class="footer_time-hours ">8.00-20.00</li>
-                            <li class="footer_time-hours ">8.00-20.00</li>
-                            <li class="footer_time-hours ">8.00-20.00</li>
-                            <li class="footer_time-hours ">9.00-12.00</li>
-                            
-                        </ul>
-                    </li>
-                    <li class="sub">
-                        
-                        <ul class="footer subcontent diachi">
-                           <li style="font-size: 25px;" ><h4>Address</h4></li>
-                           <li ><a style="text-decoration: none;color:aliceblue" href="#"><i style="color:chocolate;" class="fas fa-phone-alt"></i>&emsp;+456789 235</a></li>
-                            <li ><a style="text-decoration: none;color:aliceblue" href="#"><i style="color:chocolate;" class="fas fa-envelope-open-text"></i>&emsp;coffe@gmail.com</a></li>
-                            <li><a style="text-decoration: none;color:aliceblue"href="#"><i style="color:chocolate;" class="fas fa-building"></i>&emsp;375 Nguyễn kiệm</a></li>
-                           <li>
-                          <a href="#">
-                            <i style="color:chocolate;"class="fab fa-instagram"></i> 
-                          </a>&emsp;
-                          <a href="#"><i style="color:rgb(45, 136, 255);" class="fab fa-facebook"></i></a>&emsp;
-                          <a><i style="color:red" class="fab fa-youtube"></i></a>
-                            
-                             
-                        </li>
-                       
-                        </ul>
-                    </li>
-                    <li style="margin-left: 300px;">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1499666993473!2d106.67767731460603!3d10.799823892305671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528d772c9449b%3A0x7dbaf1e77dfb181!2zMzc1IE5ndXnhu4VuIEtp4buHbSwgUGjGsOG7nW5nIDksIFBow7ogTmh14bqtbiwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1629461577241!5m2!1svi!2s" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </li>
-                 </ul>     
-            </nav>
+        <footer>
+            <div class="foot">
+                <div class="foots">
+                    <div>Monday</div>
+                    <div>Tusday</div>
+                    <div>Wednesday</div>
+                    <div>Thursday</div>
+                    <div>Friday</div>
+                    <div>Saturday</div>
+                    <div>Sunday</div>
+                </div>
+                <div class="foots jq">
+                    <div>...</div>
+                    <div>...</div>
+                    <div>...</div>
+                    <div>...</div>
+                    <div>...</div>
+                    <div>...</div>
+                    <div>...</div>
+                </div>
+                <div class="foots time">
+                    <div>Chosce</div>
+                    <div>8.00-20.00</div>
+                    <div>8.00-20.00</div>
+                    <div>8.00-20.00</div>
+                    <div>8.00-20.00</div>
+                    <div>8.00-20.00</div>
+                    <div>9.00-12.00</div>
+                </div>
+                <div class="foots">
+                    <div style="font-size: 35px;">Địa chỉ</div>
+                    <div class="infomation">
+                        <div class="infomations">
+                            <i class="fas fa-phone-alt"></i>
+                            <a >+456789 235</a>
+        
+                        </div>
+                        <div class="infomations">
+                            <i class="fas fa-envelope-open-text"></i>
+                            <a>coffe@gmail.com</a>
+                        </div>
+                        <div class="infomations">
+                            <i class="fas fa-building"></i>
+                            <a>375 nguyen kiem</a >
+                        </div>
+                        <div>
+                            <a href="#" class="fab fa-facebook" id="facebooks" style="color: #03a9f4;"></a>
+                            <a href="#" class="fab fa-youtube" id="youtubes" style="color: #03a9f4;"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="foots">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1499666993473!2d106.67767731460603!3d10.799823892305671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528d772c9449b%3A0x7dbaf1e77dfb181!2zMzc1IE5ndXnhu4VuIEtp4buHbSwgUGjGsOG7nW5nIDksIFBow7ogTmh14bqtbiwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1629461577241!5m2!1svi!2s" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+              </div>
         </footer>  
     </body>
     
