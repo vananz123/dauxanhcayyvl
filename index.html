@@ -174,47 +174,29 @@
           </div>
         </div>
       </div>
-      <div class="space"></div>
       <section>
-        <div class="bodySlider">
-          
-          <div class="slider">
-            <div class="movebtn prevbtn"><i class="fas fa-arrow-alt-circle-left"></i></div>
-            <div class="movebtn nextbtn"><i class="fas fa-arrow-alt-circle-right"></i></div>
-            <div class="dot">
-              <div class="dots act"></div>
-              <div class="dots"></div>
-              <div class="dots"></div>
-            </div>
-            <div class="caption_left">
-              <div  class="caption_ act">
-                <h4>COFFEE SAMPA</h4>
-                
-              </div>
-              <div  class="caption_">
-                <h4>COFFEE PANDA</h4>
-                
-              </div>
-              <div  class="caption_">
-                <h4>COFFEE HOT</h4>
+        <div class="slider owl-carousel owl-theme">
+          <div class="slider-item slider-item-one">
+            <div class="wapper">
+              <div class="slider-item-text">
+                <p>Cho một ngày làm việc năng động !</p>
+                <p>Sự đơn giản</p>
               </div>
             </div>
-            <div class="sliders">
-              
-              <div class="tt"><img src="https://c.pxhere.com/photos/1c/5b/coffee_coffee_beans_afternoon_tea-1087030.jpg!d"/></div>
-              <div class="tt"><img src="https://c.pxhere.com/photos/15/5a/coffee_Cup_Table_wood-1617499.jpg!d"/></div>
-              <div class="tt"><img src="https://c.pxhere.com/photos/a1/3c/Beverage_Cafe_Cappuccino_Chocolate_cocoa_counter_cozy_Cream-1623286.jpg!d"/></div>
-             
-            </div> 
-            <div class="caption_right">
-              <div  class="caption_ act">
-                <span>Coffe drink gently in the morning </span>
+          </div>
+          <div class="slider-item slider-item-two">
+            <div class="wapper">
+              <div class="slider-item-text">
+                <p>Cho một ngày làm việc năng động !</p>
+                <p>Sự dịu dàng</p>
               </div>
-              <div  class="caption_">       
-                <span>Coffe drink gently in the morning</span>
-              </div>
-              <div  class="caption_">
-                <span>Coffe drink gently in the morning</span>
+            </div>
+          </div>
+          <div class="slider-item slider-item-three">
+            <div class="wapper">
+              <div class="slider-item-text">
+                <p>Cho một ngày làm việc năng động !</p>
+                <p>Sự ngọt ngào</p>
               </div>
             </div>
           </div>
@@ -228,7 +210,7 @@
             <span class="btnV"><a>xem thêm</a></span>
           </div>
           <br>
-          <div class="owl-carousel owl-theme">
+          <div class="owl-carousel owl-theme menuC">
             <div class="item">
                 <a href="#list">
                     <img src="tai_nguyen/bg/cake_1.png">
@@ -473,56 +455,5 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script>
-      var slides=document.querySelectorAll('.slider .sliders')
-      const leng=document.querySelectorAll('.tt > img').length
-      var dot=document.querySelectorAll('.dot .dots')
-      var capl=document.querySelectorAll('.caption_left .caption_')
-      var capr=document.querySelectorAll('.caption_right .caption_')
-      var r=$('.slider').width();
-      const nextbtn=document.querySelector('div.nextbtn')
-      const prevbtn=document.querySelector('div.prevbtn')
-      $(slides).css({
-          "width":`${3*r}px`
-      })
-      
-      function setact(i){
-          $(nextbtn).click(function(){
-            if(i==leng-1){
-              setact(i-(leng-1));
-            }else{
-              setact(i+1);
-            }
-          })
-          $(prevbtn).click(function(){
-            if(i==0){
-              setact(i+(leng-1));
-            }else{
-              setact(i-1);
-            }
-          })
-          var m=`${i*-r}px`
-          $(slides).css({
-            "transform":`translateX(${m})`
-          })
-          for(dots of dot){
-              dots.classList.remove('act');
-              dot[i].classList.add('act');
-          }
-          for(caps of capl){
-            caps.classList.remove('act')
-            capl[i].classList.add('act')
-          }
-          for(caps of capr){
-            caps.classList.remove('act')
-            capr[i].classList.add('act')
-          }
-      }
-      for(let i=0;i<dot.length;i++){
-        dot[i].addEventListener('click',function(){
-          setact(i)
-        })
-      }
-      setact(0)//giá trị mặc định khi dot khi dc click
-  </script>
+    
 </html>

@@ -105,31 +105,3 @@ div.tt{
     transform:translateY(15px) translateX(calc(130px + calc(260px *var(--i)))) rotate(0deg) skew(0deg,0deg) scale(1);
     opacity: 1;
 }
-div.sliderBox{
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.79);
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.sliderBox .slideBox_content{
-    width: 1000px;
-    margin: 0 auto;
-}
-.sliderBox .slideBox_content > img{
-    width: 100%;
-    max-height: 600px;
-    object-fit: cover;
-
-}
-.sliderBox_p,
-.sliderBox_n{
-    color: aliceblue;
-    font-size: 50px;
-}

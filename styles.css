@@ -1,4 +1,17 @@
-
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #9b9ba1;
+    border-radius: 10px;
+  }
 html{
     font-size: 16px;
 }
@@ -16,17 +29,12 @@ html{
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
-div.space{
-    width: 100%;
-    height: 50px;
-    background: #000000;
-}
 div.headerr{
     position: fixed;
     top: 0;
     left: 0;
     z-index: 9;
-    background: #FFF;
+    background: #9b9ba1;
     border-bottom: 2px solid #9b9ba1;
     width: 100%;
     height: 50px;
@@ -57,7 +65,7 @@ nav.navv{
     display: flex;
     text-align: center;
     align-items: center;
-    background: #FFF;
+    background: none;
     height: 35px;
     list-style-type: none;
     width: 600px;
@@ -245,102 +253,102 @@ div.xclode{
     bottom: 25px;
 }
 /* img anh nen */
-div.bodySlider{
-    padding-top: 40px;
-    width: 100%;
-    height: auto;
-    /* background: #060405; */
-}
 .slider{
-    width: 65%;
-    height: auto;
-    position: relative;
-    overflow: hidden;
-    margin: 0 auto ;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 50px;
 }
-div.movebtn{
-    opacity: 0;
+.slider-item{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.slider-item::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height:100%;
+    background:rgba(0, 0, 0, 0.4);
+}
+.slider-item-one{
+    background-image: url("https://c.pxhere.com/photos/1c/5b/coffee_coffee_beans_afternoon_tea-1087030.jpg!d");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.slider-item-two{
+    background-image: url("https://c.pxhere.com/photos/15/5a/coffee_Cup_Table_wood-1617499.jpg!d");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.slider-item-three{
+    background-image: url("https://c.pxhere.com/photos/a1/3c/Beverage_Cafe_Cappuccino_Chocolate_cocoa_counter_cozy_Cream-1623286.jpg!d");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.owl-prev{
     position: absolute;
     top: 50%;
-    z-index: 11;
-    transition: opacity 0.5s;
+    transform: translateY(-50%);
+    left:0 ;
+    font-size: 40px!important;
+    color: #ffffff!important;
 }
-div.prevbtn{
-    left: 10px;
-}
-div.nextbtn{
-    right: 10px;
-}
-div.movebtn > i{
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-}
-div.movebtn:hover{
-    transform: scale(1.2);
-    opacity: 1;
-}
-.slider:hover .movebtn{
-    opacity: 1;
-}
-.slider .sliders{
-    display: flex;
-    transition: transform 0.5s linear;
-}
-.slider .sliders .tt{
-    transition: .4s ease;
-}
-.slider .sliders .tt img{
-    width: 100%;
-}
-.dot{
+.owl-next{
     position: absolute;
-    display:flex;
-    bottom: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    right:0;
+    font-size: 40px!important;
+    color: #ffffff!important;
+}
+.owl-next,.owl-prev:hover{
+    background: none!important;
+    outline: none!important;
+}
+.owl-dots{
+    position: absolute;
+    bottom: 10px;
     left: 50%;
-    transform:translate(-50%);
-    width: auto;
-    z-index: 1;
+    transform: translateX(-50%);
 }
-.dot .dots{
-    width: 20px;
-    height: 20px;
+.owl-dot span{
+    margin: 0!important;
+    background-color: transparent!important;
+}
+.owl-dots .owl-dot{
+    margin: 2px!important;
+    width: 23px!important;
+    height: 23px!important;
+    border: 2px solid white!important;
     border-radius: 50%;
-    margin: 10px;
-    border: 2px solid gold;
-    cursor: pointer;
 }
-.dots.act{
-    background: white;
+.owl-dots .owl-dot.active{
+    background-color: white!important;
 }
-
-.caption_left .caption_{
-    position: absolute;
-    width: auto;
-    top: 2%;
-    left: 1%;
-    transition: .3s;
-    opacity: 0;
-    z-index: 1;
+div.wapper{
+    position: relative;
+    width: 100%;
+    margin: auto;
 }
-.caption_left .caption_ > h4{
-    color: #cb321a;
+.wapper .slider-item-text{
+    position:absolute;
+    top:50%;
+    left: 30%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    color: white;
 }
-.caption_right .caption_{
-    position: absolute;
-    bottom: 2%;
-    right: 1%;
-    transition: .3s;
-    opacity: 0;
-    color: #FFF;
+.wapper .slider-item-text p {
+    font-size:20px;
 }
-.caption_left .caption_.act{
-    opacity: 1;
-}
-.caption_right .caption_.act{
-    opacity: 1;
+.wapper .slider-item-text p:nth-child(2){
+    color: #BB0000;
+    font-size: 25px;
+    font-weight: 800;
 }
 /* order caption */
 div#vl1 > h2{

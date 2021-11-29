@@ -29,8 +29,8 @@
     .rrTitle{
         width: 90%;
     }
-    div.space{
-        height: 50px;
+    .slider-item{
+        height: 70vh;
     }
     .btnTaskbar{
         display: block;
@@ -83,14 +83,13 @@
     html{
         font-size: 12px;
     }
+    .slider-item{
+        height: 70vh;
+    }
     div.rr{
         height: 370px;
     }
-    .slider{
-        width: 100%;
-        border-radius: 0;
-    }
-    div.owl-carousel{
+    div.menuC{
         width: 600px;
     }
     .list{
@@ -141,8 +140,8 @@
     html{
         font-size: 10px;
     }
-    .space{
-        display: none;
+    .slider-item{
+        height: 50vh;
     }
     .navbar{
         display: block;
@@ -150,7 +149,7 @@
     div.rr{
         height: 320px;
     }
-    div.owl-carousel{
+    div.menuC{
         width: 100%;
         border-radius: 0;
     }

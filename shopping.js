@@ -20,7 +20,7 @@ $(document).ready(function(){
               <img src="tai_nguyen/cake/cake_${i+1}.png"/>
               <div class="bglist"><p>${namedisk[i]}</p></div>
               <div class="bglistTitle">
-                <p>new !</P>
+                <p>mới !</P>
               </div>
               <div class="bglist_c fas fa-cart-plus"></div>
               <div class="deal_list">
@@ -40,7 +40,7 @@ $(document).ready(function(){
               <img src="tai_nguyen/coffee/cafe_${i+1}.png"/>
               <div class="bglist"><p>${nameDrink[i]}</p></div>
               <div class="bglistTitle">
-                <p>new !</P>
+                <p>mới !</P>
               </div>
               <div class="bglist_c fas fa-cart-plus"></div>
               <div class="deal_list">
@@ -60,7 +60,7 @@ $(document).ready(function(){
               <img src="tai_nguyen/goicafe/goi_cafe_${i+1}.png"/>
               <div class="bglist"><p>${nameCoffeeBeans[i]}</p></div>
               <div class="bglistTitle">
-                <p>new !</P>
+                <p>mới !</P>
               </div>
               <div class="bglist_c fas fa-cart-plus"></div>
               <div class="deal_list">
