@@ -78,13 +78,13 @@ div.navbarshape{
     transition: all .0.5s;
 }
 div.navbarshape > div{
-    border-left: 1px solid var(--colorssblck);
+    border-left: 1px solid var(--boderbtn);
     padding:15px 0 15px 15px;
 }
 div.navbarshape > div > a{
     text-decoration: none;
     font-size: 14px;
-    color: var(--colorssblck);
+    color: var(--boderbtn);
     font-weight: 600;
     text-transform: capitalize;
 }

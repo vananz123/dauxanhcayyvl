@@ -337,7 +337,7 @@ div.wapper{
 .wapper .slider-item-text{
     position:absolute;
     top:50%;
-    left: 30%;
+    left: 50%;
     transform: translateY(-50%);
     transform: translateX(-50%);
     color: white;
