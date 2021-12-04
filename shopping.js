@@ -8,7 +8,6 @@ $(document).ready(function(){
     const priceDirnk=[50000,50000,70000,40000,50000,50000,50000]
     const nameCoffeeBeans =["Euta cafe","Cà phê Kimbo","Cà phê thái nguyên"];
     const priceBeans=[200000,300000,250000]
-   
     function dsmon(){
       var templist=document.querySelector('#list')
       var templist1=document.querySelector('#list1')
@@ -115,6 +114,12 @@ $(document).ready(function(){
         })
       }
     }
+    const heart_list =document.querySelectorAll("div.bglistTitle i");
+    for(let i=0;i<heart_list.length;i++){
+      heart_list[i].addEventListener("click",function(){
+        $(heart_list[i]).toggleClass("change");
+      })
+    }
     function UpdatePrice(s,e,i){
       var event =e.target;
       var par =event.parentElement.parentElement.parentElement.parentElement;
@@ -179,7 +184,7 @@ $(document).ready(function(){
 
     function checkSize(product){
       var size =product.querySelectorAll("div.size_list form input");
-      
+
       for(var i=0;i<size.length;i++){
         if(size[i].checked){
           var s =size[i].parentElement 
@@ -187,7 +192,7 @@ $(document).ready(function(){
           break;
         }
       }
-      
+
     }
     function checkPay(){
       const allPrice =document.querySelectorAll("div.shoBarCon .shopItem");

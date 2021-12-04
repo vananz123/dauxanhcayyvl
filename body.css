@@ -295,10 +295,13 @@ div.size_list{
     color: #e4e0e4;
 }
 .bglistTitle > i{
-    color: #FFFFFF;
+    color: #000000;
     padding-top: 5px;
     font-size: 20px;
     cursor: pointer;
+}
+.bglistTitle > i.change{
+    color: red;
 }
 .list .listImg:hover .bglist{
     transform: translateY(0);
