@@ -153,9 +153,13 @@ div.checkOut #thanhtoan.show{
 }
 div.shopAdd{
     clear:left;
+    display: flex;
 }
 div.shopAdd input{
-    width: 100px;
+    width: 70px;
+}
+div.shopAdd span {
+    padding-top: 3px;
 }
 div.shopX{
     position: absolute;

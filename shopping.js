@@ -20,15 +20,25 @@ $(document).ready(function(){
               <img src="tai_nguyen/cake/cake_${i+1}.png"/>
               <div class="bglist"><p>${namedisk[i]}</p></div>
               <div class="bglistTitle">
-                <p>mới !</P>
+                <i class="far fa-heart"></i>
               </div>
               <div class="bglist_c fas fa-cart-plus"></div>
               <div class="deal_list">
                 <p>
-                <span>${priceDirnk[i].toLocaleString("de-DE")}</span><sup>đ</sup>
+                <span>${priceDisk[i].toLocaleString("de-DE")}</span><sup>đ</sup>
                 </p>
               </div>
+              <div class="size_list">
+                <form>
+                  <p>size</p>
+                  <label>S <input type="radio" id="html" name="size" value="0" checked></label>
+                  <label>M <input type="radio" id="css" name="size" value="10000"></label>
+                  
+                  <label>L <input type="radio" id="javascript" name="size" value="20000"></label>
+                </form>
+              </div>
             </div>
+            
         </div>
         `//temp là các thành phần html muốn thêm vào 
         templist.insertAdjacentHTML("beforeend",temp) //dùng insertAdjacentHTML để thêm vào beforeend là thêm vào sao
@@ -40,13 +50,22 @@ $(document).ready(function(){
               <img src="tai_nguyen/coffee/cafe_${i+1}.png"/>
               <div class="bglist"><p>${nameDrink[i]}</p></div>
               <div class="bglistTitle">
-                <p>mới !</P>
+                <i class="far fa-heart"></i>
               </div>
               <div class="bglist_c fas fa-cart-plus"></div>
               <div class="deal_list">
                 <p>
-                <span>${priceDisk[i].toLocaleString("de-DE")}</span><sup>đ</sup>
+                <span>${priceDirnk[i].toLocaleString("de-DE")}</span><sup>đ</sup>
                 </p>
+              </div>
+              <div class="size_list">
+                <form>
+                  <p>size</p>
+                  <label>S <input type="radio" id="html" name="size" value="0" checked></label>
+                  <label>M <input type="radio" id="css" name="size" value="10000"></label>
+                  
+                  <label>L <input type="radio" id="javascript" name="size" value="20000"></label>
+                </form>
               </div>
             </div>
         </div>
@@ -60,13 +79,22 @@ $(document).ready(function(){
               <img src="tai_nguyen/goicafe/goi_cafe_${i+1}.png"/>
               <div class="bglist"><p>${nameCoffeeBeans[i]}</p></div>
               <div class="bglistTitle">
-                <p>mới !</P>
+                <i class="far fa-heart"></i>
               </div>
               <div class="bglist_c fas fa-cart-plus"></div>
               <div class="deal_list">
                 <p>
                 <span>${priceBeans[i].toLocaleString("de-DE")}</span><sup>đ</sup>
                 </p>
+              </div>
+              <div class="size_list">
+                <form>
+                  <p>size</p>
+                  <label>S <input type="radio" id="html" name="size" value="0" checked></label>
+                  <label>M <input type="radio" id="css" name="size" value="20000"></label>
+                  
+                  <label>L <input type="radio" id="javascript" name="size" value="40000"></label>
+                </form>
               </div>
             </div>
           
@@ -77,6 +105,29 @@ $(document).ready(function(){
      
     }
     dsmon();
+    const sizeList =document.querySelectorAll("div.size_list form");
+    for(let i=0;i<sizeList.length;i++){
+      var s =sizeList[i].querySelectorAll("input");
+      for(let j =0;j < s.length ;j++){
+        s[j].addEventListener("click",function(e){
+          UpdatePrice(s[j],e,i);
+          
+        })
+      }
+    }
+    function UpdatePrice(s,e,i){
+      var event =e.target;
+      var par =event.parentElement.parentElement.parentElement.parentElement;
+      var productPrice;
+      if(i <6){
+        productPrice=priceDisk[i];
+      }else if(i >=6 && i< 12){
+        productPrice =priceDirnk[i-SO_CAKE];
+      }else{
+        productPrice =priceBeans[i-SO_CAFE-SO_CAKE];
+      }
+      par.querySelector("div.deal_list span").innerText=`${(parseFloat(productPrice)+parseFloat(event.value)).toLocaleString("de-DE")}`;
+    }
     const btnAdd =document.querySelectorAll("div.bglist_c");
     btnAdd.forEach(function(shopAdd,index){
       shopAdd.addEventListener("click",function(e){{
@@ -85,11 +136,11 @@ $(document).ready(function(){
         var productImg =product.querySelector("img").src;
         var productName =product.querySelector("div.bglist > p").innerText;
         var productPrice =product.querySelector("div.deal_list span").innerText;
-        addListProduct(productImg,productName,productPrice);
+        addListProduct(productImg,productName,productPrice,product);
         
       }})
     })
-    function addListProduct(productImg,productName,productPrice){
+    function addListProduct(productImg,productName,productPrice,product){
       const tAdd=document.querySelector("div.shoBarCon");
       const t =`
           <div class="shopItem">
@@ -104,9 +155,11 @@ $(document).ready(function(){
             <div class="shopAdd">
               <span>Số lượng: </span>
               <input type="number" value="1" min="0"/>
+              <span> SIZE: </span>
+              <p>${checkSize(product)}</p>
             </div>
           </div>`
-      let ck=checkAdd(productName)
+      let ck=checkAdd(productName,productPrice)
       if(ck!= -1){
         addInput(ck);
       }else{
@@ -122,6 +175,19 @@ $(document).ready(function(){
         }})
       })
       resetBtn();
+    }
+
+    function checkSize(product){
+      var size =product.querySelectorAll("div.size_list form input");
+      
+      for(var i=0;i<size.length;i++){
+        if(size[i].checked){
+          var s =size[i].parentElement 
+          return s.innerText;
+          break;
+        }
+      }
+      
     }
     function checkPay(){
       const allPrice =document.querySelectorAll("div.shoBarCon .shopItem");
@@ -158,10 +224,11 @@ $(document).ready(function(){
       const sumTotal=document.querySelector("#sumPrice")
       sumTotal.innerText=`${toTal.toLocaleString("de-DE")}.000`;
     }
-    function checkAdd(productName){
+    function checkAdd(productName,productPrice){
       const check=document.querySelectorAll("div.shopItem .titleItem .nameItem");
+      const checkP=document.querySelectorAll("div.shopItem .titleItem .priceItem span");
       for(let i=0;i<check.length;i++){
-        if(check[i].innerText ==productName){
+        if(check[i].innerText ==productName && checkP[i].innerText ==productPrice){
           return i
         }
       }
