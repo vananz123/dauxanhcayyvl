@@ -283,7 +283,7 @@ div.size_list{
     transition: 0.5s;
     background: #F8F8FF;
     color: #9b9ba1;
-    z-index: 11;
+    z-index: 1;
     cursor: pointer;
 }
 .bglistTitle{
@@ -303,10 +303,10 @@ div.size_list{
 .bglistTitle > i.change{
     color: red;
 }
-.list .listImg:hover .bglist{
+.list .list_:hover .bglist{
     transform: translateY(0);
 }
-.list .listImg:hover .bglist_c{
+.list .list_:hover .bglist_c{
     transform: translateY(0);
 }
 div.store{

@@ -176,15 +176,14 @@
     }
     .list .list_{
         margin-left: 1.5rem;
-        width: 20rem;
         border-radius: var(--boderbtn);
         width: 100%;
-        
         scroll-snap-align: center;
     }
     .list .listImg{
         position: relative;
         width: 100%;
+        height: auto;
     }
     .list_ .listImg > img {
         width: 100%;
@@ -192,7 +191,6 @@
         border-radius: 0 0 var(--boderbtn) 0;
         z-index: 0;
     }
-    
     .devBlog .devBlogF > img{
         height: 200px;
     }

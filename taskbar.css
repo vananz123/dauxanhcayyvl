@@ -60,6 +60,9 @@ ul.task-item > li{
 .downM{
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
 }
 .downM > span,#navbarSign > a{
     font-size: 16px;
@@ -70,6 +73,7 @@ ul.task-item > li{
 }
 .downM > i{
     font-size: 16px;
+    
 }
 div.navbarshape{
     overflow: hidden;

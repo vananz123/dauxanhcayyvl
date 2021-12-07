@@ -123,6 +123,7 @@ $(document).ready(function(){
     function UpdatePrice(s,e,i){
       var event =e.target;
       var par =event.parentElement.parentElement.parentElement.parentElement;
+
       var productPrice;
       if(i <6){
         productPrice=priceDisk[i];
